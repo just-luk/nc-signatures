@@ -8,10 +8,18 @@
 #include <kodo/block/decoder.hpp>
 #include <kodo/block/encoder.hpp>
 #include <kodo/block/generator/random_uniform.hpp>
+#include <fifi/utils.hpp>
 #define N 10
 
 using namespace pbc;
 using namespace std;
+
+uint32_t get_value(kodo::finite_field field, const uint8_t* elements,
+                          std::size_t index)
+{
+        return fifi::get_value(fifi::finite_field::prime2325, elements, index);
+}
+
 string random_string(int len)
 {
      string str("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
@@ -65,11 +73,13 @@ int main(int argc, char** argv) {
       return 0;
    }
    string id = argv[1] + random_string(10);
-   ifstream f("./pbc/param/a.param", ios::in);
+   // ifstream f("./pbc/param/a.param", ios::in);
+   ifstream f("./pbc/param/2325.param", ios::in);
    ifstream input_file(argv[1], ios::in);
    type_a_param = string(istreambuf_iterator<char>(f), istreambuf_iterator<char>());
-   
    string test_file = string(istreambuf_iterator<char>(input_file), istreambuf_iterator<char>());
+   printf("Length of file is %lu bytes\n", test_file.length());
+   
    pairing = Pairing::init_from_param_str(type_a_param);
    
    Element h, public_key, secret_key;
@@ -100,53 +110,95 @@ int main(int argc, char** argv) {
    element_printf("signature of vector2 = %s\n", sig2);
    
    if(verify(h, public_key, vector1, N, sig1, id, pairing)) {
-     printf("\n\U00002705 Vector 1 verified!\n");
+     printf("\nVector 1 verified! \U00002705\n");
    }
    if(!verify(h, public_key, vector2, N, sig1, id, pairing)) {
-     printf("\n\U00002705 Vector 2 doesn't verify under vector 1 signature!\n");
+     printf("\nVector 2 doesn't verify under vector 1 signature! \U00002705\n");
    }
    if(verify(h, public_key, vector2, N, sig2, id, pairing)) {
-     printf("\n\U00002705 Vector 2 verified!\n");
+     printf("\nVector 2 verified! \U00002705\n");
    }
    if(!verify(h, public_key, vector1, N, sig2, id, pairing)) {
-     printf("\n\U00002705 Vector 1 doesn't verify under vector 2 signature!\n\n");
+     printf("\nVector 1 doesn't verify under vector 2 signature! \U00002705\n\n");
    }
    
-   printf("Length of file: %lu\n", test_file.length());
-   string compressed = sig1.to_bytes_compressed();
-   int len = compressed.size();
-   size_t symbols = 10;
-   size_t header_size = sizeof(bool) + sizeof(uint32_t) + len + id.size();
-   size_t symbol_bytes = 1400 - header_size;
+   mpz_class t = pairing->g1_order();
+   gmp_printf("Order = %Zd\n", t.get_mpz_t());
    
-   kodo::finite_field field = kodo::finite_field::binary8;
+   auto field = kodo::finite_field::prime2325;
+   
    kodo::block::encoder encoder(field);
    kodo::block::decoder decoder(field);
-   kodo::block::generator::random_uniform generator(field);
+   // number of vectors
+   auto symbols = 10;
+
+   // Pick the size of each vector in bytes AKA N
+   auto symbol_bytes = 1400;
+   
    encoder.configure(symbols, symbol_bytes);
    decoder.configure(symbols, symbol_bytes);
+
+   kodo::block::generator::random_uniform generator(field);
    generator.configure(encoder.symbols());
+
+   // storage for each vector
+   std::vector<uint8_t> symbol(encoder.symbol_bytes());
+
+   // coefficients
+   std::vector<uint8_t> coefficients(generator.max_coefficients_bytes());
    
-   vector<uint8_t> data_in(test_file.begin(), test_file.end());
-   vector<uint8_t> coefficients(generator.max_coefficients_bytes());
-   vector<uint8_t> symbol(encoder.symbol_bytes() + header_size);
-   vector<uint8_t> data_out(data_in.size());
+   std::vector<uint8_t> data_in(encoder.block_bytes());
+   
+   std::generate(data_in.begin(), data_in.end(), rand);
+
    encoder.set_symbols_storage(data_in.data());
+   auto acc_field = encoder.field();
+   std::vector<uint8_t> data_out(decoder.block_bytes());
    decoder.set_symbols_storage(data_out.data());
-   uint32_t seed = rand();
-   
-   bool is_systematic = false;
-   generator.set_seed(seed);
-   memcpy(symbol.data(), &is_systematic, sizeof(bool));
-   memcpy(symbol.data() + sizeof(bool), &seed, sizeof(uint32_t));
-   memcpy(symbol.data() + sizeof(bool) + sizeof(uint32_t), &compressed, len);
-   memcpy(symbol.data() + sizeof(bool) + sizeof(uint32_t) + len, &id, id.size());
-   generator.generate(coefficients.data());
-   encoder.encode_symbol(symbol.data() + header_size,
-                                      coefficients.data());
-   for (int i = 0; i < symbol.size(); i++) {
-        printf("%d ",symbol[i]);
+
+
+    // Lose packets with 10% probability
+   auto loss_propability = 10;
+
+   while (!decoder.is_complete())
+   {
+       {
+           printf("coded symbol");
+
+           // Draw a seed
+           auto seed = rand();
+           generator.set_seed(seed);
+
+           generator.generate(coefficients.data());
+
+           // Encode a symbol into the symbol buffer
+           encoder.encode_symbol(symbol.data(), coefficients.data());
+           
+           // 350 bc there are 4 bits in a byte
+           for(int i = 0; i < 350; i++) {
+           	uint32_t test_out = get_value(field, symbol.data(), i);
+           	printf("(%u)", test_out);
+           }
+
+           // Drop packet based on loss probability
+           if (rand() % 100 < loss_propability)
+           {
+               printf(" - lost\n");
+               continue;
+           }
+
+	   // decode using seed
+           generator.set_seed(seed);
+           generator.generate(coefficients.data());
+           decoder.decode_symbol(symbol.data(), coefficients.data());
+           printf(" - decoded, rank now %lu\n", decoder.rank());
+       }
    }
-   printf("\n");
+
+   // Check if we properly decoded the data
+   if (data_out == data_in)
+   {
+       printf("Data decoded correctly\n");
+   }
    return 0;
 }
