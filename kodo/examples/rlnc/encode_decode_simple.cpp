@@ -40,7 +40,7 @@ int main()
     srand(static_cast<uint32_t>(time(0)));
 
     // Pick the finite field to use for the encoding and decoding.
-    auto field = kodo::finite_field::prime2325;
+    auto field = kodo::finite_field::binary8;
 
     // Create an encoder and decoder.
     kodo::block::encoder encoder(field);

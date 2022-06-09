@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun  9 12:33:52 2022
+# Make data base, printed on Thu Jun  9 12:39:49 2022
 
 # Variables
 
@@ -31,7 +33,7 @@ rvm_path = /home/gitpod/.rvm
 # environment
 SUPERVISOR_ADDR = localhost:22999
 # environment
-SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/17c04e79-b4d7-4c9d-8926-70defc129e3b
+SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/2b07492e-5110-4a2f-8bc2-a863e2fc3116
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -79,7 +81,7 @@ PATH = /ide/bin/remote-cli:/home/gitpod/.nix-profile/bin:/workspace/.cargo/bin:/
 # environment
 GITPOD_OWNER_ID = 8619b44a-d525-47f9-b6a0-7a5dca283ffc
 # environment
-GITPOD_WORKSPACE_ID = justluk-ncsignatures-lve320c9n54
+GITPOD_WORKSPACE_ID = justluk-ncsignatures-chep7m4mmek
 # environment
 GITPOD_INTERVAL = 30000
 # environment
@@ -103,7 +105,7 @@ SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-93f5cee8-61a7-418b-afb0-91381606497c.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-e1974cca-7017-4f97-8c75-c3ab111ded74.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -145,7 +147,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
-GITPOD_CLI_APITOKEN = X7sgEvAhgzyOS7vTTo8-Niv2zt.RxuwG
+GITPOD_CLI_APITOKEN = -H169nWmFmHVDIgkDgalmnMANGRB1Ezs
 # automatic
 +F = $(notdir $+)
 # environment
@@ -153,7 +155,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-HOSTNAME = justluk-ncsignatures-lve320c9n54
+HOSTNAME = justluk-ncsignatures-chep7m4mmek
 # environment
 GRADLE_USER_HOME = /workspace/.gradle/
 # environment
@@ -231,7 +233,7 @@ GITPOD_MEMORY = 3435
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # environment
-GITPOD_TASKS = [{"name":"Install Dependencies","init":"cp -r kodo/src src\ncp kodo/examples/rlnc/encode_decode_simple.cpp .\ncp kodo/examples/rlnc/encode_recode_decode_simple.cpp .\nrm -rf kodo\ngit clone https://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@github.com/steinwurf/kodo.git\ncp -r src kodo/src\ncp encode_decode_simple.cpp kodo/examples/rlnc/encode_decode_simple.cpp\ncp encode_recode_decode_simple.cpp kodo/examples/rlnc/encode_recode_decode_simple.cpp\n"}]
+GITPOD_TASKS = [{"name":"Install Dependencies","init":"cp -r kodo/src src\ncp -r kodo/example examples\nrm -rf kodo\ngit clone https://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@github.com/steinwurf/kodo.git\ncp -r src kodo/src\ncp -r examples kodo/examples\nrm -rf src\nrm -rf examples\n","command":"make kodo_test"}]
 # default
 MAKEFILES := 
 # environment
@@ -255,7 +257,7 @@ PWD = /workspace/nc-signatures
 # environment
 LC_ALL = C
 # environment
-GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"just-luk/nc-signatures - main","ref":"main","refType":"branch","revision":"38007149fb87b6dd84ce03eec8e7e8672da89f1d","repository":{"cloneUrl":"https://github.com/just-luk/nc-signatures.git","host":"github.com","name":"nc-signatures","owner":"just-luk","private":true},"normalizedContextURL":"https://github.com/just-luk/nc-signatures","checkoutLocation":"nc-signatures"}
+GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"just-luk/nc-signatures - main","ref":"main","refType":"branch","revision":"20fe61dc90b16dab51c85377005481e5dd85d79b","repository":{"cloneUrl":"https://github.com/just-luk/nc-signatures.git","host":"github.com","name":"nc-signatures","owner":"just-luk","private":true},"normalizedContextURL":"https://github.com/just-luk/nc-signatures","checkoutLocation":"nc-signatures"}
 # environment
 JAVA_TOOL_OPTIONS =  -Xmx3435m
 # automatic
@@ -275,9 +277,9 @@ NGINX_DOCROOT_IN_REPO = public
 # environment
 rvm_loaded_flag = 1
 # environment
-GITPOD_INSTANCE_ID = 94ee404f-1f5c-44ec-a899-ab0de91f7b18
+GITPOD_INSTANCE_ID = 6332cb91-68e3-4628-99b2-b2613e8b285f
 # environment
-GITPOD_WORKSPACE_URL = https://justluk-ncsignatures-lve320c9n54.ws-us47.gitpod.io
+GITPOD_WORKSPACE_URL = https://justluk-ncsignatures-chep7m4mmek.ws-us47.gitpod.io
 # default
 .RECIPEPREFIX := 
 # environment
@@ -297,9 +299,9 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.6
 
 # Directories
 
-# . (device 2346, inode 1476420089): 18 files, no impossibilities.
+# . (device 2346, inode 1075145382): 17 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -350,7 +352,7 @@ kodo_install:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 12:33:30.928149385
+#  Last modified 2022-06-09 12:38:58.988904373
 #  File has been updated.
 #  Successfully updated.
 
@@ -401,14 +403,12 @@ test_no_install:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 337 B / avg = 10 B
-# current buf: size = 8162 B / used = 337 B / count = 32 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 333 B / avg = 10 B
+# current buf: size = 8162 B / used = 333 B / count = 31 / avg = 10 B
 
-# strcache performance: lookups = 51 / hit rate = 37%
+# strcache performance: lookups = 50 / hit rate = 38%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/51=2%
-# Finished Make data base on Thu Jun  9 12:33:52 2022
+# Load=31/8192=0%, Rehash=0, Collisions=1/50=2%
+# Finished Make data base on Thu Jun  9 12:39:49 2022
 
  
-make: *** No rule to make target 'all'.  Stop.
-

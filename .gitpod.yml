@@ -6,13 +6,21 @@ tasks:
   - name: Install Dependencies
     init: |
       cp -r kodo/src src
-      cp -r kodo/example examples
+      cp -r kodo/examples examples
       rm -rf kodo
       git clone https://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@github.com/steinwurf/kodo.git
       cp -r src kodo/src
       cp -r examples kodo/examples
       rm -rf src
       rm -rf examples
+      gp sync-done install
+
+  - name: fifi_test
+    init: gp sync-await install
+    command: make fifi_test
+
+  - name: kodo_Test
+    init: gp sync-await install
     command: make kodo_test
 
 
