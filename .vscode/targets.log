@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,11 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
+<<<<<<< HEAD
 # Make data base, printed on Thu Jun  9 13:24:05 2022
+=======
+# Make data base, printed on Thu Jun  9 12:33:52 2022
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 
 # Variables
 
@@ -33,7 +35,11 @@ rvm_path = /home/gitpod/.rvm
 # environment
 SUPERVISOR_ADDR = localhost:22999
 # environment
+<<<<<<< HEAD
 SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/3a3bae81-8797-4d36-9c2f-c21165978cc6
+=======
+SUPERVISOR_ENVVAR_OTS = https://gitpod.io/api/ots/get/17c04e79-b4d7-4c9d-8926-70defc129e3b
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
@@ -81,7 +87,11 @@ PATH = /ide/bin/remote-cli:/home/gitpod/.nix-profile/bin:/workspace/.cargo/bin:/
 # environment
 GITPOD_OWNER_ID = 8619b44a-d525-47f9-b6a0-7a5dca283ffc
 # environment
+<<<<<<< HEAD
 GITPOD_WORKSPACE_ID = justluk-ncsignatures-8l8d1c5ekn5
+=======
+GITPOD_WORKSPACE_ID = justluk-ncsignatures-lve320c9n54
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # environment
 GITPOD_INTERVAL = 30000
 # environment
@@ -105,7 +115,11 @@ SDKMAN_PLATFORM = linuxx64
 # environment
 VSCODE_LOG_STACK = false
 # environment
+<<<<<<< HEAD
 VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-dbc20414-98bc-45e2-b382-a242b087b47b.sock
+=======
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-93f5cee8-61a7-418b-afb0-91381606497c.sock
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -147,7 +161,11 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
+<<<<<<< HEAD
 GITPOD_CLI_APITOKEN = 0VO4SQngskwHoROrKfbLQciwkpwwTUx5
+=======
+GITPOD_CLI_APITOKEN = X7sgEvAhgzyOS7vTTo8-Niv2zt.RxuwG
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # automatic
 +F = $(notdir $+)
 # environment
@@ -155,7 +173,11 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
+<<<<<<< HEAD
 HOSTNAME = justluk-ncsignatures-8l8d1c5ekn5
+=======
+HOSTNAME = justluk-ncsignatures-lve320c9n54
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # environment
 GRADLE_USER_HOME = /workspace/.gradle/
 # environment
@@ -233,7 +255,11 @@ GITPOD_MEMORY = 3435
 # environment
 VSCODE_HANDLES_SIGPIPE = true
 # environment
+<<<<<<< HEAD
 GITPOD_TASKS = [{"name":"Install Dependencies","init":"cp -r kodo/src src\ncp -r kodo/examples examples\nrm -rf kodo\ngit clone https://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@github.com/steinwurf/kodo.git\ncp -r src kodo\ncp -r examples kodo\nrm -rf src\nrm -rf examples\ngp sync-done install\n"},{"name":"fifi_test","init":"gp sync-await install","command":"make fifi_test"},{"name":"kodo_test","init":"gp sync-await install","command":"make kodo_test"}]
+=======
+GITPOD_TASKS = [{"name":"Install Dependencies","init":"cp -r kodo/src src\ncp kodo/examples/rlnc/encode_decode_simple.cpp .\ncp kodo/examples/rlnc/encode_recode_decode_simple.cpp .\nrm -rf kodo\ngit clone https://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@github.com/steinwurf/kodo.git\ncp -r src kodo/src\ncp encode_decode_simple.cpp kodo/examples/rlnc/encode_decode_simple.cpp\ncp encode_recode_decode_simple.cpp kodo/examples/rlnc/encode_recode_decode_simple.cpp\n"}]
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # default
 MAKEFILES := 
 # environment
@@ -257,7 +283,11 @@ PWD = /workspace/nc-signatures
 # environment
 LC_ALL = C
 # environment
+<<<<<<< HEAD
 GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"just-luk/nc-signatures - main","ref":"main","refType":"branch","revision":"f599c90a8b8710f2b702cb7641a5be84712d09bb","repository":{"cloneUrl":"https://github.com/just-luk/nc-signatures.git","host":"github.com","name":"nc-signatures","owner":"just-luk","private":true},"normalizedContextURL":"https://github.com/just-luk/nc-signatures","checkoutLocation":"nc-signatures"}
+=======
+GITPOD_WORKSPACE_CONTEXT = {"isFile":false,"path":"","title":"just-luk/nc-signatures - main","ref":"main","refType":"branch","revision":"38007149fb87b6dd84ce03eec8e7e8672da89f1d","repository":{"cloneUrl":"https://github.com/just-luk/nc-signatures.git","host":"github.com","name":"nc-signatures","owner":"just-luk","private":true},"normalizedContextURL":"https://github.com/just-luk/nc-signatures","checkoutLocation":"nc-signatures"}
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # environment
 JAVA_TOOL_OPTIONS =  -Xmx3435m
 # automatic
@@ -277,9 +307,15 @@ NGINX_DOCROOT_IN_REPO = public
 # environment
 rvm_loaded_flag = 1
 # environment
+<<<<<<< HEAD
 GITPOD_INSTANCE_ID = 0a74cd47-5589-40e9-8d95-2bf7d0be275f
 # environment
 GITPOD_WORKSPACE_URL = https://justluk-ncsignatures-8l8d1c5ekn5.ws-us47.gitpod.io
+=======
+GITPOD_INSTANCE_ID = 94ee404f-1f5c-44ec-a899-ab0de91f7b18
+# environment
+GITPOD_WORKSPACE_URL = https://justluk-ncsignatures-lve320c9n54.ws-us47.gitpod.io
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 # default
 .RECIPEPREFIX := 
 # environment
@@ -299,9 +335,15 @@ MY_RUBY_HOME = /home/gitpod/.rvm/rubies/ruby-2.7.6
 
 # Directories
 
+<<<<<<< HEAD
 # . (device 2346, inode 1811972953): 15 files, no impossibilities.
 
 # 15 files, no impossibilities in 1 directories.
+=======
+# . (device 2346, inode 1476420089): 18 files, no impossibilities.
+
+# 18 files, no impossibilities in 1 directories.
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 
 # Implicit Rules
 
@@ -352,7 +394,11 @@ kodo_install:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+<<<<<<< HEAD
 #  Last modified 2022-06-09 13:23:41.104810367
+=======
+#  Last modified 2022-06-09 12:33:30.928149385
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 #  File has been updated.
 #  Successfully updated.
 
@@ -403,6 +449,7 @@ test_no_install:
 
 # No general ('VPATH' variable) search path.
 
+<<<<<<< HEAD
 # strcache buffers: 1 (0) / strings = 29 / storage = 276 B / avg = 9 B
 # current buf: size = 8162 B / used = 276 B / count = 29 / avg = 9 B
 
@@ -410,5 +457,16 @@ test_no_install:
 # hash-table stats:
 # Load=29/8192=0%, Rehash=0, Collisions=1/48=2%
 # Finished Make data base on Thu Jun  9 13:24:05 2022
+=======
+# strcache buffers: 1 (0) / strings = 32 / storage = 337 B / avg = 10 B
+# current buf: size = 8162 B / used = 337 B / count = 32 / avg = 10 B
+
+# strcache performance: lookups = 51 / hit rate = 37%
+# hash-table stats:
+# Load=32/8192=0%, Rehash=0, Collisions=1/51=2%
+# Finished Make data base on Thu Jun  9 12:33:52 2022
+>>>>>>> parent of 0e1a5a2 (update gitpod.yml)
 
  
+make: *** No rule to make target 'all'.  Stop.
+
