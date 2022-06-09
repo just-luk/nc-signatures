@@ -1,6 +1,6 @@
 {
     "is_symlink": true,
-    "path": "/home/luke/Documents/kodo/resolve_symlinks/platform",
-    "real_path": "/home/luke/Documents/kodo/resolved_dependencies/platform-bccd32/4.0.0-bc3824",
+    "path": "/workspace/nc-signatures/kodo/resolve_symlinks/platform",
+    "real_path": "/workspace/nc-signatures/kodo/resolved_dependencies/platform-bccd32/4.0.0-866635",
     "sha1": "b1bff989aa5001e0f71b8109143f4317d38fa191"
 }

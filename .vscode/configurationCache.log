@@ -1,0 +1,1 @@
+{"buildTargets":["fifi_install","fifi_test","kodo_install","kodo_test","run_fifi_example","run_kodo_example","test","test_no_install"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
