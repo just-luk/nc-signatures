@@ -1,6 +1,6 @@
 {
     "is_symlink": true,
-    "path": "/home/luke/Documents/kodo/resolve_symlinks/waf-tools",
-    "real_path": "/home/luke/Documents/kodo/resolved_dependencies/waf-tools-51dff5/4.41.0-ba643d",
+    "path": "/workspace/nc-signatures/kodo/resolve_symlinks/waf-tools",
+    "real_path": "/workspace/nc-signatures/kodo/resolved_dependencies/waf-tools-51dff5/4.42.0-a3040c",
     "sha1": "a7a8a39f9b24ed86473e130e17a283ff2616a263"
 }

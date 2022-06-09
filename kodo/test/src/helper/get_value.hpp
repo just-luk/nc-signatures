@@ -42,8 +42,6 @@ inline uint32_t get_value(kodo::finite_field field, const uint8_t* elements,
         return fifi::get_value(fifi::finite_field::binary8, elements, index);
     case kodo::finite_field::binary16:
         return fifi::get_value(fifi::finite_field::binary16, elements, index);
-    case kodo::finite_field::prime2325:
-        return fifi::get_value(fifi::finite_field::prime2325, elements, index);
 
     default:
         assert(false);

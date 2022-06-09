@@ -1,19 +1,19 @@
-# project kodo (13.1.0) configured on Wed Jun  8 17:54:44 2022 by
-# waf 2.0.22 (abi 20, python 3080af0 on linux)
+# project kodo (13.1.0) configured on Thu Jun  9 12:22:44 2022 by
+# waf 2.0.22 (abi 20, python 3080df0 on linux)
 # using ./waf configure --fifi_path=../fifi
 #
 ----------------------------------------
 Setting top to
-/home/luke/Documents/kodo
+/workspace/nc-signatures/kodo
 ----------------------------------------
 Setting out to
-/home/luke/Documents/kodo/build/linux
+/workspace/nc-signatures/kodo/build/linux
 ----------------------------------------
 Using the mkspec:
 cxx_default
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++'] paths=['/home/luke/.cargo/bin', '/home/luke/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='G++' -> ['/usr/bin/g++']
+find program=['g++'] paths=['/home/gitpod/.pyenv/versions/3.8.13/bin', '/home/gitpod/.pyenv/libexec', '/home/gitpod/.pyenv/plugins/python-build/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/bin', '/home/gitpod/.pyenv/plugins/pyenv-update/bin', '/home/gitpod/.pyenv/plugins/pyenv-installer/bin', '/home/gitpod/.pyenv/plugins/pyenv-doctor/bin', '/home/gitpod/.sdkman/candidates/maven/current/bin', '/home/gitpod/.sdkman/candidates/java/current/bin', '/home/gitpod/.sdkman/candidates/gradle/current/bin', '/workspace/.cargo/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6@global/bin', '/home/gitpod/.rvm/rubies/ruby-2.7.6/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims', '/home/gitpod/.pyenv/shims', '/workspace/go/bin', '/home/gitpod/.nix-profile/bin', '/ide/bin/remote-cli', '/home/gitpod/go/bin', '/home/gitpod/go-packages/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/workspace/.pip-modules/bin', '/home/gitpod/.pyenv/bin', '/workspace/.rvm/bin', '/home/gitpod/.cargo/bin', '/home/linuxbrew/.linuxbrew/bin', '/home/linuxbrew/.linuxbrew/sbin/', '/usr/games', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/home/gitpod/.rvm/bin'] var='G++' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -364,7 +364,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['gcc'] paths=['/home/luke/.cargo/bin', '/home/luke/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='GCC' -> ['/usr/bin/gcc']
+find program=['gcc'] paths=['/home/gitpod/.pyenv/versions/3.8.13/bin', '/home/gitpod/.pyenv/libexec', '/home/gitpod/.pyenv/plugins/python-build/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/bin', '/home/gitpod/.pyenv/plugins/pyenv-update/bin', '/home/gitpod/.pyenv/plugins/pyenv-installer/bin', '/home/gitpod/.pyenv/plugins/pyenv-doctor/bin', '/home/gitpod/.sdkman/candidates/maven/current/bin', '/home/gitpod/.sdkman/candidates/java/current/bin', '/home/gitpod/.sdkman/candidates/gradle/current/bin', '/workspace/.cargo/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6@global/bin', '/home/gitpod/.rvm/rubies/ruby-2.7.6/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims', '/home/gitpod/.pyenv/shims', '/workspace/go/bin', '/home/gitpod/.nix-profile/bin', '/ide/bin/remote-cli', '/home/gitpod/go/bin', '/home/gitpod/go-packages/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/workspace/.pip-modules/bin', '/home/gitpod/.pyenv/bin', '/workspace/.rvm/bin', '/home/gitpod/.cargo/bin', '/home/linuxbrew/.linuxbrew/bin', '/home/linuxbrew/.linuxbrew/sbin/', '/usr/games', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/home/gitpod/.rvm/bin'] var='GCC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -715,7 +715,7 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/luke/.cargo/bin', '/home/luke/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/gitpod/.pyenv/versions/3.8.13/bin', '/home/gitpod/.pyenv/libexec', '/home/gitpod/.pyenv/plugins/python-build/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/bin', '/home/gitpod/.pyenv/plugins/pyenv-update/bin', '/home/gitpod/.pyenv/plugins/pyenv-installer/bin', '/home/gitpod/.pyenv/plugins/pyenv-doctor/bin', '/home/gitpod/.sdkman/candidates/maven/current/bin', '/home/gitpod/.sdkman/candidates/java/current/bin', '/home/gitpod/.sdkman/candidates/gradle/current/bin', '/workspace/.cargo/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6/bin', '/home/gitpod/.rvm/gems/ruby-2.7.6@global/bin', '/home/gitpod/.rvm/rubies/ruby-2.7.6/bin', '/home/gitpod/.pyenv/plugins/pyenv-virtualenv/shims', '/home/gitpod/.pyenv/shims', '/workspace/go/bin', '/home/gitpod/.nix-profile/bin', '/ide/bin/remote-cli', '/home/gitpod/go/bin', '/home/gitpod/go-packages/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/workspace/.pip-modules/bin', '/home/gitpod/.pyenv/bin', '/workspace/.rvm/bin', '/home/gitpod/.cargo/bin', '/home/linuxbrew/.linuxbrew/bin', '/home/linuxbrew/.linuxbrew/sbin/', '/usr/games', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/home/gitpod/.nvm/versions/node/v16.15.1/bin', '/home/gitpod/.rvm/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/g++
 ----------------------------------------
 Checking for cxxflags: -msse2
@@ -729,10 +729,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/test.cpp[0m
 
-['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-msse2', '../test.cpp', '-c', '-o/home/luke/Documents/kodo/build/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-msse2', '../test.cpp', '-c', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/testbuild/testprog[0m
 
-['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/home/luke/Documents/kodo/build/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_5f92d518bb2fb2cba7e36f8f394ca15c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ----------------------------------------
 Checking for cxxflags: -mssse3
@@ -746,10 +746,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/test.cpp[0m
 
-['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-mssse3', '../test.cpp', '-c', '-o/home/luke/Documents/kodo/build/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-mssse3', '../test.cpp', '-c', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/testbuild/testprog[0m
 
-['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/home/luke/Documents/kodo/build/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_ea1f3048a007b2f9c5e8fa6ba9bc6471/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ----------------------------------------
 Checking for cxxflags: -msse4.2
@@ -763,10 +763,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/test.cpp[0m
 
-['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-msse4.2', '../test.cpp', '-c', '-o/home/luke/Documents/kodo/build/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-msse4.2', '../test.cpp', '-c', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/testbuild/testprog[0m
 
-['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/home/luke/Documents/kodo/build/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_afec0302dfd2c0e37ca8c2bc1c73c135/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ----------------------------------------
 Checking for cxxflags: -mavx2
@@ -780,10 +780,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/test.cpp[0m
 
-['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-mavx2', '../test.cpp', '-c', '-o/home/luke/Documents/kodo/build/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '-mavx2', '../test.cpp', '-c', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/testbuild/testprog[0m
 
-['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/home/luke/Documents/kodo/build/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_00f2492bfbe6000f10698fa4da892583/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ----------------------------------------
 Checking for library pthread
@@ -797,8 +797,8 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/test.cpp[0m
 
-['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '../test.cpp', '-c', '-o/home/luke/Documents/kodo/build/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-Wextra', '-Wall', '-O2', '-ftree-vectorize', '-finline-functions', '-std=c++14', '../test.cpp', '-c', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/testbuild/testprog[0m
 
-['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/home/luke/Documents/kodo/build/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
+['/usr/bin/g++', '-s', 'test.cpp.1.o', '-o/workspace/nc-signatures/kodo/build/linux/.conf_check_0cf94f0f546476c45bb83f0fc4b60f7f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpthread']
 yes
