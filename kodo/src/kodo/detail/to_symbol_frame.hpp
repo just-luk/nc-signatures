@@ -22,7 +22,6 @@
 
 #include <cassert>
 
-#include <fifi/field/prime2325.hpp>
 #include <fifi/field/binary.hpp>
 #include <fifi/field/binary16.hpp>
 #include <fifi/field/binary4.hpp>
@@ -82,11 +81,6 @@ inline auto to_symbol_frame(fifi::field::binary16, symbol_index lower_bound,
 {
     return {lower_bound, upper_bound};
 }
-inline auto to_symbol_frame(fifi::field::prime2325, symbol_index lower_bound,
-                            symbol_index upper_bound) -> symbol_frame
-{
-    return {lower_bound, upper_bound};
-}
 
 template <class Field>
 inline auto to_symbol_frame(Field field, const symbol_range& range)
@@ -135,16 +129,6 @@ inline auto to_symbol_frame(fifi::field::binary16, byte_index lower_bound,
 
     symbol_index lower_index{ceil_division(lower_bound.value, 2U)};
     symbol_index upper_index{floor_division(upper_bound.value, 2U)};
-
-    return symbol_frame{lower_index, upper_index};
-}
-
-inline auto to_symbol_frame(fifi::field::prime2325, byte_index lower_bound,
-                            byte_index upper_bound) -> symbol_frame
-{
-
-    symbol_index lower_index{ceil_division(lower_bound.value, 4U)};
-    symbol_index upper_index{floor_division(upper_bound.value, 4U)};
 
     return symbol_frame{lower_index, upper_index};
 }

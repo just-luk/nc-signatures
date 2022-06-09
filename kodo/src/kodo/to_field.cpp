@@ -45,10 +45,6 @@ finite_field to_field(const std::string& value)
     {
         return finite_field::binary16;
     }
-    else if (value == "prime2325")
-    {
-        return finite_field::prime2325;
-    }
     else
     {
         assert(0 && "Unknown field");

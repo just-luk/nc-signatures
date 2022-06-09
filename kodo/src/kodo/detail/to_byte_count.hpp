@@ -23,7 +23,6 @@
 #include <cassert>
 
 #include <fifi/field/binary.hpp>
-#include <fifi/field/prime2325.hpp>
 #include <fifi/field/binary16.hpp>
 #include <fifi/field/binary4.hpp>
 #include <fifi/field/binary8.hpp>

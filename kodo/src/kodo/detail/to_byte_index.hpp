@@ -23,7 +23,6 @@
 #include <cassert>
 
 #include <fifi/field/binary.hpp>
-#include <fifi/field/prime2325.hpp>
 #include <fifi/field/binary16.hpp>
 #include <fifi/field/binary4.hpp>
 #include <fifi/field/binary8.hpp>
@@ -64,12 +63,6 @@ inline auto to_byte_index(fifi::field::binary16, symbol_index index)
     -> byte_index
 {
     return byte_index{static_cast<std::size_t>(index.value * 2)};
-}
-
-inline auto to_byte_index(fifi::field::prime2325, symbol_index index)
-    -> byte_index
-{
-    return byte_index{static_cast<std::size_t>(index.value * 4)};
 }
 
 inline auto to_byte_index(bit_index bit) -> byte_index

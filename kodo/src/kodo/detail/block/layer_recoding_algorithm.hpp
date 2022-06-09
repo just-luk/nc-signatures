@@ -23,14 +23,12 @@
 #include <algorithm>
 #include <cassert>
 #include <cstdint>
-#include <iostream>
 
 #include "../fill_zero.hpp"
 #include "../symbol_count.hpp"
 #include "../symbol_index.hpp"
 
 #include "../../version.hpp"
-#include <fifi/utils.hpp>
 
 namespace kodo
 {
@@ -67,10 +65,6 @@ public:
             assert(Super::is_symbol_set(index));
             const uint8_t* symbol_i = Super::symbol_data(index);
             const uint8_t* coefficients_i = Super::coefficients_data(index);
-            std::cout << value << " * "
-                      << fifi::get_value(fifi::finite_field::prime2325,
-                                         symbol_i, 0)
-                      << std::endl;
 
             // Did you forget to set the data on the decoder?
             assert(symbol_i != nullptr);
@@ -87,12 +81,9 @@ public:
             {
                 Super::vector_multiply_add_into(
                     coefficients, coefficients_i, value,
-                    Super::max_coefficients_bytes()); // coefficients =
-                                                      // coefficients *
-                                                      // coefficients_in
-                Super::vector_multiply_add_into(
-                    symbol_data, symbol_i, value,
-                    Super::symbol_bytes()); // symbol = symbol * value
+                    Super::max_coefficients_bytes());
+                Super::vector_multiply_add_into(symbol_data, symbol_i, value,
+                                                Super::symbol_bytes());
             }
         }
     }

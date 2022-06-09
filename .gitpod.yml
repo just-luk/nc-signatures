@@ -6,13 +6,14 @@ tasks:
   - name: Install Dependencies
     init: |
       cp -r kodo/src src
-      cp kodo/examples/rlnc/encode_decode_simple.cpp .
-      cp kodo/examples/rlnc/encode_recode_decode_simple.cpp .
+      cp -r kodo/example examples
       rm -rf kodo
       git clone https://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@github.com/steinwurf/kodo.git
       cp -r src kodo/src
-      cp encode_decode_simple.cpp kodo/examples/rlnc/encode_decode_simple.cpp
-      cp encode_recode_decode_simple.cpp kodo/examples/rlnc/encode_recode_decode_simple.cpp
-      
+      cp -r examples kodo/examples
+      rm -rf src
+      rm -rf examples
+    command: make kodo_test
+
 
 
