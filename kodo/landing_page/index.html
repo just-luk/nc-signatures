@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<!--
+    Fractal by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Kodo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            user-scalable=no" />
+        <link rel="icon" type="image/ico" href="./images/icon.ico" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a class="scrolly" href="#header">Kodo</a> <span
+                        class="powered_by">powered
+                        by <a href="https://steinwurf.com">Steinwurf</a></span>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="scrolly" href="#header">Home</a>
+                        </li>
+                        <li>
+                            <a class="scrolly" href="#use-cases">Use Cases</a>
+                        </li>
+                        <li>
+                            <a class="scrolly" href="#code-samples">Code samples</a>
+                        </li>
+                        <li>
+                            <a class="scrolly" href="#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a class="scrolly" href="./docs/">Docs</a>
+                        </li>
+                        <!-- <li>
+                            <a class="scrolly" href="#pricing">Pricing</a>
+                        </li> -->
+                        <!--
+                        <li>
+                            <a href="#!">Dropdown</a>
+                            <ul class="nav-dropdown">
+                            <li>
+                                <a href="#!">Item 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Item 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Item 3</a>
+                            </li>
+                            </ul>
+                        </li>
+                        -->
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Header -->
+        <header id="header">
+            <div id="background_effect"></div>
+            <div class="content">
+                <img class="logo" src="images/kodo_logo_text.svg" alt="" />
+                <p>Erasure correcting codes for humans</p>
+                <ul class="actions">
+                    <li><a href="#" class="button primary icon solid
+                            fa-download">Get Started</a></li>
+                    <li><a href="#statement" class="button icon solid
+                            fa-chevron-down scrolly">Learn
+                            More</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="statement" class="wrapper special">
+            <div class="image"><img src="images/kodo_logo_150x150.png" alt="" /></div>
+            <div class="inner">
+                <br>
+                <p>
+                    Using kodo, developers can easily integrate erasure
+                    correcting codes to
+                    meet their specific needs. <br>
+                    The kodo software library implements a wide range of erasure
+                    correcting
+                    codes ranging from novel codes such as Random Linear Network
+                    Codes to
+                    traditional codes such as Reed-Solomon.<br>
+                    Kodo is cross-platform which makes it easy to deploy your
+                    code on a variety
+                    of chips and platforms.
+                </p>
+            </div>
+        </section>
+        <!-- Two -->
+        <section id="use-cases" class="wrapper style2">
+            <div class="inner alt">
+                <section class="spotlight">
+                    <div class="image">
+                        <img src="images/low_delay.svg" class="icon_svg_image
+                            svg_stroke" alt=""
+                            />
+                    </div>
+                    <div class="content">
+                        <h3>Low Delay Communication</h3>
+                        <p>Using kodo’s erasure correcting code algorithms,
+                            redundancy can be
+                            injected into the packet transport and thereby
+                            enabling receivers to
+                            quickly recover from packet loss and avoid costly
+                            round-trip-times (RTT)
+                            incurred by relying on traditional acknowledgment
+                            based scheme used in
+                            protocols such as TCP.</p>
+                    </div>
+                </section>
+                <section class="spotlight">
+                    <div class="image">
+                        <img src="images/reliablity.svg" class="icon_svg_image
+                            svg_stroke" alt=""
+                            />
+                    </div>
+                    <div class="content">
+                        <h3>Increase Communication Reliability</h3>
+                        <p>Using the erasure correcting codes provided by kodo,
+                            device to device
+                            communication can be made robust in scenarios with
+                            high loss probability.
+                            This is accomplished by sending encoded redundancy
+                            that is statistically
+                            more likely to be useful for the receiver. In
+                            scenarios where packets are
+                            passed through a multi hop network, recoding of the
+                            packets can be used
+                            for obtaining even bigger gains.</p>
+                    </div>
+                </section>
+                <section class="spotlight">
+                    <div class="image">
+                        <img src="images/robustness.svg" class="icon_svg_image
+                            svg_stroke" alt=""
+                            />
+                    </div>
+                    <div class="content">
+                        <h3>Improve Storage Robustness</h3>
+                        <p>With kodo it is possible to build storage systems
+                            which are more robust
+                            towards data loss due to, e.g., failing hard drives.
+                            This is accomplished
+                            by using erasure correcting codes to encode the
+                            existing data and restore
+                            the original data. Our partner company, Chocolate
+                            Cloud is working with
+                            that solution.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section id="how it works" class="wrapper style2">
+            <div class="inner">
+                <header>
+                    <h2>How it works</h2>
+                    <p>Decoding a cat</p>
+                </header>
+                <p>
+                    This video shows an encoding and decoding of a picture.
+                    The left side shows the state of the decoding, here the cat
+                    will eventually
+                    appear.
+                    On the right side the "coding vector" is shown. The coding
+                    vector is a
+                    representation of how the data is combined.
+
+                    When using a block encoder, as in this example, the encoding
+                    is performed
+                    over a <i>generation</i> of data.
+                    A generation is a collection of <i>symbols</i>, each symbol
+                    is a set number
+                    of bytes.
+                    In this example the generation is the complete picture of
+                    the cat.
+                    Each symbol is exactly the number of bytes which is needed
+                    for each row of
+                    pixels in the picture.
+
+                    Initially each row is printed uncoded, this mode is called
+                    <i>systematic</i>
+                    mode.
+                    In some cases the row is not printed, this indicates that
+                    the row had
+                    somehow been lost.
+                    After attempting to print each row, we start to print
+                    encoded data instead.
+                    This can be
+                    seen as a row of static noise at first, and then slowly as
+                    the decoding
+                    progresses,
+                    the static noise becomes the missing parts of the picture.
+                </p>
+                <span class="image fit youtube"><iframe
+                        src="https://www.youtube.com/embed/fyY6EbdOPlk?autoplay=0"></iframe></span>
+            </div>
+        </section>
+        <section id="code-samples" class="wrapper">
+            <div class="inner">
+                <h3>Code Samples</h3>
+                <h4>Encoder</h4>
+                <p>This example contains some semi-pseudocode which shows the
+                    most basic part of the encoder API.</p>
+                <pre>
+<code>#include &lt;kodo/block/encoder.hpp&gt;
+#include &lt;kodo/block/generator/random_uniform.hpp&gt;
+
+int main()
+{
+    // Pick the number of symbols to encode.
+    auto symbols = 150;
+    
+    // Pick the size of each symbol in bytes
+    auto symbol_bytes = 1400;
+
+    // Create and configure encoder and generator
+    kodo::block::encoder encoder(kodo::finite_field::binary8);
+    encoder.configure(symbols, symbol_bytes);
+
+    kodo::block::generator::random_uniform generator(field);
+    generator.configure(encoder.symbols());
+
+    // Allocate storage for the symbol, coefficients, and the data to encode.
+    uint8_t* symbol = malloc(encoder.symbol_bytes());
+    uint8_t* coefficients = malloc(generator.max_coefficients_bytes());
+    uint8_t* data_in = malloc(encoder.block_bytes());
+
+    // Assign the data buffer to the encoder
+    encoder.set_symbols_storage(data_in);
+
+    while (!enough)
+    {
+        // The RLNC code is rateless, which means that it can generate an
+        // infinite number of coded packets.        
+        generator.generate(coefficients);
+        encoder.encode_symbol(symbol, coefficients);
+
+        handle_encoded_data(symbol, coefficients);
+    }
+}
+</code>
+</pre>
+                <h4>Decoder</h4>
+                <p>This example contains some semi-pseudocode which shows the
+                    most basic part of the decoder API.</p>
+                <pre>
+<code>#include &lt;kodo/block/decoder.hpp&gt;
+
+int main()
+{
+    // Pick the number of symbols to decode.
+    auto symbols = 150;
+    
+    // Pick the size of each symbol in bytes
+    auto symbol_bytes = 1400;
+
+    // Create and configure decoder
+    kodo::block::decoder decoder(kodo::finite_field::binary8);
+    decoder.configure(symbols, symbol_bytes);
+
+    // Allocate storage for the data to decode.
+    uint8_t* data_out = malloc(decoder.block_bytes());
+
+    // Assign the data buffer to the decoder
+    decoder.set_symbols_storage(data_out);
+
+    while (!decoder.is_complete())
+    {
+        uint8_t* symbol = [receive encoded symbol];
+        uint8_t* coefficients = [receive coefficients];
+        decoder.decode_symbol(symbol, coefficients);
+    }
+}
+</code>
+</pre>
+            </div>
+        </section>
+        <section id="contact" class="wrapper">
+            <div class="inner">
+                <header class="major">
+                    <h2>Contact</h2>
+                </header>
+            </div>
+            <div class="inner align-center">
+                <p>
+                    If you want to know more, please leave us a message and we
+                    will contact
+                    you.
+                </p>
+                <p>
+                    <a target="_blank"
+                        href="mailto:contact@steinwurf.com?subject=Enquire
+                        about Kodo library" class="button primary icon solid
+                        fa-envelope">Contact</a>
+                </p>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a target="_blank" href="mailto:contact@steinwurf.com"
+                        class="icon
+                        solid fa-envelope"><span class="label">Mail</span></a></li>
+                <li><a href="https://github.com/steinwurf/kodo" class="icon
+                        brands
+                        fa-github"><span class="label">Github</span></a></li>
+            </ul>
+            <p class="copyright">&copy; <a href="https://steinwurf.com">Steinwurf
+                    ApS</a><br>Credits:
+                <a href="http://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"
+            type="text/javascript"></script>
+        <script src="assets/js/background_effect_dots.js"
+            type="text/javascript"></script>
+        <script src="assets/js/color_svg.js" type="text/javascript"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"
+            integrity="sha512-zol3kFQ5tnYhL7PzGt0LnllHHVWRGt2bTCIywDiScVvLIlaDOVJ6sPdJTVi0m3rA660RT+yZxkkRzMbb1L8Zkw=="crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/a11y-light.min.css"
+            integrity="sha512-PW96n2amVglidqEDLPUdjJ0zByhT20poSqWJYZRutR6CP2QH58k96WmorqNnC4QXnosNeqMJM8FR/93isIifDQ=="crossorigin="anonymous"
+            />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/cpp.min.js"
+            integrity="sha512-u39RFB1w5xl14G3Z2hWfNMmw8oUtaTnRjp/ZDigBoWtuMHRcq30JUw1rfiIYgGVKltGPHIuiVW1A9lo2cy0h3w=="crossorigin="anonymous"></script>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>

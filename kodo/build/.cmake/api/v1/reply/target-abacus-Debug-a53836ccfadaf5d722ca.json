@@ -1,0 +1,140 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "fifi/abacus/CMakeFiles/abacus.dir/./src/abacus/metric.cpp.o"
+		},
+		{
+			"path" : "fifi/abacus/CMakeFiles/abacus.dir/./src/abacus/metrics.cpp.o"
+		},
+		{
+			"path" : "fifi/abacus/CMakeFiles/abacus.dir/./src/abacus/version.cpp.o"
+		},
+		{
+			"path" : "fifi/abacus/CMakeFiles/abacus.dir/./src/abacus/view.cpp.o"
+		},
+		{
+			"path" : "fifi/abacus/CMakeFiles/abacus.dir/./src/abacus/view_iterator.cpp.o"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"resolve_symlinks/abacus/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 40,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 45,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "bourne::@4cf75bf04b20c3901825"
+		}
+	],
+	"id" : "abacus::@476dce8e1fa27442cdd8",
+	"name" : "abacus",
+	"paths" : 
+	{
+		"build" : "fifi/abacus",
+		"source" : "resolve_symlinks/abacus"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "resolve_symlinks/abacus/src/abacus/metric.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "resolve_symlinks/abacus/src/abacus/metrics.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "resolve_symlinks/abacus/src/abacus/version.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "resolve_symlinks/abacus/src/abacus/view.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "resolve_symlinks/abacus/src/abacus/view_iterator.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

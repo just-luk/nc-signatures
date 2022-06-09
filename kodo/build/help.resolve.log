@@ -1,0 +1,44 @@
+wurf: Resolve execute help
+----------------------------------------
+Load "waf-tools" (help)
+resolve_symlinks/waf-tools => /home/luke/Documents/kodo/resolved_dependencies/waf-tools-51dff5/4.41.0-ba643d
+----------------------------------------
+Load "fifi" (help)
+resolve_symlinks/fifi => /home/luke/Documents/fifi
+----------------------------------------
+Load "platform" (help)
+resolve_symlinks/platform => /home/luke/Documents/kodo/resolved_dependencies/platform-bccd32/4.0.0-bc3824
+----------------------------------------
+Load "cpuid" (help)
+resolve_symlinks/cpuid => /home/luke/Documents/kodo/resolved_dependencies/cpuid-4d8071/8.0.0-c885d3
+----------------------------------------
+Load "bourne" (help)
+resolve_symlinks/bourne => /home/luke/Documents/kodo/resolved_dependencies/bourne-992fab/9.0.0-b9c11a
+----------------------------------------
+Load "abacus" (help)
+resolve_symlinks/abacus => /home/luke/Documents/kodo/resolved_dependencies/abacus-1ae4f8/1.1.2-6dd573
+----------------------------------------
+Load "gbenchmark" (help)
+resolve_symlinks/gbenchmark => /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-33a8fa/1.0.1-c09c6c
+----------------------------------------
+Load "gtest" (help)
+resolve_symlinks/gtest => /home/luke/Documents/kodo/resolved_dependencies/gtest-5c3bfe/4.2.2-a5641e
+----------------------------------------
+Load "gtest-source" (help)
+resolve_symlinks/gtest-source => /home/luke/Documents/kodo/resolved_dependencies/gtest-source-769aad/release-1.11.0-07e307
+----------------------------------------
+Load "gbenchmark-source" (help)
+resolve_symlinks/gbenchmark-source => /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-source-ddb2bf/v1.5.5-fadd9a
+----------------------------------------
+Load "stub" (help)
+resolve_symlinks/stub => /home/luke/Documents/kodo/resolved_dependencies/stub-90d487/6.5.0-7ce938
+----------------------------------------
+Load "endian" (help)
+resolve_symlinks/endian => /home/luke/Documents/kodo/resolved_dependencies/endian-30a816/12.1.0-b2caab
+----------------------------------------
+Load "recycle" (help)
+resolve_symlinks/recycle => /home/luke/Documents/kodo/resolved_dependencies/recycle-b2469b/6.0.0-bac386
+----------------------------------------
+Load "ranbo" (help)
+resolve_symlinks/ranbo => /home/luke/Documents/kodo/resolved_dependencies/ranbo-aa5c0d/1.0.1-37faf4
+wurf: dependency_cache OrderedDict([('waf-tools', {'path': '/home/luke/Documents/kodo/resolve_symlinks/waf-tools', 'recurse': True}), ('platform', {'path': '/home/luke/Documents/kodo/resolve_symlinks/platform', 'recurse': True}), ('cpuid', {'path': '/home/luke/Documents/kodo/resolve_symlinks/cpuid', 'recurse': True}), ('bourne', {'path': '/home/luke/Documents/kodo/resolve_symlinks/bourne', 'recurse': True}), ('abacus', {'path': '/home/luke/Documents/kodo/resolve_symlinks/abacus', 'recurse': True}), ('fifi', {'path': '/home/luke/Documents/kodo/resolve_symlinks/fifi', 'recurse': True}), ('gtest-source', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gtest-source', 'recurse': True}), ('gtest', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gtest', 'recurse': True}), ('gbenchmark-source', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gbenchmark-source', 'recurse': True}), ('gbenchmark', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gbenchmark', 'recurse': True}), ('stub', {'path': '/home/luke/Documents/kodo/resolve_symlinks/stub', 'recurse': True}), ('endian', {'path': '/home/luke/Documents/kodo/resolve_symlinks/endian', 'recurse': True}), ('recycle', {'path': '/home/luke/Documents/kodo/resolve_symlinks/recycle', 'recurse': True}), ('ranbo', {'path': '/home/luke/Documents/kodo/resolve_symlinks/ranbo', 'recurse': True})])

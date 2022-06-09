@@ -1,0 +1,852 @@
+[
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/decoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/encoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/generator/parity_2d.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/generator/parity_2d.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/generator/parity_2d.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/generator/random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/generator/random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/generator/random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/generator/rs_cauchy.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/generator/rs_cauchy.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/generator/rs_cauchy.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/block/generator/tunable.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/block/generator/tunable.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/block/generator/tunable.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/detail/bitset.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/detail/bitset.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/detail/bitset.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/detail/rs_cauchy_matrix.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/detail/rs_cauchy_matrix.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/detail/rs_cauchy_matrix.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/fulcrum/decoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/fulcrum/decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/fulcrum/decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/fulcrum/encoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/fulcrum/encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/fulcrum/encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/fulcrum/generator/random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/fulcrum/generator/random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/fulcrum/generator/random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/perpetual/decoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/perpetual/decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/perpetual/decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/perpetual/encoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/perpetual/encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/perpetual/encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/perpetual/generator/random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/perpetual/generator/random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/perpetual/generator/random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/perpetual/offset/random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/perpetual/offset/random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/perpetual/offset/random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/slide/decoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/slide/decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/slide/decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/slide/encoder.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/slide/encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/slide/encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/slide/generator/random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/slide/generator/random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/slide/generator/random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/slide/range.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/slide/range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/slide/range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/to_field.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/to_field.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/to_field.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/to_string.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/to_string.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/to_string.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -g -o CMakeFiles/kodo.dir/src/kodo/version.cpp.o -c /workspace/just-luk.github.io/kodo/src/kodo/version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/src/kodo/version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -g -o CMakeFiles/hello_world.dir/examples/hello_world.cpp.o -c /workspace/just-luk.github.io/kodo/examples/hello_world.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/examples/hello_world.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -g -o CMakeFiles/perpetual_encode_decode_simple.dir/examples/perpetual/encode_decode_simple.cpp.o -c /workspace/just-luk.github.io/kodo/examples/perpetual/encode_decode_simple.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/examples/perpetual/encode_decode_simple.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/kodo_tests.cpp.o -c /workspace/just-luk.github.io/kodo/test/kodo_tests.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/kodo_tests.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/generator/test_parity_2d.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/generator/test_parity_2d.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/generator/test_parity_2d.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/generator/test_random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/generator/test_random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/generator/test_random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/generator/test_rs_cauchy.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/generator/test_rs_cauchy.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/generator/test_rs_cauchy.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/generator/test_tunable.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/generator/test_tunable.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/generator/test_tunable.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/test_block.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/test_block.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/test_block.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/test_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/test_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/test_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/block/test_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/block/test_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/block/test_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/block/test_layer_decoding_callback.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_decoding_callback.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_decoding_callback.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/block/test_layer_decoding_status_updater.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_decoding_status_updater.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_decoding_status_updater.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/block/test_layer_is_coefficients_decoded.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_is_coefficients_decoded.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_is_coefficients_decoded.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/block/test_layer_parity_2d_generator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_parity_2d_generator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/block/test_layer_parity_2d_generator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_get_bit.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_get_bit.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_get_bit.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_layer_info.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_info.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_info.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_layer_symbol_mapping.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_symbol_mapping.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_symbol_mapping.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_layer_symbol_storage.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_symbol_storage.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_symbol_storage.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_layer_uniform_offset.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_uniform_offset.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_layer_uniform_offset.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_mask_coefficients.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_mask_coefficients.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_mask_coefficients.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_outer_generator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_outer_generator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_outer_generator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_shift_right.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_shift_right.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_shift_right.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_stack_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_stack_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_stack_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/perpetual/test_stacks.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_stacks.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/perpetual/test_stacks.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_coefficients_vector.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_coefficients_vector.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_coefficients_vector.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_coefficients_view.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_coefficients_view.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_coefficients_view.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_allocate_coefficients_vector.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_allocate_coefficients_vector.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_allocate_coefficients_vector.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_coefficients_storage.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_coefficients_storage.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_coefficients_storage.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_coefficients_view_math.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_coefficients_view_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_coefficients_view_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_common_symbol_storage.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_common_symbol_storage.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_common_symbol_storage.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_decoding_operations.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_decoding_operations.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_decoding_operations.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_decoding_status_counter.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_decoding_status_counter.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_decoding_status_counter.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_encoding_algorithm.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_encoding_algorithm.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_encoding_algorithm.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_is_coefficient_decoded.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_is_coefficient_decoded.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_is_coefficient_decoded.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_mapping.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_mapping.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_mapping.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_layer_systematic_decoding_algorithm.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_systematic_decoding_algorithm.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_layer_systematic_decoding_algorithm.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_stack_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_stack_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_stack_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/slide/test_stack_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/slide/test_stack_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/slide/test_stack_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_bit_count.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_bit_count.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_bit_count.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_bit_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_bit_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_bit_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_bit_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_bit_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_bit_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_bitset.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_bitset.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_bitset.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_byte_count.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_byte_count.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_byte_count.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_byte_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_byte_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_byte_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_byte_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_byte_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_byte_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_ceil_division.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_ceil_division.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_ceil_division.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_floor_division.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_floor_division.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_floor_division.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_in_frame.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_in_frame.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_in_frame.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_in_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_in_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_in_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_intersection.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_intersection.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_intersection.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_is_empty.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_is_empty.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_is_empty.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_is_last.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_is_last.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_is_last.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_is_overlapping.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_is_overlapping.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_is_overlapping.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_is_subrange.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_is_subrange.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_is_subrange.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_is_zero.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_is_zero.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_is_zero.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_last.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_last.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_last.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_final.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_final.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_final.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_log.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_log.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_log.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_log_generator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_log_generator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_log_generator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_mapping.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_mapping.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_mapping.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_math.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_symbol_bytes.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbol_bytes.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbol_bytes.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_symbol_storage.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbol_storage.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbol_storage.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_layer_symbols.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbols.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_layer_symbols.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_random_sequence_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_random_sequence_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_random_sequence_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_range_iterator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_range_iterator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_range_iterator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_relative_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_relative_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_relative_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_reverse.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_reverse.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_reverse.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_split_lower.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_split_lower.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_split_lower.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_split_upper.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_split_upper.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_split_upper.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_symbol_count.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_count.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_count.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_symbol_frame.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_frame.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_frame.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_symbol_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_symbol_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_symbol_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_bit.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_bit.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_bit.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_bit_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_bit_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_bit_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_bitmask.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_bitmask.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_bitmask.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_bitset.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_bitset.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_bitset.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_byte_count.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_count.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_count.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_byte_index.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_index.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_index.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_byte_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_byte_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_string.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_string.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_string.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_symbol_frame.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_symbol_frame.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_symbol_frame.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/detail/test_to_symbol_range.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/detail/test_to_symbol_range.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/detail/test_to_symbol_range.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/fulcrum/generator/test_random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/fulcrum/generator/test_random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/fulcrum/generator/test_random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/fulcrum/test_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/fulcrum/test_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/fulcrum/test_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/fulcrum/test_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/fulcrum/test_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/fulcrum/test_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/fulcrum/test_fulcrum.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/fulcrum/test_fulcrum.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/fulcrum/test_fulcrum.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/generator/test_random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/generator/test_random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/generator/test_random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/offset/test_random_uniform.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/offset/test_random_uniform.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/offset/test_random_uniform.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/test_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/test_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/test_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/test_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/test_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/test_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/test_inner_generator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/test_inner_generator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/test_inner_generator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/test_layer_outer_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/test_layer_outer_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/test_layer_outer_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/perpetual/test_perpetual.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/perpetual/test_perpetual.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/perpetual/test_perpetual.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_decoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_decoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_decoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_encoder.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_encoder.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_encoder.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_generator.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_generator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_generator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_rate_controller.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_rate_controller.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_rate_controller.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_slide.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_slide.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_slide.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/slide/test_stream.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/slide/test_stream.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/slide/test_stream.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/test_finite_field.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/test_finite_field.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/test_finite_field.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/test_log_callback.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/test_log_callback.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/test_log_callback.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/test_to_field.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/test_to_field.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/test_to_field.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/test_to_string.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/test_to_string.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/test_to_string.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/recycle/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/stub/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/endian/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/ranbo/src -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -o CMakeFiles/kodo_test.dir/test/src/test_version.cpp.o -c /workspace/just-luk.github.io/kodo/test/src/test_version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/test/src/test_version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -g -o bourne/CMakeFiles/bourne.dir/src/bourne/detail/parser.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/detail/parser.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/detail/parser.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -g -o bourne/CMakeFiles/bourne.dir/src/bourne/json.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/json.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/json.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -g -o bourne/CMakeFiles/bourne.dir/src/bourne/version.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src/bourne/version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/detail/cpu_support.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/detail/cpu_support.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/detail/cpu_support.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/detail/simd_allocator.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/detail/simd_allocator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/detail/simd_allocator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary16_basic.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary16_basic.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary16_basic.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary16_math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary16_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary16_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -mavx2 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary4_avx2.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_avx2.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_avx2.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary4_basic.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_basic.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_basic.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary4_math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary4_neon.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_neon.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_neon.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -mssse3 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary4_ssse3.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_ssse3.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary4_ssse3.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -mavx2 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary8_avx2.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_avx2.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_avx2.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary8_basic.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_basic.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_basic.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary8_math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary8_neon.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_neon.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_neon.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -mssse3 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary8_ssse3.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_ssse3.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary8_ssse3.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -mavx2 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary_avx2.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_avx2.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_avx2.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary_basic.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_basic.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_basic.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary_math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary_neon.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_neon.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_neon.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -msse2 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/binary_sse2.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_sse2.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/binary_sse2.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/prime2325_basic.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_basic.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_basic.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/prime2325_math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -msse4.2 -o fifi/CMakeFiles/fifi.dir/src/fifi/field/prime2325_sse42.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_sse42.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/field/prime2325_sse42.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/math.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/math.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/math.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/to_field.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/to_field.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/to_field.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/to_string.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/to_string.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/to_string.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -fconstexpr-steps=1000000000 -o fifi/CMakeFiles/fifi.dir/src/fifi/version.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/fifi/src/fifi/version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -o fifi/cpuid/CMakeFiles/cpuid.dir/src/cpuid/cpuinfo.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src/cpuid/cpuinfo.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src/cpuid/cpuinfo.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/platform/src -g -o fifi/cpuid/CMakeFiles/cpuid.dir/src/cpuid/version.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src/cpuid/version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/cpuid/src/cpuid/version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -g -o fifi/abacus/CMakeFiles/abacus.dir/src/abacus/metric.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/metric.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/metric.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -g -o fifi/abacus/CMakeFiles/abacus.dir/src/abacus/metrics.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/metrics.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/metrics.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -g -o fifi/abacus/CMakeFiles/abacus.dir/src/abacus/version.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/version.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/version.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -g -o fifi/abacus/CMakeFiles/abacus.dir/src/abacus/view.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/view.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/view.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/bourne/src -g -o fifi/abacus/CMakeFiles/abacus.dir/src/abacus/view_iterator.cpp.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/view_iterator.cpp",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/abacus/src/abacus/view_iterator.cpp"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/include -I/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o resolve_symlinks/gtest-source/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/src/gmock-all.cc",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o resolve_symlinks/gtest-source/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/src/gmock_main.cc",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -I/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -I/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o resolve_symlinks/gtest-source/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/src/gtest-all.cc",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/workspace/just-luk.github.io/kodo/build",
+  "command": "/usr/bin/clang++ -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/include -isystem /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest -g -Wall -Wshadow -Werror -Wconversion -DGTEST_HAS_PTHREAD=1 -fexceptions -W -Wpointer-arith -Wreturn-type -Wcast-qual -Wwrite-strings -Wswitch -Wunused-parameter -Wcast-align -Wchar-subscripts -Winline -Wredundant-decls -o resolve_symlinks/gtest-source/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/src/gtest_main.cc",
+  "file": "/workspace/just-luk.github.io/kodo/resolve_symlinks/gtest-source/googletest/src/gtest_main.cc"
+}
+]

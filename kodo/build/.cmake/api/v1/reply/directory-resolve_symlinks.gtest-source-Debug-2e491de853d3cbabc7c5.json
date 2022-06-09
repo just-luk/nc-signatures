@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "resolve_symlinks/gtest-source",
+		"source" : "resolve_symlinks/gtest-source"
+	}
+}
