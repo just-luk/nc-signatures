@@ -26,8 +26,6 @@
 
 #include <cassert>
 
-
-#include <fifi/field/prime2325_math.hpp>
 #include <fifi/field/binary16_math.hpp>
 #include <fifi/field/binary4_math.hpp>
 #include <fifi/field/binary8_math.hpp>
@@ -224,8 +222,6 @@ static std::unique_ptr<decoder::interface> make_stack(finite_field field)
         return std::make_unique<model<fifi::field::binary8_math>>();
     case finite_field::binary16:
         return std::make_unique<model<fifi::field::binary16_math>>();
-    case finite_field::prime2325:
-        return std::make_unique<model<fifi::field::prime2325_math>>();
     default:
         assert(0 && "Not a valid field");
         return nullptr;

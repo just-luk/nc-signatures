@@ -38,8 +38,7 @@ enum class finite_field : uint8_t
     /// The binary extension field with 2⁸ elements
     binary8 = 2,
     /// The binary extension field with 2¹⁶ elements
-    binary16 = 3,
-    prime2325 = 4
+    binary16 = 3
 };
 }
 }

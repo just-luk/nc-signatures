@@ -86,17 +86,6 @@ inline auto to_byte_range(fifi::field::binary16, const symbol_frame& frame)
     return {lower_byte, upper_byte};
 }
 
-inline auto to_byte_range(fifi::field::prime2325, const symbol_frame& frame)
-    -> byte_range
-{
-    byte_index lower_byte{
-        static_cast<std::size_t>(frame.lower_bound().value * 4U)};
-    byte_index upper_byte{
-        static_cast<std::size_t>(frame.upper_bound().value * 4U)};
-
-    return {lower_byte, upper_byte};
-}
-
 template <class Field>
 inline auto to_byte_range(Field field, const symbol_range& range) -> byte_range
 {

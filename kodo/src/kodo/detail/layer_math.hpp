@@ -74,8 +74,6 @@ public:
             return finite_field::binary8;
         case fifi::finite_field::binary16:
             return finite_field::binary16;
-        case fifi::finite_field::prime2325:
-            return finite_field::prime2325;
         default:
             assert(0 && "Unknown field");
             return finite_field::binary;

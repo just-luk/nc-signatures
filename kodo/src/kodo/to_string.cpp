@@ -44,9 +44,6 @@ std::string to_string(finite_field field)
     case finite_field::binary16:
         name = "binary16";
         break;
-    case finite_field::prime2325:
-        name = "prime2325";
-        break;
     default:
         assert(0 && "Unsupported field");
     };
