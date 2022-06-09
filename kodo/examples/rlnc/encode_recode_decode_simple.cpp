@@ -40,7 +40,7 @@ int main()
     srand(static_cast<uint32_t>(time(0)));
 
     // Pick the finite field to use for the encoding and decoding.
-    auto field = kodo::finite_field::prime2325;
+    auto field = kodo::finite_field::binary8;
 
     // Create an encoder and decoder.
     kodo::block::encoder encoder(field);
@@ -48,7 +48,7 @@ int main()
     kodo::block::decoder decoder(field);
 
     // Pick the number of symbols to encode/decode.
-    auto symbols = 10;
+    auto symbols = 150;
 
     // Pick the size of each symbol in bytes
     auto symbol_bytes = 1400;
@@ -102,11 +102,30 @@ int main()
 
     while (!decoder.is_complete())
     {
-        if (!recoder.is_complete())
+        if (encoder.rank() > systematic_index)
+        {
+            std::cout << "systematic symbol";
+            auto index = systematic_index;
+            systematic_index += 1;
+            encoder.encode_systematic_symbol(symbol.data(), index);
+
+            // Drop packet based on loss probability
+            if (rand() % 100 < loss_propability)
+            {
+                std::cout << " - lost" << std::endl;
+            }
+            else
+            {
+                recoder.decode_systematic_symbol(symbol.data(), index);
+                std::cout << " - decoded, rank now " << recoder.rank()
+                          << std::endl;
+            }
+        }
+        else if (!recoder.is_complete())
         {
             // The RLNC code is rateless, which means, in theory, that it can
             // generate an infinite number of coded packets.
-            std::cout << "coded symbol" << std::endl;
+            std::cout << "coded symbol";
             coefficients.resize(generator.max_coefficients_bytes());
 
             // Draw a seed
@@ -139,7 +158,7 @@ int main()
         }
         if (recoder.rank() != 0)
         {
-            std::cout << "recoded symbol" << std::endl;
+            std::cout << "recoded symbol";
             generator.generate_recode(recoding_coefficients.data(), recoder);
 
             recoder.recode_symbol(symbol.data(), coefficients.data(),
