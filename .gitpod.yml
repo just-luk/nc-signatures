@@ -9,8 +9,8 @@ tasks:
       cp -r kodo/examples examples
       rm -rf kodo
       git clone https://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@github.com/steinwurf/kodo.git
-      cp -r src kodo/src
-      cp -r examples kodo/examples
+      cp -r src kodo
+      cp -r examples kodo
       rm -rf src
       rm -rf examples
       gp sync-done install
