@@ -22,6 +22,3 @@ tasks:
   - name: kodo_test
     init: gp sync-await install
     command: make kodo_test
-
-
-
