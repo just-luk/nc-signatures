@@ -1,0 +1,11 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+
+bld.program(
+    features="cxx benchmark",
+    source=["init.cpp"],
+    target="fifi_initialization",
+    install_path=None,
+    use=["fifi", "gbenchmark"],
+)

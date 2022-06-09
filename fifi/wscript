@@ -1,0 +1,229 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+import os
+from waflib.Build import BuildContext
+from waflib.extras.wurf.directory import remove_directory
+
+
+APPNAME = "fifi"
+VERSION = "35.1.3"
+
+
+def options(opt):
+
+    opt.add_option(
+        "--all_docs",
+        default=False,
+        action="store_true",
+        help="Generate all documentation versions using giit.",
+    )
+
+
+def configure(conf):
+
+    _set_simd_flags(conf)
+
+    if conf.is_toplevel():
+
+        # Make sure we recreate the docs virtualenv on (re-)configure
+        venv_path = os.path.join(
+            conf.path.abspath(), "build", "virtualenv-docs")
+
+        if os.path.isdir(venv_path):
+            remove_directory(venv_path)
+
+
+def _set_simd_flags(conf):
+    """
+    Sets flags used to compile in SIMD mode
+    """
+    CXX = conf.env.get_flat("CXX")
+    flags = []
+    # DEST_CPU should be set explicitly for clang cross-compilers
+    cpu = conf.env["DEST_CPU"]
+
+    # Matches both g++ and clang++
+    if "g++" in CXX or "clang" in CXX:
+        # Test different compiler flags based on the target CPU
+        if cpu == "x86" or cpu == "x86_64":
+            flags += conf.mkspec_try_flags(
+                "cxxflags", ["-msse2", "-mssse3", "-msse4.2", "-mavx2"]
+            )
+        elif cpu == "arm" or cpu == "thumb":
+            flags += conf.mkspec_try_flags("cxxflags", ["-mfpu=neon"])
+
+    elif "CL.exe" in CXX or "cl.exe" in CXX:
+        if cpu == "x86" or cpu == "x86_64" or cpu == "amd64":
+            flags += conf.mkspec_try_flags("cxxflags", ["/arch:AVX2"])
+
+    elif "em++" in CXX:
+        flags = []
+
+    else:
+        conf.fatal("Unknown compiler - no SIMD flags specified")
+
+    conf.env["CFLAGS_FIFI_SIMD"] = flags
+    conf.env["CXXFLAGS_FIFI_SIMD"] = flags
+
+
+def build(bld):
+
+    optimized_sources = {
+        "field/binary_neon": ["-mfpu=neon"],
+        "field/binary4_neon": ["-mfpu=neon"],
+        "field/binary8_neon": ["-mfpu=neon"],
+        "field/binary_sse2": ["-msse2"],
+        "field/binary_avx2": ["-mavx2", "/arch:AVX2"],
+        "field/binary4_avx2": ["-mavx2", "/arch:AVX2"],
+        "field/binary8_avx2": ["-mavx2", "/arch:AVX2"],
+        "field/binary4_ssse3": ["-mssse3"],
+        "field/binary8_ssse3": ["-mssse3"],
+        "field/prime2325_sse42": ["-msse4.2"],
+    }
+
+    libs = ["cpuid", "platform_includes", "bourne", "abacus"]
+
+    cxxflags = []
+    compiler_binary = bld.env.get_flat("CXX").lower()
+
+    if "clang" in compiler_binary:
+        cxxflags += ["-fconstexpr-steps=1000000000"]
+    elif "g++" in compiler_binary:
+        cxxflags += ["-funroll-loops"]
+    elif "cl.exe" in compiler_binary:
+        cxxflags += ["/constexpr:steps1000000000"]
+
+    for source, flags in optimized_sources.items():
+
+        simd_flags = [f for f in flags if f in bld.env["CXXFLAGS_FIFI_SIMD"]]
+
+        if "-mavx2" in simd_flags and "clang" not in compiler_binary:
+            simd_flags += [
+                "-mno-avx256-split-unaligned-load",
+                "-mno-avx256-split-unaligned-store",
+            ]
+
+        bld.objects(
+            source="src/fifi/" + source + ".cpp",
+            target=source,
+            cxxflags=cxxflags + simd_flags,
+            use=libs,
+        )
+
+    source_files = bld.path.ant_glob(
+        "src/fifi/**/*.cpp", excl=["src/fifi/" + s + ".cpp" for s in optimized_sources]
+    )
+
+    # Build static library if this is top-level, otherwise just .o files
+    features = ["cxx"]
+    if bld.is_toplevel():
+        features += ["cxxstlib"]
+
+    bld(
+        features=features,
+        source=source_files,
+        target="fifi",
+        cxxflags=cxxflags,
+        use=libs + list(optimized_sources.keys()),
+        install_path="${PREFIX}/lib",
+        export_includes=["src"],
+    )
+
+    if bld.is_toplevel():
+
+        # Only build tests when executed from the top-level wscript,
+        # i.e. not when included as a dependency
+        bld.recurse("test")
+
+        bld.recurse("examples/basic_arithmetic")
+        bld.recurse("examples/print_tables")
+        bld.recurse("examples/custom_prime")
+        bld.recurse("examples/simd_accelerations")
+        bld.recurse("examples/readme")
+
+        bld.recurse("benchmark/arithmetic")
+        bld.recurse("benchmark/prime2325")
+        bld.recurse("benchmark/initialization")
+
+        sourcepath = bld.path.find_node("src")
+
+        bld.install_files(
+            dest="${PREFIX}/include",
+            files=sourcepath.ant_glob("**/*.hpp"),
+            cwd=sourcepath,
+            relative_trick=True,
+        )
+
+        bld.install_files(dest="${PREFIX}/",
+                          files=bld.path.ant_glob("NEWS.rst"))
+
+
+def docs(ctx):
+    """Build the documentation in a virtualenv"""
+
+    with ctx.create_virtualenv() as venv:
+
+        # To update the requirements.txt just delete it - a fresh one
+        # will be generated from test/requirements.in
+        if not os.path.isfile("docs/requirements.txt"):
+            venv.run("python -m pip install pip-tools")
+            venv.run("pip-compile docs/requirements.in")
+
+        venv.run("python -m pip install -r docs/requirements.txt")
+
+        build_path = os.path.join(ctx.path.abspath(), "build", "site", "docs")
+
+        venv.run(
+            "giit clean . --build_path {}".format(build_path), cwd=ctx.path.abspath()
+        )
+        venv.run(
+            "giit sphinx . --build_path {}".format(build_path), cwd=ctx.path.abspath()
+        )
+
+
+class PlotContext(BuildContext):
+    cmd = "plot_benchmarks"
+    fun = "plot_benchmarks"
+
+
+def plot_benchmarks(ctx):
+
+    venv = ctx.create_virtualenv(name="virtualenv-plots", overwrite=False)
+
+    venv.run(
+        "build_current/benchmark/arithmetic/fifi_arithmetic --benchmark_out='out.json' --benchmark_counters_tabular=true"
+    )
+
+    venv.run("python3 -m pip install pip-tools")
+
+    venv.run(
+        "pip-compile --output-file=benchmark/arithmetic/requirements.txt benchmark/arithmetic/requirements.in"
+    )
+    venv.run("pip install -r benchmark/arithmetic/requirements.txt")
+    venv.run("python benchmark/arithmetic/plot.py -i out.json")
+
+
+class ReleaseContext(BuildContext):
+    cmd = "prepare_release"
+    fun = "prepare_release"
+
+
+def prepare_release(ctx):
+    """Prepare a release."""
+
+    # Rewrite versions
+    with ctx.rewrite_file(filename="src/fifi/version.hpp") as f:
+
+        pattern = r"#define STEINWURF_FIFI_VERSION v\d+_\d+_\d+"
+        replacement = "#define STEINWURF_FIFI_VERSION v{}".format(
+            VERSION.replace(".", "_")
+        )
+
+        f.regex_replace(pattern=pattern, replacement=replacement)
+
+    with ctx.rewrite_file(filename="src/fifi/version.cpp") as f:
+        pattern = r'return "\d+\.\d+\.\d+"'
+        replacement = 'return "{}"'.format(VERSION)
+
+        f.regex_replace(pattern=pattern, replacement=replacement)

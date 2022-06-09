@@ -1,0 +1,10 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+bld.program(
+    features="cxx benchmark",
+    source=["prime2325.cpp"],
+    target="fifi_prime2325",
+    install_path=None,
+    use=["fifi", "gbenchmark"],
+)

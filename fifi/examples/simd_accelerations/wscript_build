@@ -1,0 +1,8 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+bld.program(features='cxx',
+            source='simd_accelerations.cpp',
+            target='simd_accelerations',
+            install_path=None,
+            use=['fifi'])

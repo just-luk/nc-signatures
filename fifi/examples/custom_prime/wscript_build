@@ -1,0 +1,17 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+cxxflags = []
+compiler_binary = bld.env.get_flat('CXX').lower()
+if 'clang' in compiler_binary:
+    cxxflags = ['-fconstexpr-steps=1000000000']
+elif 'cl.exe' in compiler_binary:
+    cxxflags = ['/constexpr:steps1000000000']
+
+bld.program(
+    features="cxx",
+    source="custom_prime.cpp",
+    target="custom_prime",
+    cxxflags=cxxflags,
+    install_path=None,
+    use=["fifi"])

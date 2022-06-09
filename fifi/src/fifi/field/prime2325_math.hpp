@@ -1,0 +1,155 @@
+// License for Commercial Usage
+// Distributed under the "FIFI EVALUATION LICENSE 1.3"
+//
+// Licensees holding a valid commercial license may use this project
+// in accordance with the standard license agreement terms provided
+// with the Software (see accompanying file LICENSE.rst or
+// https://www.steinwurf.com/license), unless otherwise different
+// terms and conditions are agreed in writing between Licensee and
+// Steinwurf ApS in which case the license will be regulated by that
+// separate written agreement.
+//
+// License for Non-Commercial Usage
+// Distributed under the "FIFI RESEARCH LICENSE 1.2"
+//
+// Licensees holding a valid research license may use this project
+// in accordance with the license agreement terms provided with the
+// Software
+//
+// See accompanying file LICENSE.rst or https://www.steinwurf.com/license
+
+#pragma once
+
+#include "prime2325_backend.hpp"
+
+#include "../detail/cpu_support.hpp"
+#include "../detail/enabled_ptr.hpp"
+#include "../detail/field_metrics.hpp"
+#include "../finite_field.hpp"
+#include "../version.hpp"
+
+namespace fifi
+{
+inline namespace STEINWURF_FIFI_VERSION
+{
+namespace field
+{
+
+/// Finite field operations in 2³²-5.
+class prime2325_math
+{
+public:
+    /// The backend used
+    using backend_type = prime2325_backend;
+
+    /// The finite field
+    using field_type = prime2325;
+
+public:
+    /// Constructor
+    prime2325_math();
+
+    /// Constructor
+    prime2325_math(const prime2325_backend* backend);
+
+    /// Constructor
+    prime2325_math(const prime2325_backend* backend,
+                   const detail::cpu_support& cpu);
+
+    /// Change the backend used
+    void set_backend(const prime2325_backend* backend);
+    void set_backend(const prime2325_backend* backend,
+                     const detail::cpu_support& cpu);
+
+    /// @copydoc acceleration::field()
+    finite_field field() const;
+
+    /// @copydoc acceleration::field_info()
+    prime2325 field_info() const;
+
+    /// @copydoc math::add()
+    uint32_t add(uint32_t a, uint32_t b) const;
+
+    /// @copydoc math::subtract()
+    uint32_t subtract(uint32_t a, uint32_t b) const;
+
+    /// @copydoc math::multiply()
+    uint32_t multiply(uint32_t a, uint32_t b) const;
+
+    /// @copydoc math::divide()
+    uint32_t divide(uint32_t a, uint32_t b) const;
+
+    /// @copydoc math::invert()
+    uint32_t invert(uint32_t a) const;
+
+    /// @copydoc math::vector_add_into()
+    void vector_add_into(uint8_t* x, const uint8_t* y, std::size_t size) const;
+
+    /// @copydoc math::vector_subtract_into()
+    void vector_subtract_into(uint8_t* x, const uint8_t* y,
+                              std::size_t size) const;
+
+    /// @copydoc math::vector_multiply_into()
+    void vector_multiply_into(uint8_t* x, uint32_t constant,
+                              std::size_t size) const;
+
+    /// @copydoc math::vector_multiply_add_into()
+    void vector_multiply_add_into(uint8_t* x, const uint8_t* y,
+                                  uint32_t constant, std::size_t size) const;
+
+    /// @copydoc math::vector_multiply_subtract_into()
+    void vector_multiply_subtract_into(uint8_t* x, const uint8_t* y,
+                                       uint32_t constant,
+                                       std::size_t size) const;
+
+    /// @copydoc math::vector_dot_product()
+    void vector_dot_product(uint8_t** x, const uint8_t** y,
+                            const uint8_t** constants, std::size_t size,
+                            std::size_t x_vectors, std::size_t y_vectors) const;
+
+    /// @copydoc math::total_processed()
+    std::size_t total_processed() const;
+
+    /// @return The name of a metric as a string
+    auto metric_name(field_metric id) const -> std::string;
+
+    /// @return A specific metric value
+    auto metric_value(field_metric id) const -> uint64_t;
+
+    /// @return a memory copy of the metrics storage.
+    void copy_metrics_storage(uint8_t* data) const;
+
+    /// @return the size of the memory allocated for the metrics in bytes
+    auto metrics_storage_bytes() const -> std::size_t;
+
+    /// @return All metrics in json format.
+    auto metrics_to_json() const -> std::string;
+
+    /// Reset all the metrics
+    void reset_metrics();
+
+    /// Reset specific metric
+    void reset_metric(field_metric id);
+
+    /// @return The number of metrics in the metrics object
+    auto metrics() const -> std::size_t;
+
+    /// @return The metric id associated with the metric index
+    auto metric_id(std::size_t index) const -> field_metric;
+
+private:
+    /// The acceleration backend
+    const prime2325_backend* m_backend;
+
+    /// 2³²-5 basic acceleration
+    detail::enabled_ptr<prime2325_basic> m_prime2325_basic;
+
+    /// Object containing metrics for the accelerations
+    abacus::metrics m_metrics;
+
+    /// metrics to manipulate the metrics object
+    mutable detail::field_metrics m_field_metrics;
+};
+}
+}
+}
