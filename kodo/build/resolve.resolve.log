@@ -1,0 +1,676 @@
+wurf: Resolve execute resolve
+['git', 'config', '--get', 'remote.origin.url']
+out: https://github.com/steinwurf/kodo
+
+----------------------------------------
+Resolve "waf-tools" (git semver)
+Could not fetch tags.json from: https://raw.githubusercontent.com/steinwurf/tag-registry/master/tags.json
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/urllib/request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.8/http/client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/usr/lib/python3.8/http/client.py", line 1418, in connect
+    super().connect()
+  File "/usr/lib/python3.8/http/client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.8/socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/luke/Documents/kodo/.waf3-2.0.22-be6418327900e93411f0499214fa7edb/waflib/extras/wurf/tag_database.py", line 18, in download_tags
+    response=urlopen(req)
+  File "/usr/lib/python3.8/urllib/request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.8/urllib/request.py", line 525, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.8/urllib/request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.8/urllib/request.py", line 502, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.8/urllib/request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.8/urllib/request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -3] Temporary failure in name resolution>
+No registered tags for waf-tools.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/waf-tools.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/waf-tools.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: b02878ab54f71d06603231f902fbde877ca5b971
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.0.1
+1.0.2
+1.0.3
+1.0.4
+1.0.5
+1.0.6
+1.1.0
+1.2.0
+1.2.1
+1.3.0
+1.3.1
+1.4.0
+1.5.0
+1.5.1
+2.0.0
+2.1.0
+2.1.1
+2.10.0
+2.10.1
+2.11.0
+2.12.0
+2.13.0
+2.14.0
+2.15.0
+2.16.0
+2.16.1
+2.16.2
+2.17.0
+2.17.1
+2.18.0
+2.19.0
+2.19.1
+2.2.0
+2.20.0
+2.21.0
+2.22.0
+2.23.0
+2.24.0
+2.25.0
+2.26.0
+2.27.0
+2.28.0
+2.29.0
+2.3.0
+2.30.0
+2.31.0
+2.32.0
+2.32.1
+2.33.0
+2.33.1
+2.33.2
+2.34.0
+2.35.0
+2.36.0
+2.36.1
+2.37.0
+2.38.0
+2.39.0
+2.4.0
+2.40.0
+2.40.1
+2.40.2
+2.41.0
+2.42.0
+2.43.0
+2.44.0
+2.45.0
+2.46.0
+2.47.0
+2.48.0
+2.49.0
+2.5.0
+2.50.0
+2.51.0
+2.52.0
+2.53.0
+2.53.1
+2.54.0
+2.6.0
+2.7.0
+2.8.0
+2.9.0
+3.0.0
+3.0.1
+3.0.2
+3.1.0
+3.1.1
+3.1.2
+3.1.3
+3.10.0
+3.10.1
+3.11.0
+3.12.0
+3.12.1
+3.13.0
+3.14.0
+3.14.1
+3.15.0
+3.16.0
+3.17.0
+3.17.1
+3.17.2
+3.18.0
+3.19.0
+3.19.1
+3.2.0
+3.3.0
+3.4.0
+3.4.1
+3.5.0
+3.5.1
+3.6.0
+3.6.1
+3.7.0
+3.8.0
+3.8.1
+3.9.0
+4.0.0
+4.0.1
+4.0.2
+4.0.3
+4.0.4
+4.1.0
+4.1.1
+4.10.0
+4.11.0
+4.12.0
+4.13.0
+4.13.1
+4.13.2
+4.14.0
+4.15.0
+4.15.1
+4.16.0
+4.17.0
+4.17.1
+4.18.0
+4.19.0
+4.2.0
+4.20.0
+4.20.1
+4.21.0
+4.21.1
+4.22.0
+4.23.0
+4.24.0
+4.25.0
+4.25.1
+4.26.0
+4.27.0
+4.28.0
+4.29.0
+4.3.0
+4.30.0
+4.31.0
+4.32.0
+4.33.0
+4.34.0
+4.35.0
+4.36.0
+4.37.0
+4.38.0
+4.39.0
+4.4.0
+4.40.0
+4.41.0
+4.5.0
+4.5.1
+4.6.0
+4.7.0
+4.8.0
+4.9.0
+4.9.1
+
+wurf: GitSemverResolver name waf-tools -> /home/luke/Documents/kodo/resolved_dependencies/waf-tools-51dff5/4.41.0-ba643d
+['git', 'rev-parse', 'HEAD']
+out: b02878ab54f71d06603231f902fbde877ca5b971
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/waf-tools -> /home/luke/Documents/kodo/resolved_dependencies/waf-tools-51dff5/4.41.0-ba643d
+resolve_symlinks/waf-tools => /home/luke/Documents/kodo/resolved_dependencies/waf-tools-51dff5/4.41.0-ba643d
+----------------------------------------
+Resolve "fifi" (user path)
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/fifi -> /home/luke/Documents/fifi
+resolve_symlinks/fifi => /home/luke/Documents/fifi
+----------------------------------------
+Resolve "platform" (git semver)
+No registered tags for platform.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/platform.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/platform.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: eb20d6f4735cf6bd199747f7dca09faf4663f028
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.1.0
+1.2.0
+1.2.1
+1.2.2
+1.3.0
+2.0.0
+3.0.0
+3.0.1
+3.1.0
+3.2.0
+3.3.0
+3.4.0
+3.5.0
+4.0.0
+
+wurf: GitSemverResolver name platform -> /home/luke/Documents/kodo/resolved_dependencies/platform-bccd32/4.0.0-bc3824
+['git', 'rev-parse', 'HEAD']
+out: 509af3363b4359af15c7ea790717ec57e8fea7b8
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/platform -> /home/luke/Documents/kodo/resolved_dependencies/platform-bccd32/4.0.0-bc3824
+resolve_symlinks/platform => /home/luke/Documents/kodo/resolved_dependencies/platform-bccd32/4.0.0-bc3824
+----------------------------------------
+Resolve "cpuid" (git semver)
+No registered tags for cpuid.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/cpuid.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/cpuid.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: eaaa4343223e510f9a61478a577d4f62a3990b0e
+
+['git', 'tag', '-l']
+out: 1.0.0
+2.0.0
+3.0.0
+3.1.0
+3.2.0
+3.2.1
+3.3.0
+3.3.1
+4.0.0
+5.0.0
+5.0.1
+5.0.2
+6.0.0
+6.1.0
+6.2.0
+6.2.1
+6.3.0
+6.3.1
+6.4.0
+6.5.0
+7.0.0
+8.0.0
+
+wurf: GitSemverResolver name cpuid -> /home/luke/Documents/kodo/resolved_dependencies/cpuid-4d8071/8.0.0-c885d3
+['git', 'rev-parse', 'HEAD']
+out: d4eb66f2fa21f992b38b2a3d7042dc9fa769c53f
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/cpuid -> /home/luke/Documents/kodo/resolved_dependencies/cpuid-4d8071/8.0.0-c885d3
+resolve_symlinks/cpuid => /home/luke/Documents/kodo/resolved_dependencies/cpuid-4d8071/8.0.0-c885d3
+----------------------------------------
+Resolve "bourne" (git semver)
+No registered tags for bourne.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/bourne.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/bourne.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: e82cb8f13f874cd067f97da164f49e60a7a2cb0f
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.1.0
+2.0.0
+3.0.0
+4.0.0
+4.1.0
+5.0.0
+6.0.0
+7.0.0
+7.0.1
+7.0.2
+7.1.0
+7.2.0
+7.3.0
+7.3.1
+7.3.2
+7.4.0
+8.0.0
+9.0.0
+
+wurf: GitSemverResolver name bourne -> /home/luke/Documents/kodo/resolved_dependencies/bourne-992fab/9.0.0-b9c11a
+['git', 'rev-parse', 'HEAD']
+out: 086d6c11b844f6e5e20937862ad96f06afc21f02
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/bourne -> /home/luke/Documents/kodo/resolved_dependencies/bourne-992fab/9.0.0-b9c11a
+resolve_symlinks/bourne => /home/luke/Documents/kodo/resolved_dependencies/bourne-992fab/9.0.0-b9c11a
+----------------------------------------
+Resolve "abacus" (git semver)
+No registered tags for abacus.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/abacus.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/abacus.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: e5b34183ae2ab3a489e403438dbe7335c8471d10
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.1.0
+1.1.1
+1.1.2
+
+wurf: GitSemverResolver name abacus -> /home/luke/Documents/kodo/resolved_dependencies/abacus-1ae4f8/1.1.2-6dd573
+['git', 'rev-parse', 'HEAD']
+out: 0e8e9bc151201f626e1f6bc47344ef4ec451b13d
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/abacus -> /home/luke/Documents/kodo/resolved_dependencies/abacus-1ae4f8/1.1.2-6dd573
+resolve_symlinks/abacus => /home/luke/Documents/kodo/resolved_dependencies/abacus-1ae4f8/1.1.2-6dd573
+----------------------------------------
+Resolve "gbenchmark" (git semver)
+No registered tags for gbenchmark.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/gbenchmark.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/gbenchmark.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 2d01ed4fde5d2a70f2f567aa97ebcbcc79ed7078
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.0.1
+
+wurf: GitSemverResolver name gbenchmark -> /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-33a8fa/1.0.1-c09c6c
+['git', 'rev-parse', 'HEAD']
+out: e9429add4796f74fb01b39b76946aafe53cf625a
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/gbenchmark -> /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-33a8fa/1.0.1-c09c6c
+resolve_symlinks/gbenchmark => /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-33a8fa/1.0.1-c09c6c
+----------------------------------------
+Resolve "gtest" (git semver)
+No registered tags for gtest.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/gtest.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/gtest.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: aa89fca6c1984efe7083b61c5922bebb9e4f65fb
+
+['git', 'tag', '-l']
+out: 1.0.3
+1.0.4
+2.0.0
+2.0.1
+2.0.2
+2.0.3
+2.0.4
+2.0.5
+2.0.6
+2.0.7
+2.1.0
+2.1.1
+2.1.2
+2.1.3
+2.2.0
+2.3.0
+2.3.1
+3.0.0
+4.0.0
+4.1.0
+4.2.0
+4.2.1
+4.2.2
+
+wurf: GitSemverResolver name gtest -> /home/luke/Documents/kodo/resolved_dependencies/gtest-5c3bfe/4.2.2-a5641e
+['git', 'rev-parse', 'HEAD']
+out: 152c9d039e49030732ecdb288fdb14b68e6342e2
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/gtest -> /home/luke/Documents/kodo/resolved_dependencies/gtest-5c3bfe/4.2.2-a5641e
+resolve_symlinks/gtest => /home/luke/Documents/kodo/resolved_dependencies/gtest-5c3bfe/4.2.2-a5641e
+----------------------------------------
+Resolve "gtest-source" (git checkout)
+resolve: ExistingCheckoutResolver gtest-source no stored checkout for commit release-1.11.0
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/google/googletest.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/google/googletest.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 0320f517fd920866d918e564105d68fd4362040a
+
+['git', 'branch']
+out: * main
+
+['git', 'rev-parse', 'HEAD']
+out: 0320f517fd920866d918e564105d68fd4362040a
+
+wurf: GitCheckoutResolver name gtest-source -> /home/luke/Documents/kodo/resolved_dependencies/gtest-source-769aad/release-1.11.0-07e307
+['git', 'branch']
+out: * (HEAD detached at release-1.11.0)
+  main
+
+['git', 'rev-parse', 'HEAD']
+out: e2239ee6043f73722e7aa812a459f54a28552929
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/gtest-source -> /home/luke/Documents/kodo/resolved_dependencies/gtest-source-769aad/release-1.11.0-07e307
+resolve_symlinks/gtest-source => /home/luke/Documents/kodo/resolved_dependencies/gtest-source-769aad/release-1.11.0-07e307
+------------------------------------------
+Resolve "gbenchmark-source" (git checkout)
+resolve: ExistingCheckoutResolver gbenchmark-source no stored checkout for commit v1.5.5
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/google/benchmark.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/google/benchmark.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 6d50251d8e6ed6b7f6eb1e12c558d2808fb4ddaa
+
+['git', 'branch']
+out: * main
+
+['git', 'rev-parse', 'HEAD']
+out: 6d50251d8e6ed6b7f6eb1e12c558d2808fb4ddaa
+
+wurf: GitCheckoutResolver name gbenchmark-source -> /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-source-ddb2bf/v1.5.5-fadd9a
+['git', 'branch']
+out: * (HEAD detached at v1.5.5)
+  main
+
+['git', 'rev-parse', 'HEAD']
+out: e991355c02b93fe17713efe04cbc2e278e00fdbd
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/gbenchmark-source -> /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-source-ddb2bf/v1.5.5-fadd9a
+resolve_symlinks/gbenchmark-source => /home/luke/Documents/kodo/resolved_dependencies/gbenchmark-source-ddb2bf/v1.5.5-fadd9a
+------------------------------------------
+Resolve "stub" (git semver)
+No registered tags for stub.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/stub.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/stub.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 852cdf35f6e1af1ed4c35482ab0c82dc52050f77
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.0.1
+1.1.0
+2.0.0
+2.0.1
+2.1.0
+2.1.1
+2.1.2
+2.2.0
+2.3.0
+3.0.0
+4.0.0
+4.0.1
+5.0.0
+5.0.1
+6.0.0
+6.1.0
+6.2.0
+6.3.0
+6.4.0
+6.5.0
+
+wurf: GitSemverResolver name stub -> /home/luke/Documents/kodo/resolved_dependencies/stub-90d487/6.5.0-7ce938
+['git', 'rev-parse', 'HEAD']
+out: 6f2553c4de2b0c532f823235b10e38a301f50ba3
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/stub -> /home/luke/Documents/kodo/resolved_dependencies/stub-90d487/6.5.0-7ce938
+resolve_symlinks/stub => /home/luke/Documents/kodo/resolved_dependencies/stub-90d487/6.5.0-7ce938
+------------------------------------------
+Resolve "endian" (git semver)
+No registered tags for endian.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/endian.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/endian.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 7cdc7e49c6f31b1fc35ea3a0c836f5d27ac91d61
+
+['git', 'tag', '-l']
+out: 1.0.0
+10.0.0
+10.0.1
+10.1.0
+10.2.0
+10.3.0
+11.0.0
+11.1.0
+12.0.0
+12.1.0
+2.0.0
+2.1.0
+3.0.0
+4.0.0
+4.1.0
+4.2.0
+5.0.0
+6.0.0
+6.0.1
+6.1.0
+6.2.0
+7.0.0
+8.0.0
+8.0.1
+8.1.0
+8.2.0
+9.0.0
+
+wurf: GitSemverResolver name endian -> /home/luke/Documents/kodo/resolved_dependencies/endian-30a816/12.1.0-b2caab
+['git', 'rev-parse', 'HEAD']
+out: c8396533d0524b02f2d9d8ee84764be710fa2606
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/endian -> /home/luke/Documents/kodo/resolved_dependencies/endian-30a816/12.1.0-b2caab
+resolve_symlinks/endian => /home/luke/Documents/kodo/resolved_dependencies/endian-30a816/12.1.0-b2caab
+------------------------------------------
+Resolve "recycle" (git semver)
+No registered tags for recycle.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/recycle.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/recycle.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: 5bf077b604d14bc313863283ce306bb91315ef58
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.0.1
+1.1.0
+1.1.1
+1.2.0
+2.0.0
+3.0.0
+4.0.0
+4.1.0
+4.1.1
+4.1.2
+5.0.0
+5.1.0
+6.0.0
+
+wurf: GitSemverResolver name recycle -> /home/luke/Documents/kodo/resolved_dependencies/recycle-b2469b/6.0.0-bac386
+['git', 'rev-parse', 'HEAD']
+out: 628e7b399d857d2c06149cfc6e0512c9a8062373
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/recycle -> /home/luke/Documents/kodo/resolved_dependencies/recycle-b2469b/6.0.0-bac386
+resolve_symlinks/recycle => /home/luke/Documents/kodo/resolved_dependencies/recycle-b2469b/6.0.0-bac386
+------------------------------------------
+Resolve "ranbo" (git semver)
+No registered tags for ranbo.
+['git', 'pull']
+err: fatal: unable to access 'https://github.com/steinwurf/ranbo.git/': Could not resolve host: github.com
+
+Exception when executing git pull:
+Command ['git', 'pull'] returned 1
+stderr:
+fatal: unable to access 'https://github.com/steinwurf/ranbo.git/': Could not resolve host: github.com
+
+['git', 'rev-parse', 'HEAD']
+out: c66ff6ae0012b97f15df3e8cd9626f702e2097df
+
+['git', 'tag', '-l']
+out: 1.0.0
+1.0.1
+
+wurf: GitSemverResolver name ranbo -> /home/luke/Documents/kodo/resolved_dependencies/ranbo-aa5c0d/1.0.1-37faf4
+['git', 'rev-parse', 'HEAD']
+out: c66ff6ae0012b97f15df3e8cd9626f702e2097df
+
+wurf: CreateSymlinkResolver /home/luke/Documents/kodo/resolve_symlinks/ranbo -> /home/luke/Documents/kodo/resolved_dependencies/ranbo-aa5c0d/1.0.1-37faf4
+resolve_symlinks/ranbo => /home/luke/Documents/kodo/resolved_dependencies/ranbo-aa5c0d/1.0.1-37faf4
+wurf: dependency_cache OrderedDict([('waf-tools', {'path': '/home/luke/Documents/kodo/resolve_symlinks/waf-tools', 'recurse': True}), ('platform', {'path': '/home/luke/Documents/kodo/resolve_symlinks/platform', 'recurse': True}), ('cpuid', {'path': '/home/luke/Documents/kodo/resolve_symlinks/cpuid', 'recurse': True}), ('bourne', {'path': '/home/luke/Documents/kodo/resolve_symlinks/bourne', 'recurse': True}), ('abacus', {'path': '/home/luke/Documents/kodo/resolve_symlinks/abacus', 'recurse': True}), ('fifi', {'path': '/home/luke/Documents/kodo/resolve_symlinks/fifi', 'recurse': True}), ('gtest-source', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gtest-source', 'recurse': True}), ('gtest', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gtest', 'recurse': True}), ('gbenchmark-source', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gbenchmark-source', 'recurse': True}), ('gbenchmark', {'path': '/home/luke/Documents/kodo/resolve_symlinks/gbenchmark', 'recurse': True}), ('stub', {'path': '/home/luke/Documents/kodo/resolve_symlinks/stub', 'recurse': True}), ('endian', {'path': '/home/luke/Documents/kodo/resolve_symlinks/endian', 'recurse': True}), ('recycle', {'path': '/home/luke/Documents/kodo/resolve_symlinks/recycle', 'recurse': True}), ('ranbo', {'path': '/home/luke/Documents/kodo/resolve_symlinks/ranbo', 'recurse': True})])

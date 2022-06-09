@@ -1,0 +1,69 @@
+[
+  {
+    "name": "waf-tools",
+    "resolver": "git",
+    "method": "semver",
+    "major": 4,
+    "sources": ["github.com/steinwurf/waf-tools.git"]
+  },
+  {
+    "name": "fifi",
+    "resolver": "git",
+    "method": "semver",
+    "major": 35,
+    "sources": ["github.com/steinwurf/fifi.git"]
+  },
+  {
+    "name": "gbenchmark",
+    "internal": true,
+    "resolver": "git",
+    "method": "semver",
+    "major": 1,
+    "sources": ["github.com/steinwurf/gbenchmark.git"]
+  },
+  {
+    "name": "stub",
+    "internal": true,
+    "resolver": "git",
+    "method": "semver",
+    "major": 6,
+    "sources": ["github.com/steinwurf/stub.git"]
+  },
+  {
+    "name": "endian",
+    "resolver": "git",
+    "method": "semver",
+    "major": 12,
+    "sources": ["github.com/steinwurf/endian.git"]
+  },
+  {
+    "name": "recycle",
+    "resolver": "git",
+    "method": "semver",
+    "major": 6,
+    "sources": ["github.com/steinwurf/recycle.git"]
+  },
+  {
+    "name": "bourne",
+    "internal": true,
+    "resolver": "git",
+    "method": "semver",
+    "major": 9,
+    "sources": ["github.com/steinwurf/bourne.git"]
+  },
+  {
+    "name": "ranbo",
+    "resolver": "git",
+    "method": "semver",
+    "major": 1,
+    "sources": ["github.com/steinwurf/ranbo.git"]
+  },
+  {
+    "name": "gtest",
+    "internal": true,
+    "resolver": "git",
+    "method": "semver",
+    "major": 4,
+    "sources": ["github.com/steinwurf/gtest.git"]
+  }
+]

@@ -1,0 +1,484 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						9,
+						12
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e61bd65464f446e99c4d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "endian",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-endian-Debug-e1316f06fe5d653e69c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "resolve_symlinks/endian"
+				},
+				{
+					"build" : "ranbo",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-ranbo-Debug-3707333f7628e99d4db7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "resolve_symlinks/ranbo"
+				},
+				{
+					"build" : "bourne",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-bourne-Debug-2ccd8942558b5bc38605.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "resolve_symlinks/bourne",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "recycle",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-recycle-Debug-066c04e49a586e583314.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "resolve_symlinks/recycle"
+				},
+				{
+					"build" : "fifi",
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-fifi-Debug-b35941139817e035741b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 5,
+					"source" : "resolve_symlinks/fifi",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "fifi/platform",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-fifi.platform-Debug-4fb8540ad07f480242ee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 6,
+					"source" : "resolve_symlinks/platform"
+				},
+				{
+					"build" : "fifi/cpuid",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-fifi.cpuid-Debug-89c5ddf20faf0bb797d6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 7,
+					"source" : "resolve_symlinks/cpuid",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "fifi/abacus",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-fifi.abacus-Debug-133ee05449cc44e806b4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 8,
+					"source" : "resolve_symlinks/abacus",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "resolve_symlinks/gtest-source",
+					"childIndexes" : 
+					[
+						10
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-resolve_symlinks.gtest-source-Debug-2e491de853d3cbabc7c5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 9,
+					"source" : "resolve_symlinks/gtest-source"
+				},
+				{
+					"build" : "resolve_symlinks/gtest-source/googlemock",
+					"childIndexes" : 
+					[
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-resolve_symlinks.gtest-source.googlemock-Debug-67c576c1719a3ba1bd9a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 10,
+					"source" : "resolve_symlinks/gtest-source/googlemock",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "resolve_symlinks/gtest-source/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-resolve_symlinks.gtest-source.googletest-Debug-ed0c5fd69860cc592d3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8.12"
+					},
+					"parentIndex" : 10,
+					"projectIndex" : 11,
+					"source" : "resolve_symlinks/gtest-source/googletest",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"build" : "resolve_symlinks/stub",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-resolve_symlinks.stub-Debug-6f38626f6cebf6224f04.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 12,
+					"source" : "resolve_symlinks/stub"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						9,
+						12
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "kodo",
+					"targetIndexes" : 
+					[
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "endian",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ranbo",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "bourne",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "recycle",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						6,
+						7,
+						8
+					],
+					"directoryIndexes" : 
+					[
+						5
+					],
+					"name" : "fifi",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "platform",
+					"parentIndex" : 5
+				},
+				{
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "cpuid",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "abacus",
+					"parentIndex" : 5,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						10
+					],
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						11
+					],
+					"directoryIndexes" : 
+					[
+						10
+					],
+					"name" : "gmock",
+					"parentIndex" : 9,
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						11
+					],
+					"name" : "gtest",
+					"parentIndex" : 10,
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						12
+					],
+					"name" : "stub",
+					"parentIndex" : 0
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 8,
+					"id" : "abacus::@476dce8e1fa27442cdd8",
+					"jsonFile" : "target-abacus-Debug-a53836ccfadaf5d722ca.json",
+					"name" : "abacus",
+					"projectIndex" : 8
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "bourne::@4cf75bf04b20c3901825",
+					"jsonFile" : "target-bourne-Debug-18a3ec1753fcd0b5507c.json",
+					"name" : "bourne",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "cpuid::@1fee63716babee08efe1",
+					"jsonFile" : "target-cpuid-Debug-1cea6a05ac872c71d8cf.json",
+					"name" : "cpuid",
+					"projectIndex" : 7
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "fifi::@0e211a00980ab01280f1",
+					"jsonFile" : "target-fifi-Debug-a7cdec540b952b2d36ee.json",
+					"name" : "fifi",
+					"projectIndex" : 5
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "gmock::@99e0e6b7b83a6fc1b3f7",
+					"jsonFile" : "target-gmock-Debug-3bb8097d5735b319c958.json",
+					"name" : "gmock",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "gmock_main::@99e0e6b7b83a6fc1b3f7",
+					"jsonFile" : "target-gmock_main-Debug-8def4f0c264dbf435698.json",
+					"name" : "gmock_main",
+					"projectIndex" : 10
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "gtest::@617b52e0f38082cb60dd",
+					"jsonFile" : "target-gtest-Debug-443718fd476df249bcea.json",
+					"name" : "gtest",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "gtest_main::@617b52e0f38082cb60dd",
+					"jsonFile" : "target-gtest_main-Debug-db306594fbd1b5291eed.json",
+					"name" : "gtest_main",
+					"projectIndex" : 11
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hello_world::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hello_world-Debug-733e6822b2bfa6e46043.json",
+					"name" : "hello_world",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "kodo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kodo-Debug-030e7edc6776e7ec0077.json",
+					"name" : "kodo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "kodo_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-kodo_test-Debug-0a28b83b3a49814db662.json",
+					"name" : "kodo_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "perpetual_encode_decode_simple::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-perpetual_encode_decode_simple-Debug-e6c42a6db839de5134ac.json",
+					"name" : "perpetual_encode_decode_simple",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/just-luk.github.io/kodo/build",
+		"source" : "/workspace/just-luk.github.io/kodo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
