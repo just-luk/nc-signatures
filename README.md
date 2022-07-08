@@ -1,5 +1,3 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io#https://github.com/just-luk/nc-signatures)
-
 # nc-signatures
 Authentication Schemes for Network Coding
 
@@ -7,6 +5,5 @@ Authentication Schemes for Network Coding
 Code for the implementation and performance evaluation of authentication schemes for network coding.
 
 ### Resources used
- - [pbc](https://github.com/blynn/pbc)
- - [kodo](https://kodo.steinwurf.com/docs/11.0.0/index.html)
- - [pbc bindings for c++](https://github.com/xu-cheng/pbc-bindings)
+ - [mcl](https://github.com/herumi/mcl)
+ - [kodr](https://github.com/itzmeanjan/kodr)
