@@ -1,8 +1,0 @@
-#! /usr/bin/env python
-# encoding: utf-8
-
-bld.program(features='cxx',
-            source='print_tables.cpp',
-            target='print_tables',
-            install_path=None,
-            use=['fifi'])

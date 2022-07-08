@@ -1,8 +1,0 @@
-#! /usr/bin/env python
-# encoding: utf-8
-
-bld.program(features='cxx',
-            source='basic_arithmetic.cpp',
-            target='basic_arithmetic',
-            install_path=None,
-            use=['fifi'])
