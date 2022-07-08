@@ -1,8 +1,0 @@
-#! /usr/bin/env python
-# encoding: utf-8
-
-bld.program(features='cxx',
-            source='readme.cpp',
-            target='readme',
-            install_path=None,
-            use=['fifi'])

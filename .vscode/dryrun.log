@@ -1,8 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/workspace/nc-signatures'
-cd kodo
-./waf configure --fifi_path=../fifi
-./waf build
-./waf install
-make: Leaving directory '/workspace/nc-signatures'
+make: Entering directory '/home/luke/Downloads/nc-signatures'
+clang++ -o main.exe main.cpp -DMCL_USE_VINT -I ~/.local/include/ -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+./main.exe
+make: Leaving directory '/home/luke/Downloads/nc-signatures'
  
