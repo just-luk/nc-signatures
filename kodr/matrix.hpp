@@ -1,4 +1,4 @@
-# pragma once
+#pragma once
 
 #include <mcl/bn256.hpp>
 #include <stdexcept>
@@ -9,15 +9,14 @@
 using namespace mcl::bn256;
 
 typedef struct Matrix {
-    std::vector<std::vector<Fr>> data;
-    uint rows;
-    uint cols;
-    Matrix(std::vector<std::vector<Fr>> d);
-    Matrix();
-    Matrix(uint row, uint cols);
-    bool Cmp(Matrix& other);
-    Matrix multiply(Matrix& other);
+  std::vector<std::vector<Fr>> data;
+  int rows;
+  int cols;
+  Matrix(std::vector<std::vector<Fr>> d);
+  Matrix();
+  Matrix(int row, int cols);
+  bool Cmp(Matrix &other);
+  Matrix multiply(Matrix &other);
 } Matrix;
-
 
 #endif
