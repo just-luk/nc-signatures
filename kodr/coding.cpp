@@ -2,11 +2,10 @@
 #include <decoder.hpp>
 #include <encoder.hpp>
 #include <fstream>
-#include <ios>
 #include <iostream>
 #include <math.h>
 #include <mcl/bn256.hpp>
-#include <vector>
+#include <recoder.hpp>
 
 using namespace mcl::bn256;
 
@@ -77,16 +76,36 @@ int main() {
 
   std::random_shuffle(codedPieces.begin(), codedPieces.end());
 
+  std::vector<CodedPiece> droppedPieces(codedPieces.begin(),
+                                        codedPieces.end() - droppedPieceCount);
+  FullRLNCRecoder recoder(droppedPieces);
+  int recodedPieceCount = droppedPieces.size() * 2;
+  std::vector<CodedPiece> recodedPieces(recodedPieceCount);
+  for (int i = 0; i < recodedPieceCount; i++) {
+    recodedPieces[i] = recoder.getCodedPiece();
+    std::cout << "recoded piece " << i + 1 << std::endl;
+    std::cout << "\t" << recodedPieces[i].signature << std::endl;
+    bool verified = Verify(recodedPieces[i].signature, u, h,
+                           recodedPieces[i].piece, "logo.png123");
+    std::cout << "\t" << (verified ? "verified" : "not verified") << std::endl;
+  }
+
+  std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
+  std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(),
+                                             recodedPieces.end() - 96);
+
   FullRLNCDecoder decoder(pieceCount);
-  decoder.AddPiece(codedPieces[0], true);
+  decoder.AddPiece(droppedPiecesAgain[0], true);
   for (int i = 1; i < pieceCount; i++) {
-    decoder.AddPiece(codedPieces[i], false);
+    decoder.AddPiece(droppedPiecesAgain[i], false);
   }
 
   std::vector<std::vector<Fr>> decodedPieces = decoder.GetPieces();
-  std::cout << "decoded pieces " << decodedPieces.size() << std::endl;
+  std::cout << std::endl << "decoded pieces " << std::endl;
+  std::vector<Fr> out;
   for (int i = 0; i < decodedPieces.size(); i++) {
     for (int j = 0; j < decodedPieces[0].size(); j++) {
+      out.push_back(decodedPieces[i][j]);
       std::cout << "[" << decodedPieces[i][j] << "] ";
     }
     std::cout << std::endl;

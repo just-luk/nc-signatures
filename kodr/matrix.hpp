@@ -16,7 +16,7 @@ typedef struct Matrix {
   Matrix();
   Matrix(int row, int cols);
   bool Cmp(Matrix &other);
-  Matrix multiply(Matrix &other);
+  Matrix Multiply(Matrix other);
 } Matrix;
 
 #endif

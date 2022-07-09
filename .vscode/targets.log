@@ -2,13 +2,17 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.2.1
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  8 16:53:29 2022
+# Make data base, printed on Fri Jul  8 19:05:40 2022
 
 # Variables
 
@@ -77,7 +81,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 MANAGERPID = 1453
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-0a70ffc2-00e1-4a15-b6f9-df200a1c2c8d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7a58851f-60b6-4e79-a9cb-1382fce98fca.sock
 # environment
 VSCODE_CWD = /home/luke/Downloads/nc-signatures
 # environment
@@ -177,7 +181,6 @@ COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
- 
 MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
@@ -284,7 +287,9 @@ STARSHIP_SHELL = fish
 
 # 11 files, no impossibilities in 1 directories.
 
+ 
 # Implicit Rules
+ 
 
 # No implicit rules.
 
@@ -300,7 +305,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 16:43:49.307402539
+#  Last modified 2022-07-08 19:05:19.766316742
 #  File has been updated.
 #  Successfully updated.
 
@@ -309,7 +314,7 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 7):
-	clang++ -o kodr/coding.exe kodr/coding.cpp kodr/encoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	clang++ -o kodr/coding.exe kodr/coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 	./kodr/coding.exe > out.txt
 
 # Not a target:
@@ -340,6 +345,6 @@ main:
 # strcache performance: lookups = 24 / hit rate = 25%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Fri Jul  8 16:53:29 2022
+# Finished Make data base on Fri Jul  8 19:05:40 2022
 
  
