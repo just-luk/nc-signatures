@@ -49,11 +49,11 @@ int main() {
   Fr alpha;
   G2 u, h;
   KeyGen(alpha, u, h);
-  std::cout << "secret key " << std::endl;
-  std::cout << "\talpha = " << alpha << std::endl;
-  std::cout << "public key " << std::endl;
-  std::cout << "\th = " << h << std::endl;
-  std::cout << "\tu = " << u << std::endl;
+  // std::cout << "secret key " << std::endl;
+  // std::cout << "\talpha = " << alpha << std::endl;
+  // std::cout << "public key " << std::endl;
+  // std::cout << "\th = " << h << std::endl;
+  // std::cout << "\tu = " << u << std::endl;
 
   int pieceCount = 64;
   int codedPieceCount = pieceCount * 2;
@@ -65,11 +65,13 @@ int main() {
   for (int i = 0; i < codedPieceCount; i++) {
     codedPieces[i] = encoder.getCodedPiece();
 
-    std::cout << "coded piece " << i + 1 << std::endl;
-    std::cout << "\t" << codedPieces[i].signature << std::endl;
-    bool verified = Verify(codedPieces[i].signature, u, h, codedPieces[i].piece,
-                           "logo.png123");
-    std::cout << "\t" << (verified ? "verified" : "not verified") << std::endl;
+    // std::cout << "coded piece " << i + 1 << std::endl;
+    // std::cout << "\t" << codedPieces[i].signature << std::endl;
+    // bool verified = Verify(codedPieces[i].signature, u, h,
+    // codedPieces[i].piece,
+    //                        "logo.png123");
+    // std::cout << "\t" << (verified ? "verified" : "not verified") <<
+    // std::endl;
   }
 
   std::random_shuffle(codedPieces.begin(), codedPieces.end());
@@ -81,11 +83,12 @@ int main() {
   std::vector<CodedPiece> recodedPieces(recodedPieceCount);
   for (int i = 0; i < recodedPieceCount; i++) {
     recodedPieces[i] = recoder.getCodedPiece();
-    std::cout << "recoded piece " << i + 1 << std::endl;
-    std::cout << "\t" << recodedPieces[i].signature << std::endl;
-    bool verified = Verify(recodedPieces[i].signature, u, h,
-                           recodedPieces[i].piece, "logo.png123");
-    std::cout << "\t" << (verified ? "verified" : "not verified") << std::endl;
+    // std::cout << "recoded piece " << i + 1 << std::endl;
+    // std::cout << "\t" << recodedPieces[i].signature << std::endl;
+    // bool verified = Verify(recodedPieces[i].signature, u, h,
+    //                        recodedPieces[i].piece, "logo.png123");
+    // std::cout << "\t" << (verified ? "verified" : "not verified") <<
+    // std::endl;
   }
 
   std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
@@ -99,11 +102,11 @@ int main() {
   }
 
   std::vector<std::vector<Fr>> decodedPieces = decoder.GetPieces();
-  std::cout << std::endl << "decoded pieces " << std::endl;
-  for (int i = 0; i < decodedPieces.size(); i++) {
-    for (int j = 0; j < decodedPieces[0].size(); j++) {
-      std::cout << "[" << decodedPieces[i][j] << "] ";
-    }
-    std::cout << std::endl;
-  }
+  // std::cout << std::endl << "decoded pieces " << std::endl;
+  // for (int i = 0; i < decodedPieces.size(); i++) {
+  //   for (int j = 0; j < decodedPieces[0].size(); j++) {
+  //     std::cout << "[" << decodedPieces[i][j] << "] ";
+  //   }
+  //   std::cout << std::endl;
+  // }
 }
