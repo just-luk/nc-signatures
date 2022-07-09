@@ -48,7 +48,7 @@ void Sign(G1 &sign, const Fr &secret, std::vector<Fr> &vector,
 CodedPiece FullRLNCEncoder::getCodedPiece() {
   std::vector<Fr> vec = generateCodingVector(PieceCount());
   std::vector<Fr> piece = std::vector<Fr>(PieceSize(), 0);
-  for (int i = 0; i < PieceSize(); i++) {
+  for (int i = 0; i < PieceCount(); i++) {
     piece = multiply(piece, pieces[i], vec[i]);
   }
   G1 signature;
