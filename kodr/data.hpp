@@ -1,7 +1,6 @@
 #pragma once
 
 #include <mcl/bn256.hpp>
-#include <vector>
 
 #ifndef DATA_HPP
 #define DATA_HPP
@@ -14,6 +13,7 @@ struct CodedPiece {
   std::vector<Fr> codingVector;
   G1 signature;
   CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
+  CodedPiece();
   int len();
   std::vector<Fr> flatten();
   bool isSystematic();

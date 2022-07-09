@@ -1,7 +1,6 @@
 #include <data.hpp>
 #include <math.h>
 #include <mcl/bn256.hpp>
-#include <vector>
 
 using namespace mcl::bn256;
 
@@ -18,6 +17,8 @@ CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s) {
   codingVector = v;
   signature = s;
 }
+
+CodedPiece::CodedPiece(){};
 
 int CodedPiece::len() { return piece.size() + codingVector.size(); }
 
