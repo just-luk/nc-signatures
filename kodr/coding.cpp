@@ -61,12 +61,10 @@ int main() {
 
   FullRLNCEncoder encoder(fileData, pieceCount, "logo.png123", alpha, false);
 
-  std::vector<CodedPiece> codedPieces;
+  std::vector<CodedPiece> codedPieces(codedPieceCount);
   for (int i = 0; i < codedPieceCount; i++) {
-    codedPieces.push_back(encoder.getCodedPiece());
-  }
-  // print and verify the coded pieces
-  for (int i = 0; i < codedPieceCount; i++) {
+    codedPieces[i] = encoder.getCodedPiece();
+
     std::cout << "coded piece " << i + 1 << std::endl;
     std::cout << "\t" << codedPieces[i].signature << std::endl;
     bool verified = Verify(codedPieces[i].signature, u, h, codedPieces[i].piece,
@@ -91,8 +89,8 @@ int main() {
   }
 
   std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
-  std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(),
-                                             recodedPieces.end() - 96);
+  std::vector<CodedPiece> droppedPiecesAgain(
+      recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
   FullRLNCDecoder decoder(pieceCount);
   decoder.AddPiece(droppedPiecesAgain[0], true);
@@ -102,10 +100,8 @@ int main() {
 
   std::vector<std::vector<Fr>> decodedPieces = decoder.GetPieces();
   std::cout << std::endl << "decoded pieces " << std::endl;
-  std::vector<Fr> out;
   for (int i = 0; i < decodedPieces.size(); i++) {
     for (int j = 0; j < decodedPieces[0].size(); j++) {
-      out.push_back(decodedPieces[i][j]);
       std::cout << "[" << decodedPieces[i][j] << "] ";
     }
     std::cout << std::endl;

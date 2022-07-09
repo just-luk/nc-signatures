@@ -59,9 +59,8 @@ std::vector<std::vector<Fr>>
 OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount,
                                int pieceSize) {
   data.resize(pieceSize * pieceCount, 0);
-  std::vector<std::vector<Fr>> ret(pieceCount);
+  std::vector<std::vector<Fr>> ret(pieceCount, std::vector<Fr>(pieceSize));
   for (int i = 0; i < pieceCount; i++) {
-    ret[i].resize(pieceSize);
     copy(data.begin() + i * pieceSize, data.begin() + (i + 1) * pieceSize,
          ret[i].begin());
   }
@@ -72,7 +71,7 @@ std::vector<std::vector<Fr>>
 OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data,
                                     int pieceCount) {
   int size = data.size();
-  int pieceSize = ceil(size / pieceCount);
+  int pieceSize = ceil((float)size / (float)pieceCount);
   return OriginalPiecesWithCountAndSize(data, pieceCount, pieceSize);
 }
 

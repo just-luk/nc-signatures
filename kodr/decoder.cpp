@@ -43,9 +43,9 @@ std::vector<std::vector<Fr>> FullRLNCDecoder::GetPieces() {
   if (!IsDecoded()) {
     throw std::runtime_error("More useful pieces are required!");
   }
-  std::vector<std::vector<Fr>> pieces;
+  std::vector<std::vector<Fr>> pieces(useful);
   for (int i = 0; i < useful; i++) {
-    pieces.push_back(GetPiece(i));
+    pieces[i] = GetPiece(i);
   }
   return pieces;
 }
