@@ -98,7 +98,7 @@ int main() {
   FullRLNCDecoder decoder(pieceCount);
   decoder.AddPiece(droppedPiecesAgain[0], true);
   for (int i = 1; i < pieceCount; i++) {
-    decoder.AddPiece(droppedPiecesAgain[i], false);
+      decoder.AddPiece(droppedPiecesAgain[i], false);
   }
 
   std::vector<std::vector<Fr>> decodedPieces = decoder.GetPieces();

@@ -10,15 +10,22 @@
 #define DECODER_HPP
 
 typedef struct FullRLNCDecoder {
-  int expected, useful, received;
-  DecoderState state;
-  FullRLNCDecoder(int pieceCount);
-  int PieceLength();
-  bool IsDecoded();
-  int Required();
-  void AddPiece(CodedPiece piece, bool isFirst);
-  std::vector<Fr> GetPiece(int i);
-  std::vector<std::vector<Fr>> GetPieces();
+    int expected, useful, received;
+    DecoderState state;
+
+    FullRLNCDecoder(int pieceCount);
+
+    int PieceLength();
+
+    bool IsDecoded();
+
+    int Required();
+
+    void AddPiece(CodedPiece piece, bool isFirst);
+
+    std::vector <Fr> GetPiece(int i);
+
+    std::vector<unsigned char> getData();
 } FullRLNCDecoder;
 
 #endif

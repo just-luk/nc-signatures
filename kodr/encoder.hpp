@@ -8,21 +8,30 @@
 #define ENCODER_HPP
 
 typedef struct FullRLNCEncoder {
-  std::vector<std::vector<Fr>> pieces;
-  int extra;
-  std::string id;
-  Fr secret;
-  int PieceCount();
-  int PieceSize();
-  int DecodableLen();
-  int CodedPieceLen();
-  int Padding();
-  CodedPiece getCodedPiece();
-  FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, std::string id,
-                  Fr secret);
-  FullRLNCEncoder(std::vector<unsigned char> data, int pieceCountOrSize,
-                  std::string id, Fr secret, bool fromSize);
+    std::vector <std::vector<Fr>> pieces;
+    int extra;
+    std::string id;
+    Fr secret;
+
+    int PieceCount();
+
+    int PieceSize();
+
+    int DecodableLen();
+
+    int CodedPieceLen();
+
+    int Padding();
+
+    CodedPiece getCodedPiece();
+
+    FullRLNCEncoder(std::vector <std::vector<Fr>> pieces, std::string id,
+                    Fr secret);
+
+    FullRLNCEncoder(std::vector<unsigned char> data, int pieceCountOrSize,
+                    std::string id, Fr secret, bool fromSize);
 } FullRLNCEncoder;
-void AggregateHash(G1 &P, std::vector<Fr> &vec, const std::string &id);
+
+void AggregateHash(G1 &P, std::vector <Fr> &vec, const std::string &id);
 
 #endif
