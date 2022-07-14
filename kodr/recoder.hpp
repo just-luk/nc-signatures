@@ -2,7 +2,7 @@
 
 #include <data.hpp>
 #include <matrix.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 
 #ifndef RECODER_HPP
 #define RECODER_HPP

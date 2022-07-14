@@ -1,8 +1,8 @@
 #include <data.hpp>
 #include <math.h>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
 std::vector<Fr> multiply(std::vector<Fr> piece1, std::vector<Fr> piece2,
                          Fr by) {

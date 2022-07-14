@@ -1,6 +1,6 @@
 #include <data.hpp>
 #include <encoder.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <string>
 
 FullRLNCEncoder::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces,

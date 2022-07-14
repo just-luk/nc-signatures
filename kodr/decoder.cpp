@@ -1,7 +1,7 @@
 #include <data.hpp>
 #include <decoder.hpp>
 #include <decoder_state.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <stdexcept>
 
 FullRLNCDecoder::FullRLNCDecoder(int pieceCount) {

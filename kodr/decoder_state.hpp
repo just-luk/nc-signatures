@@ -3,7 +3,7 @@
 #include <data.hpp>
 #include <iostream>
 #include <matrix.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <stdexcept>
 
 #ifndef DECODER_STATE_HPP

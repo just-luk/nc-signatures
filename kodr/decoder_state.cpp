@@ -2,7 +2,7 @@
 #include <decoder_state.hpp>
 #include <iostream>
 #include <matrix.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <stdexcept>
 
 DecoderState::DecoderState(Matrix cfs, Matrix pieces) {

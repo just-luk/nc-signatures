@@ -1,7 +1,7 @@
 #pragma once
 
 #include <data.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <string>
 
 #ifndef ENCODER_HPP

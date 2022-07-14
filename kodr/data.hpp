@@ -1,11 +1,11 @@
 #pragma once
 
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 
 #ifndef DATA_HPP
 #define DATA_HPP
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
 std::vector<Fr> multiply(std::vector<Fr> piece1, std::vector<Fr> piece2, Fr by);
 struct CodedPiece {
