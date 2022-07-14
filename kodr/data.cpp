@@ -1,6 +1,7 @@
 #include <data.hpp>
 #include <math.h>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 
 using namespace mcl::bls12;
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <time.h>
 
 using namespace mcl::bls12;

@@ -2,6 +2,7 @@
 #include <decoder.hpp>
 #include <decoder_state.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 #include <vector>
 
@@ -23,7 +24,7 @@ bool FullRLNCDecoder::IsDecoded() { return useful >= expected; }
 
 int FullRLNCDecoder::Required() { return expected - useful; }
 
-void FullRLNCDecoder::AddPiece(CodedPiece piece, bool isFirst) {
+void FullRLNCDecoder::addPiece(CodedPiece piece, bool isFirst) {
     if (IsDecoded()) {
         throw std::runtime_error("All useful pieces have been received!");
     }
@@ -38,7 +39,7 @@ void FullRLNCDecoder::AddPiece(CodedPiece piece, bool isFirst) {
     useful = state.Rank();
 }
 
-std::vector <Fr> FullRLNCDecoder::GetPiece(int i) { return state.GetPiece(i); }
+std::vector <Fr> FullRLNCDecoder::getPiece(int i) { return state.GetPiece(i); }
 
 std::vector<unsigned char> FullRLNCDecoder::getData() {
     if (!IsDecoded()) {
@@ -49,7 +50,7 @@ std::vector<unsigned char> FullRLNCDecoder::getData() {
     std::vector<unsigned char> tempVec;
     std::string tempString;
     for (int i = 0; i < useful; i++) {
-        tempPiece = GetPiece(i);
+        tempPiece = getPiece(i);
         for (int j = 0; j < tempPiece.size(); j++) {
             tempString = tempPiece[j].getStr(mcl::IoSerialize);
             tempVec = std::vector<unsigned char>(tempString.begin(), tempString.end());

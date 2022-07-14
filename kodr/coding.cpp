@@ -5,7 +5,9 @@
 #include <iostream>
 #include <math.h>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <recoder.hpp>
+#include <random>
 
 using namespace mcl::bls12;
 
@@ -36,8 +38,8 @@ bool Verify(const G1 &sign, const G2 &u, const G2 &h, std::vector <Fr> &vector,
     Fp12 e1, e2;
     G1 hashed;
     AggregateHash(hashed, vector, id);
-    pairing(e1, sign, h);   // e1 = e(sign, Q)
-    pairing(e2, hashed, u); // e2 = e(Hm, sQ)
+    pairing(e1, sign, h);   // e1 = e(signature, h)
+    pairing(e2, hashed, u); // e2 = e(hashed, u)
     return e1 == e2;
 }
 
@@ -71,9 +73,8 @@ int main() {
     }
 
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
+    std::vector <CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
 
-    std::vector <CodedPiece> droppedPieces(codedPieces.begin(),
-                                           codedPieces.end() - droppedPieceCount);
     FullRLNCRecoder recoder(droppedPieces);
     int recodedPieceCount = droppedPieces.size() * 2;
     std::vector <CodedPiece> recodedPieces(recodedPieceCount);
@@ -86,24 +87,16 @@ int main() {
     }
 
     std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
-    std::vector <CodedPiece> droppedPiecesAgain(
-            recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
+    std::vector <CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
     FullRLNCDecoder decoder(pieceCount);
-    decoder.AddPiece(droppedPiecesAgain[0], true);
+    decoder.addPiece(droppedPiecesAgain[0], true);
     for (int i = 1; i < pieceCount; i++) {
-        decoder.AddPiece(droppedPiecesAgain[i], false);
+        decoder.addPiece(droppedPiecesAgain[i], false);
     }
 
     std::vector<unsigned char> decodedData = decoder.getData();
     if (decodedData != fileData) {
         std::cout << "ERROR Incorrect decoding!" << std::endl;
     }
-    // std::cout << std::endl << "decoded pieces " << std::endl;
-    // for (int i = 0; i < decodedPieces.size(); i++) {
-    //   for (int j = 0; j < decodedPieces[0].size(); j++) {
-    //     std::cout << "[" << decodedPieces[i][j] << "] ";
-    //   }
-    //   std::cout << std::endl;
-    // }
 }

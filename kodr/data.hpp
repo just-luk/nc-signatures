@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mcl/bls12_381.hpp>
+#include <vector>
 
 #ifndef DATA_HPP
 #define DATA_HPP

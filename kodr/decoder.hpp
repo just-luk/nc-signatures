@@ -4,6 +4,7 @@
 #include <decoder.hpp>
 #include <decoder_state.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 
 #ifndef DECODER_HPP
@@ -21,9 +22,9 @@ typedef struct FullRLNCDecoder {
 
     int Required();
 
-    void AddPiece(CodedPiece piece, bool isFirst);
+    void addPiece(CodedPiece piece, bool isFirst);
 
-    std::vector <Fr> GetPiece(int i);
+    std::vector <Fr> getPiece(int i);
 
     std::vector<unsigned char> getData();
 } FullRLNCDecoder;

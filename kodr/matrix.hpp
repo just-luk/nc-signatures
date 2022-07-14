@@ -1,6 +1,7 @@
 #pragma once
 
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 
 #ifndef MATRIX_HPP
