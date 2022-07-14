@@ -22,12 +22,13 @@ void FullRLNCRecoder::fill() {
 
 CodedPiece FullRLNCRecoder::getCodedPiece() {
     std::vector <Fr> vec = generateCodingVector(this->pieceCount);
-    std::vector <Fr> pc(this->pieces[0].piece.size(), 0);
+    int size = this->pieces[0].piece.size();
+    std::vector <Fr> pc(this->pieces[0].len(), 0);
     std::vector <G1> sigs(this->pieceCount);
 
     for (int i = 0; i < this->pieceCount; i++) {
         sigs[i] = this->pieces[i].signature;
-        pc = multiply(pc, this->pieces[i].piece, vec[i]);
+        pc = multiply(pc, this->pieces[i].flatten(), vec[i]);
     }
 
     G1 out;
@@ -38,5 +39,7 @@ CodedPiece FullRLNCRecoder::getCodedPiece() {
     tempMat = tempMat.Multiply(this->codingMatrix);
 
     vec = tempMat.data[0];
-    return CodedPiece(pc, vec, out);
+    std::vector <Fr> pieceOut(pc.begin(), pc.begin() + size);
+    std::vector <Fr> idOut(pc.begin() + size, pc.end());
+    return CodedPiece(pieceOut, idOut, vec, out);
 }

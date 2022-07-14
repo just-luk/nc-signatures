@@ -14,9 +14,12 @@ void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <G1> &generators, c
     int n = generators.size();
     int m = vec.size() - n;
     G1 hashedID;
+    hashedID.clear();
     for (int i = 0; i < m; i++) {
         if (!vec[i + n].isZero()) {
-            hashAndMapToG1(hashedID, id + std::to_string(i));
+            G1 tmp;
+            hashAndMapToG1(tmp, id + std::to_string(i));
+            hashedID += tmp * vec[i + n];
         }
     }
     G1::mulVec(P, generators.data(), vec.data(), n);
@@ -69,6 +72,7 @@ int main(int argc, char *argv[]) {
     // create random vector
     std::vector <Fr> vec1(102);
     std::vector <Fr> vec2(102);
+    std::vector <Fr> vec3(102);
     for (int i = 0; i < vec1.size(); i++) {
         vec1[i].setRand();
         vec2[i].setRand();
@@ -91,4 +95,14 @@ int main(int argc, char *argv[]) {
 
     ok = Verify(sign2, u, h, vec2, generators, id);
     std::cout << "verify sig 2 " << (ok ? "ok" : "ng") << std::endl;
+
+    std::vector <Fr> coeffs = {10, 132};
+    for (int i = 0; i < vec3.size(); i++) {
+        vec3[i] = coeffs[0] * vec1[i] + coeffs[1] * vec2[i];
+    }
+    std::vector <G1> sigs = {sign1, sign2};
+    G1 combined;
+    Combine(combined, sigs, coeffs);
+    ok = Verify(combined, u, h, vec3, generators, id);
+    std::cout << "verify sig 3 " << (ok ? "ok" : "ng") << std::endl;
 }

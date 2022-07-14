@@ -12,20 +12,21 @@ std::vector <Fr> multiply(std::vector <Fr> piece1, std::vector <Fr> piece2, Fr b
     return piece1;
 }
 
-CodedPiece::CodedPiece(std::vector <Fr> p, std::vector <Fr> v, G1 s) {
+CodedPiece::CodedPiece(std::vector <Fr> p, std::vector <Fr> idVec, std::vector <Fr> v, G1 s) {
     piece = p;
+    idVector = idVec;
     codingVector = v;
     signature = s;
 }
 
 CodedPiece::CodedPiece() {};
 
-int CodedPiece::len() { return piece.size() + codingVector.size(); }
+int CodedPiece::len() { return piece.size() + idVector.size(); }
 
 std::vector <Fr> CodedPiece::flatten() {
-    std::vector <Fr> ret;
-    ret.insert(ret.begin(), piece.begin(), piece.end());
-    ret.insert(ret.end(), codingVector.begin(), codingVector.end());
+    std::vector <Fr> ret(len());
+    std::copy(piece.begin(), piece.end(), ret.begin());
+    std::copy(idVector.begin(), idVector.end(), ret.begin() + piece.size());
     return ret;
 }
 
