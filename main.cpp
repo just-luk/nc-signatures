@@ -1,8 +1,8 @@
 #include <iostream>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <time.h>
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
 void Combine(G1 &out, std::vector<G1> &sigs, std::vector<Fr> &coeffs) {
   assert(sigs.size() == coeffs.size());

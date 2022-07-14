@@ -1,12 +1,12 @@
 #pragma once
 
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <stdexcept>
 
 #ifndef MATRIX_HPP
 #define MATRIX_HPP
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
 typedef struct Matrix {
   std::vector<std::vector<Fr>> data;

@@ -1,8 +1,8 @@
 #include <matrix.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <stdexcept>
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
 Matrix::Matrix(int rows, int cols) {
   this->rows = rows;

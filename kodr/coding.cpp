@@ -4,15 +4,15 @@
 #include <fstream>
 #include <iostream>
 #include <math.h>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <recoder.hpp>
 
-using namespace mcl::bn256;
+using namespace mcl::bls12;
 
-std::vector<unsigned char> readFile(const char *filename) {
+std::vector<unsigned char> readFile(const char *fileName) {
   // open the file:
   std::streampos fileSize;
-  std::ifstream file(filename, std::ios::binary);
+  std::ifstream file(fileName, std::ios::binary);
 
   // get its size:
   file.seekg(0, std::ios::end);
@@ -49,11 +49,11 @@ int main() {
   Fr alpha;
   G2 u, h;
   KeyGen(alpha, u, h);
-  // std::cout << "secret key " << std::endl;
-  // std::cout << "\talpha = " << alpha << std::endl;
-  // std::cout << "public key " << std::endl;
-  // std::cout << "\th = " << h << std::endl;
-  // std::cout << "\tu = " << u << std::endl;
+   std::cout << "secret key " << std::endl;
+   std::cout << "\talpha = " << alpha << std::endl;
+   std::cout << "public key " << std::endl;
+   std::cout << "\th = " << h << std::endl;
+   std::cout << "\tu = " << u << std::endl;
 
   int pieceCount = 64;
   int codedPieceCount = pieceCount * 2;

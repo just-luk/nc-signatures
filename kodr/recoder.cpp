@@ -1,6 +1,6 @@
 #include <data.hpp>
 #include <matrix.hpp>
-#include <mcl/bn256.hpp>
+#include <mcl/bls12_381.hpp>
 #include <recoder.hpp>
 
 FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps) {
