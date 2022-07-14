@@ -11,6 +11,15 @@
           </build-configuration>
         </build-configurations>
       </build-target>
+      <build-target name="coding_debug">
+        <build-configurations>
+          <build-configuration>
+            <make-targets>
+              <make-target>coding_debug</make-target>
+            </make-targets>
+          </build-configuration>
+        </build-configurations>
+      </build-target>
     </user-build-targets>
   </component>
 </project>
