@@ -1,9 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/luke/Downloads/nc-signatures'
- 
-clang++ -o main.exe main.cpp -DMCL_USE_VINT -I ~/.local/include/ -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
- 
-./main.exe
- 
-make: Leaving directory '/home/luke/Downloads/nc-signatures'
- 
