@@ -37,7 +37,7 @@ void AggregateHash(G1 &P, std::vector <Fr> &vec, const std::string &id) {
     G1 hashedID;
     hashAndMapToG1(hashedID, id);
     std::vector <G1> hashVec(vec.size(), hashedID);
-    G1::mulVecMT(P, hashVec.data(), vec.data(), vec.size(), 0);
+    G1::mulVec(P, hashVec.data(), vec.data(), vec.size());
 }
 
 void Sign(G1 &sign, const Fr &secret, std::vector <Fr> &vector,

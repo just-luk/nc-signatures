@@ -15,5 +15,12 @@
         </build>
       </configuration>
     </target>
+    <target id="154dffa7-6e55-479c-90ac-a15c104d8dcd" name="main" defaultType="MAKE">
+      <configuration id="69a987b3-176f-416a-975d-25f4b7975070" name="main">
+        <build type="MAKE">
+          <make targetName="main" />
+        </build>
+      </configuration>
+    </target>
   </component>
 </project>
