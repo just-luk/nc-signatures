@@ -3,6 +3,7 @@
 #include <data.hpp>
 #include <matrix.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 
 #ifndef RECODER_HPP
 #define RECODER_HPP

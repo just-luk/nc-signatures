@@ -1,5 +1,6 @@
 #include <matrix.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 
 using namespace mcl::bls12;

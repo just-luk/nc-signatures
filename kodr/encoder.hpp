@@ -2,6 +2,7 @@
 
 #include <data.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <string>
 
 #ifndef ENCODER_HPP

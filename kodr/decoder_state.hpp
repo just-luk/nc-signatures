@@ -4,6 +4,7 @@
 #include <iostream>
 #include <matrix.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 
 #ifndef DECODER_STATE_HPP

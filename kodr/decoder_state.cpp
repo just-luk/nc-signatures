@@ -3,6 +3,7 @@
 #include <iostream>
 #include <matrix.hpp>
 #include <mcl/bls12_381.hpp>
+#include <vector>
 #include <stdexcept>
 
 DecoderState::DecoderState(Matrix cfs, Matrix pieces) {
