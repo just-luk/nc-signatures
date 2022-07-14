@@ -8,6 +8,7 @@ FullRLNCEncoder::FullRLNCEncoder(std::vector <std::vector<Fr>> pieces,
                                  std::string id, Fr secret) {
     this->pieces = pieces;
     this->id = id;
+    this->count = 0;
     this->secret = secret;
 }
 

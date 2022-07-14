@@ -57,7 +57,7 @@ int main() {
     std::cout << "\th = " << h << std::endl;
     std::cout << "\tu = " << u << std::endl;
 
-    int pieceCount = 64;
+    int pieceCount = 32;
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
