@@ -7,26 +7,31 @@
 
 using namespace mcl::bls12;
 
-std::vector<Fr> multiply(std::vector<Fr> piece1, std::vector<Fr> piece2, Fr by);
+std::vector <Fr> multiply(std::vector <Fr> piece1, std::vector <Fr> piece2, Fr by);
+
 struct CodedPiece {
-  std::vector<Fr> piece;
-  std::vector<Fr> codingVector;
-  G1 signature;
-  CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
-  CodedPiece();
-  int len();
-  std::vector<Fr> flatten();
-  bool isSystematic();
+    std::vector <Fr> piece;
+    std::vector <Fr> codingVector;
+    G1 signature;
+
+    CodedPiece(std::vector <Fr> p, std::vector <Fr> v, G1 s);
+
+    CodedPiece();
+
+    int len();
+
+    std::vector <Fr> flatten();
+
+    bool isSystematic();
 };
-std::vector<Fr> generateCodingVector(int n);
-std::vector<std::vector<Fr>>
-OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount,
-                               int pieceSize);
-std::vector<std::vector<Fr>>
-OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data,
-                                    int pieceCount);
-std::vector<std::vector<Fr>>
-OriginalPiecesFromDataAndPieceSize(std::vector<unsigned char> data,
-                                   int pieceSize);
+
+std::vector <Fr> generateCodingVector(int n);
+
+std::vector <std::vector<Fr>>
+OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, int pieceSize);
+
+std::vector <std::vector<Fr>> OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data, int pieceCount);
+
+std::vector <std::vector<Fr>> OriginalPiecesFromDataAndPieceSize(std::vector<unsigned char> data, int pieceSize);
 
 #endif
