@@ -8,5 +8,12 @@
         </build>
       </configuration>
     </target>
+    <target id="3276236a-bd8c-41ac-a6a0-2c88d0cb1b7d" name="debug" defaultType="MAKE">
+      <configuration id="ea339f35-5467-479d-b2ea-16f3c988a243" name="debug">
+        <build type="MAKE">
+          <make targetName="coding_debug" />
+        </build>
+      </configuration>
+    </target>
   </component>
 </project>

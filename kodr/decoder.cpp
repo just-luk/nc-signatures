@@ -53,13 +53,13 @@ std::vector<unsigned char> FullRLNCDecoder::getData() {
         for (int j = 0; j < tempPiece.size(); j++) {
             tempString = tempPiece[j].getStr(mcl::IoSerialize);
             tempVec = std::vector<unsigned char>(tempString.begin(), tempString.end());
-            pieces.push_back(tempVec[0])
+            pieces.push_back(tempVec[0]);
         }
     }
     int len = pieces.size() - 1;
     while (pieces[len] == 0) {
         len--;
     }
-    pieces.resize(len);
+    pieces.resize(len + 1);
     return pieces;
 }
