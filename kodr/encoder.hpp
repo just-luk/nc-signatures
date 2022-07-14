@@ -10,7 +10,8 @@
 
 typedef struct FullRLNCEncoder {
     std::vector <std::vector<Fr>> pieces;
-    int extra, count;
+    std::vector <G1> generators;
+    int count, codedPieceCount;
     std::string id;
     Fr secret;
 
@@ -22,17 +23,16 @@ typedef struct FullRLNCEncoder {
 
     int CodedPieceLen();
 
-    int Padding();
-
     CodedPiece getCodedPiece();
 
     FullRLNCEncoder(std::vector <std::vector<Fr>> pieces, std::string id,
-                    Fr secret);
+                    Fr secret, std::vector <G1> gens, int cCount);
 
     FullRLNCEncoder(std::vector<unsigned char> data, int pieceCountOrSize,
-                    std::string id, Fr secret, bool fromSize);
+                    std::string id, Fr secret, std::vector <G1> gens, bool fromSize, int cCount);
 } FullRLNCEncoder;
 
-void AggregateHash(G1 &P, std::vector <Fr> &vec, const std::string &id);
+void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &idVec, std::vector <G1> &gens,
+                   const std::string &id);
 
 #endif

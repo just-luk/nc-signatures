@@ -27,17 +27,22 @@ std::vector<unsigned char> readFile(const char *fileName) {
     return fileData;
 }
 
-void KeyGen(Fr &alpha, G2 &pub, G2 &h) {
+void KeyGen(Fr &alpha, G2 &pub, G2 &h, std::vector <G1> &generators) {
     mapToG2(h, rand());
     alpha.setRand();
     G2::mul(pub, h, alpha);
+    for (int i = 0; i < generators.size(); i++) {
+        generators[i].x.setRand();
+        generators[i].y.setRand();
+    }
 }
 
-bool Verify(const G1 &sign, const G2 &u, const G2 &h, std::vector <Fr> &vector,
+bool Verify(const G1 &sign, const G2 &u, const G2 &h, std::vector <G1> gens, std::vector <Fr> &vector,
+            std::vector <Fr> &idVec,
             const std::string &id) {
     Fp12 e1, e2;
     G1 hashed;
-    AggregateHash(hashed, vector, id);
+    AggregateHash(hashed, vector, idVec, gens, id);
     pairing(e1, sign, h);   // e1 = e(signature, h)
     pairing(e2, hashed, u); // e2 = e(hashed, u)
     return e1 == e2;
@@ -47,28 +52,34 @@ int main() {
     srand(unsigned(time(NULL)));
     initPairing();
     std::vector<unsigned char> fileData = readFile("logo.png");
-
-    Fr alpha;
-    G2 u, h;
-    KeyGen(alpha, u, h);
-    std::cout << "secret key " << std::endl;
-    std::cout << "\talpha = " << alpha << std::endl;
-    std::cout << "public key " << std::endl;
-    std::cout << "\th = " << h << std::endl;
-    std::cout << "\tu = " << u << std::endl;
+    std::string identifier = "logo.png";
 
     int pieceCount = 32;
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
-    FullRLNCEncoder encoder(fileData, pieceCount, "logo.png123", alpha, false);
+    Fr alpha;
+    G2 u, h;
+    std::vector < G1 > generators(ceil((float) fileData.size() / (float) pieceCount));
+
+    KeyGen(alpha, u, h, generators);
+    std::cout << "secret key " << std::endl;
+    std::cout << "\talpha = " << alpha << std::endl;
+    std::cout << "public key " << std::endl;
+    std::cout << "\th = " << h << std::endl;
+    std::cout << "\tu = " << u << std::endl;
+    std::cout << "\tpieceCount = " << pieceCount << std::endl;
+
+    FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, false, codedPieceCount);
 
     std::vector <CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++) {
         codedPieces[i] = encoder.getCodedPiece();
-        bool verified = Verify(codedPieces[i].signature, u, h, codedPieces[i].piece, "logo.png123");
+        bool verified = Verify(codedPieces[i].signature, u, h, generators, codedPieces[i].piece,
+                               codedPieces[i].idVector,
+                               identifier);
         if (!verified) {
-            std::cout << "ERROR not verified" << std::endl;
+            std::cout << "ENCODER ERROR not verified" << std::endl;
         }
     }
 
@@ -80,9 +91,11 @@ int main() {
     std::vector <CodedPiece> recodedPieces(recodedPieceCount);
     for (int i = 0; i < recodedPieceCount; i++) {
         recodedPieces[i] = recoder.getCodedPiece();
-        bool verified = Verify(recodedPieces[i].signature, u, h, recodedPieces[i].piece, "logo.png123");
+        bool verified = Verify(recodedPieces[i].signature, u, h, generators, recodedPieces[i].piece,
+                               recodedPieces[i].idVector,
+                               identifier);
         if (!verified) {
-            std::cout << "ERROR not verified" << std::endl;
+            std::cout << "RECODER ERROR not verified" << std::endl;
         }
     }
 
