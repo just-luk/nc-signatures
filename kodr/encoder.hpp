@@ -10,7 +10,7 @@
 
 typedef struct FullRLNCEncoder {
     std::vector <std::vector<Fr>> pieces;
-    int extra;
+    int extra, count;
     std::string id;
     Fr secret;
 
