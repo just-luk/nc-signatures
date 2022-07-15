@@ -53,10 +53,24 @@ std::vector<unsigned char> CodedPiece::toBytes() {
     return ret;
 }
 
-bool CodedPiece::isSystematic() {
+std::vector <Fr> generateCodingVector(int n) {
+    std::vector <Fr> ret(n);
+    for (int i = 0; i < n; i++) {
+        ret[i].setRand();
+    }
+    return ret;
+}
+
+std::vector <Fr> generateSystematicVector(int idx, int n) {
+    std::vector <Fr> ret(n, 0);
+    ret[idx] = 1;
+    return ret;
+}
+
+bool isSystematic(std::vector <Fr> vec) {
     int pos = -1;
-    for (int i = 0; i < codingVector.size(); i++) {
-        Fr el = codingVector[i];
+    for (int i = 0; i < vec.size(); i++) {
+        Fr el = vec[i];
         if (el.isZero()) {
             continue;
         } else if (el.isOne()) {
@@ -68,15 +82,7 @@ bool CodedPiece::isSystematic() {
             return false;
         }
     }
-    return pos >= 0 && pos < codingVector.size();
-}
-
-std::vector <Fr> generateCodingVector(int n) {
-    std::vector <Fr> ret(n);
-    for (int i = 0; i < n; i++) {
-        ret[i].setRand();
-    }
-    return ret;
+    return pos >= 0 && pos < vec.size();
 }
 
 std::vector <std::vector<Fr>>

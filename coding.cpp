@@ -7,6 +7,7 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <recoder.hpp>
+#include <stdlib.h>
 #include <random>
 
 using namespace mcl::bls12;
@@ -48,13 +49,17 @@ bool Verify(const G1 &sign, const G2 &u, const G2 &h, std::vector <G1> gens, std
     return e1 == e2;
 }
 
-int main() {
+int main(int argc, char **argv) {
     srand(unsigned(time(NULL)));
     initPairing();
     std::vector<unsigned char> fileData = readFile("logo.png");
 
     std::string identifier = "logo.png";
-    int pieceCount = 48;
+    if(argc < 2) {
+        std::cout << "Usage: " << argv[0] << " <pieceCount>" << std::endl;
+        return 1;
+    }
+    int pieceCount = strtol(argv[1], NULL, 10);
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
@@ -70,7 +75,7 @@ int main() {
     std::cout << "\tu = " << u << std::endl;
     std::cout << "\tpieceCount = " << pieceCount << std::endl;
 
-    FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, false, codedPieceCount);
+    FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, true);
 
     std::vector <CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++) {

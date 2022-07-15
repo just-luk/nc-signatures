@@ -11,8 +11,9 @@
 typedef struct FullRLNCEncoder {
     std::vector <std::vector<Fr>> pieces;
     std::vector <G1> generators;
-    int count, codedPieceCount;
     std::string id;
+    bool useSystematic;
+    int pieceIndex;
     Fr secret;
 
     int PieceCount();
@@ -26,13 +27,13 @@ typedef struct FullRLNCEncoder {
     CodedPiece getCodedPiece();
 
     FullRLNCEncoder(std::vector <std::vector<Fr>> pieces, std::string id,
-                    Fr secret, std::vector <G1> gens, int cCount);
+                    Fr secret, std::vector <G1> gens, bool generateSystematic);
 
     FullRLNCEncoder(std::vector<unsigned char> data, int pieceCountOrSize,
-                    std::string id, Fr secret, std::vector <G1> gens, bool fromSize, int cCount);
+                    std::string id, Fr secret, std::vector <G1> gens, bool generateSystematic, bool fromSize = false);
 } FullRLNCEncoder;
 
 void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &codingVec, std::vector <G1> &gens,
-                   const std::string &id);
+                   const std::string &id, int pieceID = -1); 
 
 #endif
