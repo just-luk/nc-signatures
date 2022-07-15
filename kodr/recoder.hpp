@@ -15,8 +15,6 @@ typedef struct FullRLNCRecoder {
 
     FullRLNCRecoder(std::vector <CodedPiece> ps);
 
-    void fill();
-
     CodedPiece getCodedPiece();
 } FullRLNCRecoder;
 

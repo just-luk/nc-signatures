@@ -12,11 +12,10 @@ std::vector <Fr> multiply(std::vector <Fr> piece1, std::vector <Fr> piece2, Fr b
 
 struct CodedPiece {
     std::vector <Fr> piece;
-    std::vector <Fr> idVector;
     std::vector <Fr> codingVector;
     G1 signature;
 
-    CodedPiece(std::vector <Fr> p, std::vector <Fr> idVec, std::vector <Fr> v, G1 s);
+    CodedPiece(std::vector <Fr> p, std::vector <Fr> v, G1 s);
 
     CodedPiece();
 

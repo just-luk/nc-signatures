@@ -37,37 +37,33 @@ int FullRLNCEncoder::DecodableLen() { return PieceCount() * CodedPieceLen(); }
 
 int FullRLNCEncoder::CodedPieceLen() { return PieceCount() + PieceSize(); }
 
-void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &idVec, std::vector <G1> &gens,
+void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &codingVec, std::vector <G1> &gens,
                    const std::string &id) {
-    G1 hashedID;
-    hashedID.clear();
-    for (int i = 0; i < idVec.size(); i++) {
-        if (!idVec[i].isZero()) {
-            G1 tmp;
-            hashAndMapToG1(tmp, id + std::to_string(i));
-            hashedID += tmp * idVec[i];
-        }
+    std::vector <G1> fullPoints(gens.size() + codingVec.size());
+    std::vector <Fr> fullVec(vec.size() + codingVec.size());
+    std::copy(vec.begin(), vec.end(), fullVec.begin());
+    std::copy(codingVec.begin(), codingVec.end(), fullVec.begin() + vec.size());
+    std::copy(gens.begin(), gens.end(), fullPoints.begin());
+    for (int i = 0; i < codingVec.size(); i++) {
+        hashAndMapToG1(fullPoints[i + gens.size()], id + std::to_string(i));
     }
-    G1::mulVec(P, gens.data(), vec.data(), vec.size());
-    P += hashedID;
+    G1::mulVec(P, fullPoints.data(), fullVec.data(), fullVec.size());
 }
 
-void Sign(G1 &sign, const Fr &secret, std::vector <Fr> &vec, std::vector <Fr> &idVec, std::vector <G1> &gens,
+void Sign(G1 &sign, const Fr &secret, std::vector <Fr> &vec, std::vector <Fr> &codingVec, std::vector <G1> &gens,
           const std::string &id) {
-    AggregateHash(sign, vec, idVec, gens, id);
+    AggregateHash(sign, vec, codingVec, gens, id);
     G1::mul(sign, sign, secret);
 }
 
 CodedPiece FullRLNCEncoder::getCodedPiece() {
     std::vector <Fr> codingVec = generateCodingVector(PieceCount());
     std::vector <Fr> piece = std::vector<Fr>(PieceSize(), 0);
-    std::vector <Fr> idVec = std::vector<Fr>(codedPieceCount, 0);
     for (int i = 0; i < PieceCount(); i++) {
         piece = multiply(piece, pieces[i], codingVec[i]);
     }
     G1 signature;
-    idVec[count] = 1;
-    Sign(signature, secret, piece, idVec, this->generators, id);
+    Sign(signature, secret, piece, codingVec, this->generators, id);
     count++;
-    return CodedPiece(piece, idVec, codingVec, signature);
+    return CodedPiece(piece, codingVec, signature);
 }

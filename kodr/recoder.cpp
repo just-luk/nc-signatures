@@ -7,17 +7,6 @@
 FullRLNCRecoder::FullRLNCRecoder(std::vector <CodedPiece> ps) {
     this->pieces = ps;
     this->pieceCount = ps.size();
-    fill();
-}
-
-// Fill the coding matrix with the coded this->pieces.
-void FullRLNCRecoder::fill() {
-    std::vector <std::vector<Fr>> data(this->pieceCount, std::vector<Fr>(this->pieces[0].codingVector.size()));
-    Matrix m(data);
-    for (int i = 0; i < this->pieceCount; i++) {
-        m.data[i] = this->pieces[i].codingVector;
-    }
-    this->codingMatrix = m;
 }
 
 CodedPiece FullRLNCRecoder::getCodedPiece() {
@@ -31,15 +20,10 @@ CodedPiece FullRLNCRecoder::getCodedPiece() {
         pc = multiply(pc, this->pieces[i].flatten(), vec[i]);
     }
 
-    G1 out;
-    G1::mulVecMT(out, sigs.data(), vec.data(), sigs.size(), 4);
+    G1 signature;
+    G1::mulVec(signature, sigs.data(), vec.data(), sigs.size());
 
-    std::vector <std::vector<Fr>> tempVec(1, vec);
-    Matrix tempMat(tempVec);
-    tempMat = tempMat.Multiply(this->codingMatrix);
-
-    vec = tempMat.data[0];
     std::vector <Fr> pieceOut(pc.begin(), pc.begin() + size);
-    std::vector <Fr> idOut(pc.begin() + size, pc.end());
-    return CodedPiece(pieceOut, idOut, vec, out);
+    std::vector <Fr> vecOut(pc.begin() + size, pc.end());
+    return CodedPiece(pieceOut, vecOut, signature);
 }
