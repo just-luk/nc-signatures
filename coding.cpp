@@ -12,6 +12,24 @@
 
 using namespace mcl::bls12;
 
+std::string random_string(std::size_t length)
+{
+    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    std::random_device random_device;
+    std::mt19937 generator(random_device());
+    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+
+    std::string random_string;
+
+    for (int i = 0; i < length; ++i)
+    {
+        random_string += CHARACTERS[distribution(generator)];
+    }
+
+    return random_string;
+}
+
 std::vector<unsigned char> readFile(const char *fileName) {
     // open the file:
     std::streampos fileSize;
@@ -54,7 +72,7 @@ int main(int argc, char **argv) {
     initPairing();
     std::vector<unsigned char> fileData = readFile("logo.png");
 
-    std::string identifier = "logo.png";
+    std::string identifier = "logo.png" + random_string(8);
     if(argc < 2) {
         std::cout << "Usage: " << argv[0] << " <pieceCount>" << std::endl;
         return 1;
