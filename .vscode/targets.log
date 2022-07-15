@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 17:56:49 2022
+# Make data base, printed on Fri Jul 15 17:58:22 2022
 
 # Variables
 
@@ -248,7 +248,8 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decod 
+er.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 .DEFAULT:
@@ -277,6 +278,6 @@ all:
 # strcache performance: lookups = 21 / hit rate = 28%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/21=0%
-# Finished Make data base on Fri Jul 15 17:56:49 2022
+# Finished Make data base on Fri Jul 15 17:58:22 2022
 
  

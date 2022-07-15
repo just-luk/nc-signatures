@@ -31,7 +31,6 @@ struct CodedPiece
 
 std::vector<Fr> generateCodingVector(int n);
 std::vector<Fr> generateSystematicVector(int idx, int n);
-bool isSystematic(std::vector<Fr> vec);
 
 std::vector<std::vector<Fr>>
 OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, int pieceSize);

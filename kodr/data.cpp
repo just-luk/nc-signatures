@@ -78,32 +78,6 @@ std::vector<Fr> generateSystematicVector(int idx, int n)
     return ret;
 }
 
-bool isSystematic(std::vector<Fr> vec)
-{
-    int pos = -1;
-    for (int i = 0; i < vec.size(); i++)
-    {
-        Fr el = vec[i];
-        if (el.isZero())
-        {
-            continue;
-        }
-        else if (el.isOne())
-        {
-            if (pos != -1)
-            {
-                return false;
-            }
-            pos = i;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    return pos >= 0 && pos < vec.size();
-}
-
 std::vector<std::vector<Fr>>
 OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, int pieceSize)
 {
@@ -129,6 +103,6 @@ std::vector<std::vector<Fr>>
 OriginalPiecesFromDataAndPieceSize(std::vector<unsigned char> data, int pieceSize)
 {
     int size = data.size();
-    int pieceCount = ceil(size / pieceSize);
+    int pieceCount = ceil((float)size / (float)pieceSize);
     return OriginalPiecesWithCountAndSize(data, pieceCount, pieceSize);
 }
