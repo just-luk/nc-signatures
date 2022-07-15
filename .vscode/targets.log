@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 10:49:40 2022
+# Make data base, printed on Fri Jul 15 16:18:45 2022
 
 # Variables
 
@@ -163,7 +163,7 @@ OS = Windows_NT
 # environment
 __COMPAT_LAYER = DetectorsAppHealth
 # makefile
-.DEFAULT_GOAL := main
+.DEFAULT_GOAL := coding
 # default
 MAKE_VERSION := 4.3
 # environment
@@ -219,9 +219,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657896572): 12 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657916313): 11 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -233,13 +233,13 @@ coding_debug:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 8):
+#  recipe to execute (from 'Makefile', line 5):
 	clang++-12 -o kodr/coding.exe kodr/coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-14 11:19:20
+#  Last modified 2022-07-15 16:18:11
 #  File has been updated.
 #  Successfully updated.
 
@@ -247,9 +247,8 @@ coding:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 5):
-	clang++-12 -O3 -o kodr/coding.exe kodr/coding.cpp kodr/encoder.cpp kodr/recoder.cpp ko 
-dr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+#  recipe to execute (from 'Makefile', line 2):
+	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 .DEFAULT:
@@ -264,27 +263,21 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
-main:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -o main.exe main.cpp -DMCL_USE_VINT -I ~/.local/include/ -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
-
 # files hash-table stats:
-# Load=7/1024=1%, Rehash=0, Collisions=0/17=0%
-# VPATH Search Paths
+# Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
+# VPATH  
+Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 18 / storage = 131 B / avg = 7 B
-# current buf: size = 8174 B / used = 131 B / count = 18 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 122 B / avg = 7 B
+# current buf: size = 8174 B / used = 122 B / count = 16 / avg = 7 B
 
-# strcache performance: lookups = 25 / hit rate = 28%
+# strcache performance: lookups = 22 / hit rate = 27%
 # hash-table stats:
-# Load=18/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Fri Jul 15 10:49:40 2022
+# Load=16/8192=0%, Rehash=0, Collisions=0/22=0%
+# Finished Make data base on Fri Jul 15 16:18:45 2022
 
  
