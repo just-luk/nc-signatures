@@ -23,7 +23,7 @@ void FullRLNCRecoder::fill() {
 CodedPiece FullRLNCRecoder::getCodedPiece() {
     std::vector <Fr> vec = generateCodingVector(this->pieceCount);
     int size = this->pieces[0].piece.size();
-    std::vector <Fr> pc(this->pieces[0].len(), 0);
+    std::vector <Fr> pc(this->pieces[0].dataLen(), 0);
     std::vector <G1> sigs(this->pieceCount);
 
     for (int i = 0; i < this->pieceCount; i++) {

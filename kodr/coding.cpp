@@ -52,8 +52,8 @@ int main() {
     srand(unsigned(time(NULL)));
     initPairing();
     std::vector<unsigned char> fileData = readFile("logo.png");
-    std::string identifier = "logo.png";
 
+    std::string identifier = "logo.png";
     int pieceCount = 32;
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
@@ -79,7 +79,7 @@ int main() {
                                codedPieces[i].idVector,
                                identifier);
         if (!verified) {
-            std::cout << "ENCODER ERROR not verified" << std::endl;
+            std::cout << "[ENCODER] ERROR not verified" << std::endl;
         }
     }
 
@@ -95,7 +95,7 @@ int main() {
                                recodedPieces[i].idVector,
                                identifier);
         if (!verified) {
-            std::cout << "RECODER ERROR not verified" << std::endl;
+            std::cout << "[RECODER] ERROR not verified" << std::endl;
         }
     }
 
