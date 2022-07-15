@@ -20,7 +20,11 @@ struct CodedPiece {
 
     CodedPiece();
 
-    int len();
+    int dataLen();
+
+    int fullLen();
+
+    std::vector<unsigned char> toBytes();
 
     std::vector <Fr> flatten();
 
