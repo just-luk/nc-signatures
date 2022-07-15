@@ -8,12 +8,13 @@
 #ifndef RECODER_HPP
 #define RECODER_HPP
 
-typedef struct FullRLNCRecoder {
-    std::vector <CodedPiece> pieces;
+typedef struct FullRLNCRecoder
+{
+    std::vector<CodedPiece> pieces;
     Matrix codingMatrix;
     int pieceCount;
 
-    FullRLNCRecoder(std::vector <CodedPiece> ps);
+    FullRLNCRecoder(std::vector<CodedPiece> ps);
 
     CodedPiece getCodedPiece();
 } FullRLNCRecoder;
