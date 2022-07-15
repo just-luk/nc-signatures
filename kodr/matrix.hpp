@@ -9,12 +9,13 @@
 
 using namespace mcl::bls12;
 
-typedef struct Matrix {
-    std::vector <std::vector<Fr>> data;
+typedef struct Matrix
+{
+    std::vector<std::vector<Fr>> data;
     int rows;
     int cols;
 
-    Matrix(std::vector <std::vector<Fr>> d);
+    Matrix(std::vector<std::vector<Fr>> d);
 
     Matrix();
 

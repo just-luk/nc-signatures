@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 16:18:45 2022
+# Make data base, printed on Fri Jul 15 17:56:49 2022
 
 # Variables
 
@@ -219,9 +219,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657916313): 11 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657922123): 10 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -239,7 +239,7 @@ coding_debug:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-15 16:18:11
+#  Last modified 2022-07-15 17:56:47
 #  File has been updated.
 #  Successfully updated.
 
@@ -265,19 +265,18 @@ all:
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
-# VPATH  
-Search Paths
+# VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 122 B / avg = 7 B
-# current buf: size = 8174 B / used = 122 B / count = 16 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 116 B / avg = 7 B
+# current buf: size = 8174 B / used = 116 B / count = 15 / avg = 7 B
 
-# strcache performance: lookups = 22 / hit rate = 27%
+# strcache performance: lookups = 21 / hit rate = 28%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Jul 15 16:18:45 2022
+# Load=15/8192=0%, Rehash=0, Collisions=0/21=0%
+# Finished Make data base on Fri Jul 15 17:56:49 2022
 
  
