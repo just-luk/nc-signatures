@@ -54,7 +54,7 @@ int main() {
     std::vector<unsigned char> fileData = readFile("logo.png");
 
     std::string identifier = "logo.png";
-    int pieceCount = 32;
+    int pieceCount = 48;
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
@@ -82,6 +82,7 @@ int main() {
             std::cout << "[ENCODER] ERROR not verified" << std::endl;
         }
     }
+    std::cout << "byteLength = " << codedPieces[0].fullLen() << std::endl;
 
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
     std::vector <CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
