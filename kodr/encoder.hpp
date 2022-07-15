@@ -32,7 +32,7 @@ typedef struct FullRLNCEncoder {
                     std::string id, Fr secret, std::vector <G1> gens, bool fromSize, int cCount);
 } FullRLNCEncoder;
 
-void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &idVec, std::vector <G1> &gens,
+void AggregateHash(G1 &P, std::vector <Fr> &vec, std::vector <Fr> &codingVec, std::vector <G1> &gens,
                    const std::string &id);
 
 #endif

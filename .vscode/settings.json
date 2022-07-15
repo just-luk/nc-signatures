@@ -1,3 +1,9 @@
 {
-	"makefile.extensionOutputFolder": "./.vscode"
+	"makefile.extensionOutputFolder": "./.vscode",
+	"files.associations": {
+		"*.sage": "python",
+		"*.jack": "java",
+		"xlocale": "cpp",
+		"xlocnum": "cpp"
+	}
 }

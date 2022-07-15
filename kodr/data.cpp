@@ -12,16 +12,15 @@ std::vector <Fr> multiply(std::vector <Fr> piece1, std::vector <Fr> piece2, Fr b
     return piece1;
 }
 
-CodedPiece::CodedPiece(std::vector <Fr> p, std::vector <Fr> idVec, std::vector <Fr> v, G1 s) {
+CodedPiece::CodedPiece(std::vector <Fr> p, std::vector <Fr> v, G1 s) {
     piece = p;
-    idVector = idVec;
     codingVector = v;
     signature = s;
 }
 
 CodedPiece::CodedPiece() {};
 
-int CodedPiece::dataLen() { return piece.size() + idVector.size(); }
+int CodedPiece::dataLen() { return piece.size() + codingVector.size(); }
 
 int CodedPiece::fullLen() {
     return dataLen() * 32 + 32;
@@ -30,7 +29,7 @@ int CodedPiece::fullLen() {
 std::vector <Fr> CodedPiece::flatten() {
     std::vector <Fr> ret(dataLen());
     std::copy(piece.begin(), piece.end(), ret.begin());
-    std::copy(idVector.begin(), idVector.end(), ret.begin() + piece.size());
+    std::copy(codingVector.begin(), codingVector.end(), ret.begin() + piece.size());
     return ret;
 }
 
@@ -43,8 +42,8 @@ std::vector<unsigned char> CodedPiece::toBytes() {
         tempArr = std::vector<unsigned char>(tempString.begin(), tempString.end());
         std::copy(tempArr.begin(), tempArr.end(), ret.begin() + i * 32);
     }
-    for (int i = 0; i < idVector.size(); i++) {
-        tempString = idVector[i].getStr(mcl::IoSerialize);
+    for (int i = 0; i < codingVector.size(); i++) {
+        tempString = codingVector[i].getStr(mcl::IoSerialize);
         tempArr = std::vector<unsigned char>(tempString.begin(), tempString.end());
         std::copy(tempArr.begin(), tempArr.end(), ret.begin() + (piece.size() + i) * 32);
     }
