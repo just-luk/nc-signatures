@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 17:58:22 2022
+# Make data base, printed on Fri Jul 15 21:07:25 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ GOPATH = C:\Users\lukegriffith\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_7304_GNOAGHYXYKYBWOQW
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5924_VBZKUKDHYOSTSUJL
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 7304
+VSCODE_PID = 5924
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -160,8 +160,6 @@ USERDOMAIN = LAPTOP-HP-LUKE
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
-# environment
-__COMPAT_LAYER = DetectorsAppHealth
 # makefile
 .DEFAULT_GOAL := coding
 # default
@@ -211,7 +209,7 @@ PROCESSOR_REVISION = 8e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=10/126=8%
+# Load=98/1024=10%, Rehash=0, Collisions=10/125=8%
 
 # Pattern-specific Variable Values
 
@@ -248,8 +246,7 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decod 
-er.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 .DEFAULT:
@@ -278,6 +275,6 @@ all:
 # strcache performance: lookups = 21 / hit rate = 28%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/21=0%
-# Finished Make data base on Fri Jul 15 17:58:22 2022
+# Finished Make data base on Fri Jul 15 21:07:25 2022
 
  
