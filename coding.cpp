@@ -8,6 +8,7 @@
 #include <vector>
 #include <recoder.hpp>
 #include <stdlib.h>
+#include <assert.h>
 #include <random>
 
 using namespace mcl::bls12;
@@ -75,7 +76,7 @@ int main(int argc, char **argv)
 {
     srand(unsigned(time(NULL)));
     initPairing();
-    std::vector<unsigned char> fileData = readFile("logo.png");
+    std::vector<unsigned char> fileData = readFile("../logo.png");
 
     std::string identifier = "logo.png" + random_string(8);
     if (argc < 2)
@@ -84,12 +85,14 @@ int main(int argc, char **argv)
         return 1;
     }
     int pieceCount = strtol(argv[1], NULL, 10);
+    int pieceSize = ceil((float)fileData.size() / (float)pieceCount);
+    assert(pieceSize >= pieceCount);
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
     Fr alpha;
     G2 u, h;
-    std::vector<G1> generators(ceil((float)fileData.size() / (float)pieceCount));
+    std::vector<G1> generators(pieceSize);
 
     KeyGen(alpha, u, h, generators);
     std::cout << "secret key " << std::endl;
@@ -99,6 +102,7 @@ int main(int argc, char **argv)
     std::cout << "\tu = " << u << std::endl;
     std::cout << "\tpieceCount = " << pieceCount << std::endl;
 
+    // systematic encoder
     FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, true);
 
     std::vector<CodedPiece> codedPieces(codedPieceCount);
@@ -113,7 +117,7 @@ int main(int argc, char **argv)
             std::cout << "[ENCODER] ERROR not verified" << std::endl;
         }
     }
-    std::cout << "byteLength = " << codedPieces[0].fullLen() << std::endl;
+    std::cout << "\tbyteLength = " << codedPieces[0].fullLen() << std::endl;
 
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
     std::vector<CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
