@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 15 21:07:25 2022
+# Make data base, printed on Mon Jul 18 18:38:50 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ USERPROFILE = C:\Users\lukegriffith
 # environment
 LOCALAPPDATA = C:\Users\lukegriffith\AppData\Local
 # environment
-VSCODE_CWD = C:\WINDOWS\system32
+VSCODE_CWD = C:\Windows
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -33,7 +33,7 @@ SYSTEMROOT = C:\WINDOWS
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # environment
@@ -41,7 +41,7 @@ GOPATH = C:\Users\lukegriffith\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5924_VBZKUKDHYOSTSUJL
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19816_TUELLUMFFYXWGYFN
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 5924
+VSCODE_PID = 19816
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -217,9 +217,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657922123): 10 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657936660): 12 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -246,7 +246,8 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp 
+ -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 .DEFAULT:
@@ -269,12 +270,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 116 B / avg = 7 B
-# current buf: size = 8174 B / used = 116 B / count = 15 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 137 B / avg = 8 B
+# current buf: size = 8174 B / used = 137 B / count = 17 / avg = 8 B
 
-# strcache performance: lookups = 21 / hit rate = 28%
+# strcache performance: lookups = 23 / hit rate = 26%
 # hash-table stats:
-# Load=15/8192=0%, Rehash=0, Collisions=0/21=0%
-# Finished Make data base on Fri Jul 15 21:07:25 2022
+# Load=17/8192=0%, Rehash=0, Collisions=0/23=0%
+# Finished Make data base on Mon Jul 18 18:38:50 2022
 
  
