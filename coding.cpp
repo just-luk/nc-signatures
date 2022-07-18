@@ -1,12 +1,12 @@
-#include <data.hpp>
-#include <decoder.hpp>
-#include <encoder.hpp>
+#include <kodr/data.hpp>
+#include <kodr/decoder.hpp>
+#include <kodr/encoder.hpp>
 #include <fstream>
 #include <iostream>
 #include <math.h>
 #include <mcl/bls12_381.hpp>
 #include <vector>
-#include <recoder.hpp>
+#include <kodr/recoder.hpp>
 #include <stdlib.h>
 #include <assert.h>
 #include <random>

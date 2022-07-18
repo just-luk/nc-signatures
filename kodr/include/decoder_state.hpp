@@ -1,8 +1,7 @@
 #pragma once
 
-#include <data.hpp>
-#include <iostream>
-#include <matrix.hpp>
+#include "data.hpp"
+#include "matrix.hpp"
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <stdexcept>

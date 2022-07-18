@@ -1,8 +1,7 @@
 #pragma once
 
-#include <data.hpp>
-#include <decoder.hpp>
-#include <decoder_state.hpp>
+#include "data.hpp"
+#include "decoder_state.hpp"
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <stdexcept>
