@@ -21,6 +21,30 @@ CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s)
     signature = s;
 }
 
+CodedPiece::CodedPiece(std::vector<unsigned char> &bytes, int &pieceSize, int &codingVectorSize)
+{
+    piece.resize(pieceSize);
+    codingVector.resize(codingVectorSize);
+    std::vector<unsigned char> tempArr(32);
+    std::string tempString;
+
+    for (int i = 0; i < pieceSize; i++)
+    {
+        tempArr = std::vector<unsigned char>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempString = std::string(tempArr.begin(), tempArr.end());
+        piece[i].setStr(tempString, mcl::IoSerialize);
+    }
+    for (int i = pieceSize; i < pieceSize + codingVectorSize; i++)
+    {
+        tempArr = std::vector<unsigned char>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempString = std::string(tempArr.begin(), tempArr.end());
+        codingVector[i - pieceSize].setStr(tempString, mcl::IoSerialize);
+    }
+    tempArr = std::vector<unsigned char>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.begin() + (pieceSize + codingVectorSize + 1) * 32);
+    tempString = std::string(tempArr.begin(), tempArr.end());
+    signature.setStr(tempString, mcl::IoSerialize);
+}
+
 CodedPiece::CodedPiece(){};
 
 int CodedPiece::dataLen() { return piece.size() + codingVector.size(); }
