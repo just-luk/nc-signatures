@@ -21,26 +21,26 @@ CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s)
     signature = s;
 }
 
-CodedPiece::CodedPiece(std::vector<unsigned char> &bytes, int &pieceSize, int &codingVectorSize)
+CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, int &pieceSize, int &codingVectorSize)
 {
     piece.resize(pieceSize);
     codingVector.resize(codingVectorSize);
-    std::vector<unsigned char> tempArr(32);
+    std::vector<uint8_t> tempArr(32);
     std::string tempString;
 
     for (int i = 0; i < pieceSize; i++)
     {
-        tempArr = std::vector<unsigned char>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempArr = std::vector<uint8_t>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
         tempString = std::string(tempArr.begin(), tempArr.end());
         piece[i].setStr(tempString, mcl::IoSerialize);
     }
     for (int i = pieceSize; i < pieceSize + codingVectorSize; i++)
     {
-        tempArr = std::vector<unsigned char>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempArr = std::vector<uint8_t>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
         tempString = std::string(tempArr.begin(), tempArr.end());
         codingVector[i - pieceSize].setStr(tempString, mcl::IoSerialize);
     }
-    tempArr = std::vector<unsigned char>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.begin() + (pieceSize + codingVectorSize + 1) * 32);
+    tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.begin() + (pieceSize + codingVectorSize + 1) * 32);
     tempString = std::string(tempArr.begin(), tempArr.end());
     signature.setStr(tempString, mcl::IoSerialize);
 }
@@ -62,25 +62,25 @@ std::vector<Fr> CodedPiece::flatten()
     return ret;
 }
 
-std::vector<unsigned char> CodedPiece::toBytes()
+std::vector<uint8_t> CodedPiece::toBytes()
 {
-    std::vector<unsigned char> ret(fullLen());
-    std::vector<unsigned char> tempArr(32);
+    std::vector<uint8_t> ret(fullLen());
+    std::vector<uint8_t> tempArr(32);
     std::string tempString;
     for (int i = 0; i < piece.size(); i++)
     {
         tempString = piece[i].getStr(mcl::IoSerialize);
-        tempArr = std::vector<unsigned char>(tempString.begin(), tempString.end());
+        tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
         std::copy(tempArr.begin(), tempArr.end(), ret.begin() + i * 32);
     }
     for (int i = 0; i < codingVector.size(); i++)
     {
         tempString = codingVector[i].getStr(mcl::IoSerialize);
-        tempArr = std::vector<unsigned char>(tempString.begin(), tempString.end());
+        tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
         std::copy(tempArr.begin(), tempArr.end(), ret.begin() + (piece.size() + i) * 32);
     }
     tempString = signature.getStr(mcl::IoSerialize);
-    tempArr = std::vector<unsigned char>(tempString.begin(), tempString.end());
+    tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
     std::copy(tempArr.begin(), tempArr.end(), ret.begin() + dataLen() * 32);
     return ret;
 }
@@ -103,7 +103,7 @@ std::vector<Fr> generateSystematicVector(int idx, int n)
 }
 
 std::vector<std::vector<Fr>>
-OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, int pieceSize)
+OriginalPiecesWithCountAndSize(std::vector<uint8_t> data, int pieceCount, int pieceSize)
 {
     data.resize(pieceSize * pieceCount, 0);
     std::vector<std::vector<Fr>> ret(pieceCount, std::vector<Fr>(pieceSize));
@@ -116,7 +116,7 @@ OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, 
 }
 
 std::vector<std::vector<Fr>>
-OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data, int pieceCount)
+OriginalPiecesFromDataAndPieceCount(std::vector<uint8_t> data, int pieceCount)
 {
     int size = data.size();
     int pieceSize = ceil((float)size / (float)pieceCount);
@@ -124,7 +124,7 @@ OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data, int pieceCo
 }
 
 std::vector<std::vector<Fr>>
-OriginalPiecesFromDataAndPieceSize(std::vector<unsigned char> data, int pieceSize)
+OriginalPiecesFromDataAndPieceSize(std::vector<uint8_t> data, int pieceSize)
 {
     int size = data.size();
     int pieceCount = ceil((float)size / (float)pieceSize);

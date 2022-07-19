@@ -18,7 +18,7 @@ struct CodedPiece
 
     CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
 
-    CodedPiece(std::vector<unsigned char> &bytes, int &pieceSize, int &codingVectorSize);
+    CodedPiece(std::vector<uint8_t> &bytes, int &pieceSize, int &codingVectorSize);
 
     CodedPiece();
 
@@ -26,7 +26,7 @@ struct CodedPiece
 
     int fullLen();
 
-    std::vector<unsigned char> toBytes();
+    std::vector<uint8_t> toBytes();
 
     std::vector<Fr> flatten();
 };
@@ -35,10 +35,10 @@ std::vector<Fr> generateCodingVector(int n);
 std::vector<Fr> generateSystematicVector(int idx, int n);
 
 std::vector<std::vector<Fr>>
-OriginalPiecesWithCountAndSize(std::vector<unsigned char> data, int pieceCount, int pieceSize);
+OriginalPiecesWithCountAndSize(std::vector<uint8_t> data, int pieceCount, int pieceSize);
 
-std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceCount(std::vector<unsigned char> data, int pieceCount);
+std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceCount(std::vector<uint8_t> data, int pieceCount);
 
-std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceSize(std::vector<unsigned char> data, int pieceSize);
+std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceSize(std::vector<uint8_t> data, int pieceSize);
 
 #endif

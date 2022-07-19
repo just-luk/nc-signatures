@@ -26,7 +26,7 @@ typedef struct FullRLNCDecoder
 
     std::vector<Fr> getPiece(int i);
 
-    std::vector<unsigned char> getData();
+    std::vector<uint8_t> getData();
 } FullRLNCDecoder;
 
 #endif

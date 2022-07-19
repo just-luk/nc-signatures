@@ -30,7 +30,7 @@ typedef struct FullRLNCEncoder
     FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, std::string id,
                     Fr secret, std::vector<G1> gens, bool generateSystematic);
 
-    FullRLNCEncoder(std::vector<unsigned char> data, int pieceCountOrSize,
+    FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize,
                     std::string id, Fr secret, std::vector<G1> gens, bool generateSystematic, bool fromSize = false);
 } FullRLNCEncoder;
 

@@ -47,15 +47,15 @@ void FullRLNCDecoder::addPiece(CodedPiece piece, bool isFirst)
 
 std::vector<Fr> FullRLNCDecoder::getPiece(int i) { return state.GetPiece(i); }
 
-std::vector<unsigned char> FullRLNCDecoder::getData()
+std::vector<uint8_t> FullRLNCDecoder::getData()
 {
     if (!IsDecoded())
     {
         throw std::runtime_error("More useful pieces are required!");
     }
-    std::vector<unsigned char> pieces;
+    std::vector<uint8_t> pieces;
     std::vector<Fr> tempPiece;
-    std::vector<unsigned char> tempVec;
+    std::vector<uint8_t> tempVec;
     std::string tempString;
     for (int i = 0; i < useful; i++)
     {
@@ -63,7 +63,7 @@ std::vector<unsigned char> FullRLNCDecoder::getData()
         for (int j = 0; j < tempPiece.size(); j++)
         {
             tempString = tempPiece[j].getStr(mcl::IoSerialize);
-            tempVec = std::vector<unsigned char>(tempString.begin(), tempString.end());
+            tempVec = std::vector<uint8_t>(tempString.begin(), tempString.end());
             pieces.push_back(tempVec[0]);
         }
     }
