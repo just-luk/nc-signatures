@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 18 18:38:50 2022
+# Make data base, printed on Tue Jul 19 19:13:09 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ USERPROFILE = C:\Users\lukegriffith
 # environment
 LOCALAPPDATA = C:\Users\lukegriffith\AppData\Local
 # environment
-VSCODE_CWD = C:\Windows
+VSCODE_CWD = C:\Users\lukegriffith\AppData\Local\Programs\Microsoft VS Code
 # environment
 CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
@@ -33,7 +33,7 @@ SYSTEMROOT = C:\WINDOWS
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-PSMODULEPATH = %ProgramFiles%\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
 # default
 MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # environment
@@ -41,7 +41,7 @@ GOPATH = C:\Users\lukegriffith\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19816_TUELLUMFFYXWGYFN
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2220_VWYRHOJHCOOHAECS
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -55,7 +55,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\lukegriffith\AppData\Roaming\Code\CachedData\b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = C:\Users\lukegriffith\AppData\Roaming\Code\CachedData\3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LANG = C
 # default
@@ -75,7 +75,7 @@ POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Home
 # makefile
 CURDIR := c:/Users/lukegriffith/CLionProjects/nc-signatures
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 19816
+VSCODE_PID = 2220
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -189,7 +189,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = C:\Users\LUKEGR~1\AppData\Local\Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\7f0e1870f65c6a2413ff58d7aa18ee43-1.69.1-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\7f0e1870f65c6a2413ff58d7aa18ee43-1.69.2-main-sock
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -201,7 +201,8 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATUR 
+ES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 REGIONCODE = NA
 # environment
@@ -217,9 +218,9 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1657936660): 12 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658271585): 14 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -237,7 +238,7 @@ coding_debug:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-15 17:56:47
+#  Last modified 2022-07-19 18:56:43
 #  File has been updated.
 #  Successfully updated.
 
@@ -246,8 +247,7 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp 
- -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
 
 # Not a target:
 .DEFAULT:
@@ -270,12 +270,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 137 B / avg = 8 B
-# current buf: size = 8174 B / used = 137 B / count = 17 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 159 B / avg = 8 B
+# current buf: size = 8174 B / used = 159 B / count = 19 / avg = 8 B
 
-# strcache performance: lookups = 23 / hit rate = 26%
+# strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Mon Jul 18 18:38:50 2022
+# Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
+# Finished Make data base on Tue Jul 19 19:13:09 2022
 
  

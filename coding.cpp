@@ -3,7 +3,9 @@
 #include <encoder.hpp>
 #include <fstream>
 #include <iostream>
+#include <string>
 #include <math.h>
+#include <stdint.h>
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <recoder.hpp>
@@ -31,7 +33,7 @@ std::string random_string(std::size_t length)
     return random_string;
 }
 
-std::vector<unsigned char> readFile(const char *fileName)
+std::vector<uint8_t> readFile(const char *fileName)
 {
     // open the file:
     std::streampos fileSize;
@@ -43,7 +45,7 @@ std::vector<unsigned char> readFile(const char *fileName)
     file.seekg(0, std::ios::beg);
 
     // read the data:
-    std::vector<unsigned char> fileData(fileSize);
+    std::vector<uint8_t> fileData(fileSize);
     file.read((char *)&fileData[0], fileSize);
     return fileData;
 }
@@ -76,7 +78,7 @@ int main(int argc, char **argv)
 {
     srand(unsigned(time(NULL)));
     initPairing();
-    std::vector<unsigned char> fileData = readFile("../logo.png");
+    std::vector<uint8_t> fileData = readFile("../logo.png");
 
     std::string identifier = "logo.png" + random_string(8);
     if (argc < 2)
@@ -148,7 +150,7 @@ int main(int argc, char **argv)
         decoder.addPiece(droppedPiecesAgain[i], false);
     }
 
-    std::vector<unsigned char> decodedData = decoder.getData();
+    std::vector<uint8_t> decodedData = decoder.getData();
     if (decodedData != fileData)
     {
         std::cout << "[DECODER] ERROR Incorrect decoding!" << std::endl;

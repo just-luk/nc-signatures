@@ -15,7 +15,7 @@ FullRLNCEncoder::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces,
     this->pieceIndex = 0;
 }
 
-FullRLNCEncoder::FullRLNCEncoder(std::vector<unsigned char> data,
+FullRLNCEncoder::FullRLNCEncoder(std::vector<uint8_t> data,
                                  int pieceCountOrSize, std::string id,
                                  Fr secret, std::vector<G1> gens, bool generateSystematic, bool fromSize)
 {
