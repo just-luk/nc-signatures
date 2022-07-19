@@ -1,12 +1,12 @@
-#include <kodr/data.hpp>
-#include <kodr/decoder.hpp>
-#include <kodr/encoder.hpp>
+#include <data.hpp>
+#include <decoder.hpp>
+#include <encoder.hpp>
 #include <fstream>
 #include <iostream>
 #include <math.h>
 #include <mcl/bls12_381.hpp>
 #include <vector>
-#include <kodr/recoder.hpp>
+#include <recoder.hpp>
 #include <stdlib.h>
 #include <assert.h>
 #include <random>
@@ -109,6 +109,7 @@ int main(int argc, char **argv)
     for (int i = 0; i < codedPieceCount; i++)
     {
         codedPieces[i] = encoder.getCodedPiece();
+
         bool verified = Verify(codedPieces[i].signature, u, h, generators, codedPieces[i].piece,
                                codedPieces[i].codingVector,
                                identifier);

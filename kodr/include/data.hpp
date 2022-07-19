@@ -18,6 +18,8 @@ struct CodedPiece
 
     CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
 
+    CodedPiece(std::vector<unsigned char> &bytes, int &pieceSize, int &codingVectorSize);
+
     CodedPiece();
 
     int dataLen();
