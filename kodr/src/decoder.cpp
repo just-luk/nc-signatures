@@ -29,13 +29,13 @@ bool FullRLNCDecoder::IsDecoded() { return useful >= expected; }
 
 int FullRLNCDecoder::Required() { return expected - useful; }
 
-void FullRLNCDecoder::addPiece(CodedPiece piece, bool isFirst)
+void FullRLNCDecoder::addPiece(CodedPiece piece)
 {
     if (IsDecoded())
     {
         throw std::runtime_error("All useful pieces have been received!");
     }
-    state.AddPiece(piece, isFirst);
+    state.AddPiece(piece);
     received++;
     if (received <= 1)
     {

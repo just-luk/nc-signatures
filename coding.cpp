@@ -144,10 +144,9 @@ int main(int argc, char **argv)
     std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
     FullRLNCDecoder decoder(pieceCount);
-    decoder.addPiece(droppedPiecesAgain[0], true);
-    for (int i = 1; i < pieceCount; i++)
+    for (int i = 0; i < pieceCount; i++)
     {
-        decoder.addPiece(droppedPiecesAgain[i], false);
+        decoder.addPiece(droppedPiecesAgain[i]);
     }
 
     std::vector<uint8_t> decodedData = decoder.getData();

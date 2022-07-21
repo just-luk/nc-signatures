@@ -186,9 +186,9 @@ Matrix DecoderState::CoeffMatrix() { return coeffs; }
 
 Matrix DecoderState::CodedMatrix() { return coded; }
 
-void DecoderState::AddPiece(CodedPiece a, bool isFirst)
+void DecoderState::AddPiece(CodedPiece a)
 {
-    if (isFirst)
+    if (coeffs.cols == 0)
     {
         coeffs.data[0] = a.codingVector;
         coded.data[0] = a.piece;
