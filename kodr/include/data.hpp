@@ -18,7 +18,7 @@ struct CodedPiece
 
     CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
 
-    CodedPiece(std::vector<uint8_t> &bytes, int &pieceSize, int &codingVectorSize);
+    CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize);
 
     CodedPiece();
 

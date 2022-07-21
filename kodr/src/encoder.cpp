@@ -34,6 +34,8 @@ FullRLNCEncoder::FullRLNCEncoder(std::vector<uint8_t> data,
     }
 }
 
+FullRLNCEncoder::FullRLNCEncoder(){};
+
 int FullRLNCEncoder::PieceCount() { return pieces.size(); }
 
 int FullRLNCEncoder::PieceSize() { return pieces[0].size(); }
