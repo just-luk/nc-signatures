@@ -24,7 +24,7 @@ typedef struct FullRLNCDecoder
 
     int Required();
 
-    void addPiece(CodedPiece piece, bool isFirst);
+    void addPiece(CodedPiece piece);
 
     std::vector<Fr> getPiece(int i);
 

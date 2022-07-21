@@ -35,7 +35,7 @@ typedef struct DecoderState
 
     Matrix CodedMatrix();
 
-    void AddPiece(CodedPiece a, bool isFirst);
+    void AddPiece(CodedPiece a);
 
     std::vector<Fr> GetPiece(int idx);
 } DecoderState;
