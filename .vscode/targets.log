@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 20 20:43:28 2022
+# Make data base, printed on Wed Jul 20 23:32:08 2022
 
 # Variables
 
@@ -217,7 +217,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658271585): 14 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658369716): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -263,7 +263,8 @@ all:
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
-# VPATH Search Paths
+# VPATH Sear 
+ch Paths
 
 # No 'vpath' search paths.
 
@@ -275,6 +276,6 @@ all:
 # strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Wed Jul 20 20:43:28 2022
+# Finished Make data base on Wed Jul 20 23:32:08 2022
 
  

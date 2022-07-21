@@ -40,7 +40,7 @@ CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const 
         tempString = std::string(tempArr.begin(), tempArr.end());
         codingVector[i - pieceSize].setStr(tempString, mcl::IoSerialize);
     }
-    tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.begin() + (pieceSize + codingVectorSize + 1) * 32);
+    tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.end());
     tempString = std::string(tempArr.begin(), tempArr.end());
     signature.setStr(tempString, mcl::IoSerialize);
 }

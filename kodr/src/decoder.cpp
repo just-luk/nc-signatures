@@ -33,7 +33,7 @@ void FullRLNCDecoder::addPiece(CodedPiece piece)
 {
     if (IsDecoded())
     {
-        throw std::runtime_error("All useful pieces have been received!");
+        return;
     }
     state.AddPiece(piece);
     received++;
