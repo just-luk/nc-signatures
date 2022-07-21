@@ -57,5 +57,6 @@
 			"binaryPath": "c:\\Users\\lukegriffith\\CLionProjects\\nc-signatures\\coding.exe",
 			"binaryArgs": []
 		}
-	]
+	],
+	"cmake.configureOnOpen": false
 }

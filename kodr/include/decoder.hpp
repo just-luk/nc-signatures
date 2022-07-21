@@ -16,6 +16,8 @@ typedef struct FullRLNCDecoder
 
     FullRLNCDecoder(int pieceCount);
 
+    FullRLNCDecoder();
+
     int PieceLength();
 
     bool IsDecoded();

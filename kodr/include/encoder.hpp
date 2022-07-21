@@ -32,6 +32,8 @@ typedef struct FullRLNCEncoder
 
     FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize,
                     std::string id, Fr secret, std::vector<G1> gens, bool generateSystematic, bool fromSize = false);
+
+    FullRLNCEncoder();
 } FullRLNCEncoder;
 
 void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, std::vector<G1> &gens,

@@ -14,6 +14,8 @@ FullRLNCDecoder::FullRLNCDecoder(int pieceCount)
     state = DecoderState(pieceCount);
 }
 
+FullRLNCDecoder::FullRLNCDecoder(){};
+
 int FullRLNCDecoder::PieceLength()
 {
     if (received > 0)

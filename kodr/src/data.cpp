@@ -21,7 +21,7 @@ CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s)
     signature = s;
 }
 
-CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, int &pieceSize, int &codingVectorSize)
+CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize)
 {
     piece.resize(pieceSize);
     codingVector.resize(codingVectorSize);

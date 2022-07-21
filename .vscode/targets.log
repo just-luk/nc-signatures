@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 19:13:09 2022
+# Make data base, printed on Wed Jul 20 20:43:28 2022
 
 # Variables
 
@@ -41,7 +41,7 @@ GOPATH = C:\Users\lukegriffith\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2220_VWYRHOJHCOOHAECS
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5152_DTTXSWELHOGFFNAE
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -93,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 2220
+VSCODE_PID = 5152
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -201,8 +201,7 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEATUR 
-ES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 REGIONCODE = NA
 # environment
@@ -276,6 +275,6 @@ all:
 # strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Tue Jul 19 19:13:09 2022
+# Finished Make data base on Wed Jul 20 20:43:28 2022
 
  

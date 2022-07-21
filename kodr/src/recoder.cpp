@@ -10,6 +10,8 @@ FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps)
     this->pieceCount = ps.size();
 }
 
+FullRLNCRecoder::FullRLNCRecoder(){};
+
 CodedPiece FullRLNCRecoder::getCodedPiece()
 {
     std::vector<Fr> coefficients = generateCodingVector(this->pieceCount);
