@@ -18,6 +18,8 @@ typedef struct FullRLNCRecoder
 
     FullRLNCRecoder();
 
+    void addPiece(CodedPiece piece);
+
     CodedPiece getCodedPiece();
 } FullRLNCRecoder;
 
