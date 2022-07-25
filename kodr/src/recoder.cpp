@@ -12,7 +12,6 @@ FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps)
 
 FullRLNCRecoder::FullRLNCRecoder()
 {
-    this->pieces = std::vector<CodedPiece>();
     this->pieceCount = 0;
 };
 
