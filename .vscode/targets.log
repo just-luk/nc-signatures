@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Mon Jul 25 16:19:49 2022
+# Make data base, printed on Wed Jul 27 21:37:26 2022
 
 # Variables
 
@@ -42,7 +41,7 @@ GOPATH = C:\Users\lukegriffith\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_24572_IFGMSCJQVOTTCNAD
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11324_POHUYOOOCQGNXXBF
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -76,7 +75,7 @@ POWERSHELL_DISTRIBUTION_CHANNEL = MSI:Windows 10 Home
 # makefile
 CURDIR := c:/Users/lukegriffith/CLionProjects/nc-signatures
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
@@ -94,7 +93,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 24572
+VSCODE_PID = 11324
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # environment
@@ -202,8 +201,7 @@ ALLUSERSPROFILE = C:\ProgramData
 # environment
 SESSIONNAME = Console
 # default
-.FEAT 
-URES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
 # environment
 REGIONCODE = NA
 # environment
@@ -219,8 +217,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key  
-c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658369716): 14 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658971435): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -230,17 +227,10 @@ c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658369716): 14 files, 
 
 # Files
 
-coding_debug:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 5):
-	clang++-12 -o kodr/coding.exe kodr/coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
-
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-19 18:56:43
+#  Last modified 2022-07-27 21:37:17
 #  File has been updated.
 #  Successfully updated.
 
@@ -249,7 +239,7 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+	cd build && ../install.sh && cmake --build . 
 
 # Not a target:
 .DEFAULT:
@@ -264,6 +254,14 @@ all:
 #  File does not exist.
 #  File has not been updated.
 
+install:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 5):
+	cd build && ../ins 
+tall.sh && cmake --build . && cd .. && ./install.sh
+
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
 # VPATH Search Paths
@@ -272,12 +270,12 @@ all:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 159 B / avg = 8 B
-# current buf: size = 8174 B / used = 159 B / count = 19 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 19 / storage = 154 B / avg = 8 B
+# current buf: size = 8174 B / used = 154 B / count = 19 / avg = 8 B
 
 # strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Mon Jul 25 16:19:49 2022
+# Finished Make data base on Wed Jul 27 21:37:26 2022
 
  

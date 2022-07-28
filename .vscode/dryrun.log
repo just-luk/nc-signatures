@@ -1,5 +1,5 @@
-make.exe coding --dry-run --always-make --keep-going --print-directory
+make.exe coding --dry-run --keep-going --print-directory
 make: Entering directory 'c:/Users/lukegriffith/CLionProjects/nc-signatures'
-clang++-12 -O3 -o coding.exe coding.cpp kodr/encoder.cpp kodr/recoder.cpp kodr/decoder.cpp kodr/matrix.cpp kodr/data.cpp kodr/decoder_state.cpp -DMCL_USE_VINT -I ~/.local/include/  -I ./kodr -L ~/.local/lib -Wl,-rpath ~/.local/lib  -l mcl
+cd build && ../install.sh && cmake --build . 
 make: Leaving directory 'c:/Users/lukegriffith/CLionProjects/nc-signatures'
  
