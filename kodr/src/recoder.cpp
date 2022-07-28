@@ -21,6 +21,12 @@ void FullRLNCRecoder::addPiece(CodedPiece piece)
     this->pieceCount++;
 }
 
+void FullRLNCRecoder::clear()
+{
+    this->pieces.clear();
+    this->pieceCount = 0;
+}
+
 CodedPiece FullRLNCRecoder::getCodedPiece()
 {
     std::vector<Fr> coefficients = generateCodingVector(this->pieceCount);
