@@ -89,158 +89,159 @@ void DecoderState::clean_forward()
             }
         }
     }
-}
 
-void DecoderState::clean_backward()
-{
-    int rows = coeffs.rows;
-    int cols = coeffs.cols;
-    int boundary = min(rows, cols);
-    for (int i = boundary - 1; i >= 0; i--)
+    void DecoderState::clean_backward()
     {
-        if (coeffs.data[i][i].isZero())
+        int rows = coeffs.rows;
+        int cols = coeffs.cols;
+        int boundary = min(rows, cols);
+        for (int i = boundary - 1; i >= 0; i--)
         {
-            continue;
-        }
-
-        for (int j = 0; j < i; j++)
-        {
-            if (coeffs.data[j][i].isZero())
+            if (coeffs.data[i][i].isZero())
             {
                 continue;
             }
 
-            Fr quotient = coeffs.data[j][i] / coeffs.data[i][i];
-            for (int k = i; k < cols; k++)
+            for (int j = 0; j < i; j++)
             {
-                coeffs.data[j][k] -= coeffs.data[i][k] * quotient;
+                if (coeffs.data[j][i].isZero())
+                {
+                    continue;
+                }
+
+                Fr quotient = coeffs.data[j][i] / coeffs.data[i][i];
+                for (int k = i; k < cols; k++)
+                {
+                    coeffs.data[j][k] -= coeffs.data[i][k] * quotient;
+                }
+
+                for (int k = 0; k < coded.data[0].size(); k++)
+                {
+                    coded.data[j][k] -= coded.data[i][k] * quotient;
+                }
             }
 
-            for (int k = 0; k < coded.data[0].size(); k++)
-            {
-                coded.data[j][k] -= coded.data[i][k] * quotient;
-            }
-        }
-
-        if (coeffs.data[i][i].isOne())
-        {
-            continue;
-        }
-
-        Fr inv = 1;
-        inv = inv / coeffs.data[i][i];
-        coeffs.data[i][i] = 1;
-        for (int j = i + 1; j < cols; j++)
-        {
-            if (coeffs.data[i][j].isZero())
+            if (coeffs.data[i][i].isOne())
             {
                 continue;
             }
 
-            coeffs.data[i][j] *= inv;
-        }
-
-        for (int j = 0; j < coded.data[0].size(); j++)
-        {
-            coded.data[i][j] *= inv;
-        }
-    }
-}
-
-void DecoderState::remove_zero_rows()
-{
-    int cols = coeffs.data[0].size();
-    for (int i = 0; i < coeffs.data.size(); i++)
-    {
-        bool yes = true;
-        for (int j = 0; j < cols; j++)
-        {
-            if (!coeffs.data[i][j].isZero())
+            Fr inv = 1;
+            inv = inv / coeffs.data[i][i];
+            coeffs.data[i][i] = 1;
+            for (int j = i + 1; j < cols; j++)
             {
-                yes = false;
-                break;
+                if (coeffs.data[i][j].isZero())
+                {
+                    continue;
+                }
+
+                coeffs.data[i][j] *= inv;
+            }
+
+            for (int j = 0; j < coded.data[0].size(); j++)
+            {
+                coded.data[i][j] *= inv;
             }
         }
-        if (!yes)
+    }
+
+    void DecoderState::remove_zero_rows()
+    {
+        int cols = coeffs.data[0].size();
+        for (int i = 0; i < coeffs.data.size(); i++)
         {
-            continue;
+            bool yes = true;
+            for (int j = 0; j < cols; j++)
+            {
+                if (!coeffs.data[i][j].isZero())
+                {
+                    yes = false;
+                    break;
+                }
+            }
+            if (!yes)
+            {
+                continue;
+            }
+
+            coeffs.data.erase(coeffs.data.begin() + i);
+            coeffs.rows--;
+            coded.data.erase(coded.data.begin() + i);
+            coded.rows--;
+
+            i--;
         }
-
-        coeffs.data.erase(coeffs.data.begin() + i);
-        coded.data.erase(coded.data.begin() + i);
-
-        i--;
     }
-}
 
-void DecoderState::Rref()
-{
-    clean_forward();
-    clean_backward();
-    remove_zero_rows();
-}
-
-int DecoderState::Rank() { return coeffs.rows; }
-
-Matrix DecoderState::CoeffMatrix() { return coeffs; }
-
-Matrix DecoderState::CodedMatrix() { return coded; }
-
-void DecoderState::AddPiece(CodedPiece a)
-{
-    if (coeffs.cols == 0)
+    void DecoderState::Rref()
     {
-        coeffs.data[0] = a.codingVector;
-        coded.data[0] = a.piece;
-        coeffs.cols = a.codingVector.size();
-        coded.cols = a.piece.size();
+        clean_forward();
+        clean_backward();
+        remove_zero_rows();
     }
-    else
-    {
-        coeffs.data.push_back(a.codingVector);
-        coded.data.push_back(a.piece);
-        coeffs.rows++;
-        coded.rows++;
-    }
-}
 
-std::vector<Fr> DecoderState::GetPiece(int idx)
-{
-    if (idx >= pieceCount)
+    int DecoderState::Rank() { return coeffs.rows; }
+
+    Matrix DecoderState::CoeffMatrix() { return coeffs; }
+
+    Matrix DecoderState::CodedMatrix() { return coded; }
+
+    void DecoderState::AddPiece(CodedPiece a)
     {
-        throw std::out_of_range("Index out of bounds");
+        if (coeffs.cols == 0)
+        {
+            coeffs.data[0] = a.codingVector;
+            coded.data[0] = a.piece;
+            coeffs.cols = a.codingVector.size();
+            coded.cols = a.piece.size();
+        }
+        else
+        {
+            coeffs.data.push_back(a.codingVector);
+            coded.data.push_back(a.piece);
+            coeffs.rows++;
+            coded.rows++;
+        }
     }
-    if (idx >= coeffs.rows)
+
+    std::vector<Fr> DecoderState::GetPiece(int idx)
     {
-        throw std::runtime_error("Piece not yet decoded");
-    }
-    if (Rank() >= pieceCount)
-    {
+        if (idx >= pieceCount)
+        {
+            throw std::out_of_range("Index out of bounds");
+        }
+        if (idx >= coeffs.rows)
+        {
+            throw std::runtime_error("Piece not yet decoded");
+        }
+        if (Rank() >= pieceCount)
+        {
+            return coded.data[idx];
+        }
+        bool decoded = true;
+        for (int i = 0; i < coeffs.cols; i++)
+        {
+            switch (i)
+            {
+            case 0:
+                if (!coeffs.data[idx][i].isOne())
+                {
+                    decoded = false;
+                    goto OUT;
+                }
+            default:
+                if (coeffs.data[idx][i].isZero())
+                {
+                    decoded = false;
+                    goto OUT;
+                }
+            }
+        }
+    OUT:
+        if (!decoded)
+        {
+            throw std::runtime_error("Piece not yet decoded");
+        }
         return coded.data[idx];
     }
-    bool decoded = true;
-    for (int i = 0; i < coeffs.cols; i++)
-    {
-        switch (i)
-        {
-        case 0:
-            if (!coeffs.data[idx][i].isOne())
-            {
-                decoded = false;
-                goto OUT;
-            }
-        default:
-            if (coeffs.data[idx][i].isZero())
-            {
-                decoded = false;
-                goto OUT;
-            }
-        }
-    }
-OUT:
-    if (!decoded)
-    {
-        throw std::runtime_error("Piece not yet decoded");
-    }
-    return coded.data[idx];
-}

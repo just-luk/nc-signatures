@@ -57,8 +57,7 @@ void KeyGen(Fr &alpha, G2 &pub, G2 &h, std::vector<G1> &generators)
     G2::mul(pub, h, alpha);
     for (int i = 0; i < generators.size(); i++)
     {
-        generators[i].x.setRand();
-        generators[i].y.setRand();
+        mapToG1(generators[i], rand());
     }
 }
 
@@ -103,6 +102,7 @@ int main(int argc, char **argv)
     std::cout << "\th = " << h << std::endl;
     std::cout << "\tu = " << u << std::endl;
     std::cout << "\tpieceCount = " << pieceCount << std::endl;
+    std::cout << "\tpieceSize = " << generators.size() << std::endl;
 
     // systematic encoder
     FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, true);
@@ -111,6 +111,8 @@ int main(int argc, char **argv)
     for (int i = 0; i < codedPieceCount; i++)
     {
         codedPieces[i] = encoder.getCodedPiece();
+        std::vector<uint8_t> test = codedPieces[i].toBytes();
+        CodedPiece test2(test, pieceSize, pieceCount);
 
         bool verified = Verify(codedPieces[i].signature, u, h, generators, codedPieces[i].piece,
                                codedPieces[i].codingVector,
