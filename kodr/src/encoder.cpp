@@ -4,24 +4,18 @@
 #include <vector>
 #include <string>
 
-FullRLNCEncoder::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces,
-                                 std::string id, Fr secret, std::vector<G1> gens, bool generateSystematic)
+FullRLNCEncoder::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, Signature *sig, bool generateSystematic)
 {
     this->pieces = pieces;
-    this->id = id;
-    this->secret = secret;
-    this->generators = gens;
+    this->sig = sig;
     this->useSystematic = generateSystematic;
     this->pieceIndex = 0;
 }
 
 FullRLNCEncoder::FullRLNCEncoder(std::vector<uint8_t> data,
-                                 int pieceCountOrSize, std::string id,
-                                 Fr secret, std::vector<G1> gens, bool generateSystematic, bool fromSize)
+                                 int pieceCountOrSize, Signature *sig, bool generateSystematic, bool fromSize)
 {
-    this->id = id;
-    this->secret = secret;
-    this->generators = gens;
+    this->sig = sig;
     this->useSystematic = generateSystematic;
     this->pieceIndex = 0;
     if (fromSize)
@@ -69,13 +63,6 @@ void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, std:
     }
 }
 
-void Sign(G1 &sign, const Fr &secret, std::vector<Fr> &vec, std::vector<Fr> &codingVec, std::vector<G1> &gens,
-          const std::string &id, int pieceID = -1)
-{
-    AggregateHash(sign, vec, codingVec, gens, id, pieceID);
-    G1::mul(sign, sign, secret);
-}
-
 CodedPiece FullRLNCEncoder::getCodedPiece()
 {
     std::vector<Fr> codingVec;
@@ -86,7 +73,7 @@ CodedPiece FullRLNCEncoder::getCodedPiece()
         codingVec = generateSystematicVector(pieceIndex, PieceCount());
         piece = pieces[pieceIndex];
         pieceIndex++;
-        Sign(signature, secret, piece, codingVec, this->generators, id, pieceIndex - 1);
+        signature = sig->Sign(piece, codingVec, pieceIndex - 1);
     }
     else
     {
@@ -96,7 +83,7 @@ CodedPiece FullRLNCEncoder::getCodedPiece()
         {
             piece = multiply(piece, pieces[i], codingVec[i]);
         }
-        Sign(signature, secret, piece, codingVec, this->generators, id);
+        signature = sig->Sign(piece, codingVec);
     }
     return CodedPiece(piece, codingVec, signature);
 }

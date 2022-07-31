@@ -5,6 +5,7 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <stdexcept>
+#include <signature.hpp>
 
 #ifndef DECODER_HPP
 #define DECODER_HPP
@@ -13,8 +14,9 @@ typedef struct FullRLNCDecoder
 {
     int expected, useful, received;
     DecoderState state;
+    Signature *sig;
 
-    FullRLNCDecoder(int pieceCount);
+    FullRLNCDecoder(int pieceCount, Signature *sig);
 
     FullRLNCDecoder();
 

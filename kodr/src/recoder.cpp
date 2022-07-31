@@ -4,19 +4,27 @@
 #include <vector>
 #include <recoder.hpp>
 
-FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps)
+FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps, Signature *sig)
 {
     this->pieces = ps;
+    this->sig = sig;
     this->pieceCount = ps.size();
 }
 
-FullRLNCRecoder::FullRLNCRecoder()
+FullRLNCRecoder::FullRLNCRecoder(Signature *sig)
 {
+    this->sig = sig;
     this->pieceCount = 0;
-};
+}
+
+FullRLNCRecoder::FullRLNCRecoder(){};
 
 void FullRLNCRecoder::addPiece(CodedPiece piece)
 {
+    if (!sig->Verify(piece))
+    {
+        return;
+    }
     this->pieces.push_back(piece);
     this->pieceCount++;
 }
