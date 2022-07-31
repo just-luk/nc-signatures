@@ -13,6 +13,8 @@
 #include <assert.h>
 #include <random>
 
+#include <boneh.hpp>
+
 using namespace mcl::bls12;
 
 std::string random_string(std::size_t length)
@@ -50,29 +52,6 @@ std::vector<uint8_t> readFile(const char *fileName)
     return fileData;
 }
 
-void KeyGen(Fr &alpha, G2 &pub, G2 &h, std::vector<G1> &generators)
-{
-    mapToG2(h, rand());
-    alpha.setRand();
-    G2::mul(pub, h, alpha);
-    for (int i = 0; i < generators.size(); i++)
-    {
-        mapToG1(generators[i], rand());
-    }
-}
-
-bool Verify(const G1 &sign, const G2 &u, const G2 &h, std::vector<G1> gens, std::vector<Fr> &vector,
-            std::vector<Fr> &codingVec,
-            const std::string &id)
-{
-    Fp12 e1, e2;
-    G1 hashed;
-    AggregateHash(hashed, vector, codingVec, gens, id);
-    pairing(e1, sign, h);   // e1 = e(signature, h)
-    pairing(e2, hashed, u); // e2 = e(hashed, u)
-    return e1 == e2;
-}
-
 int main(int argc, char **argv)
 {
     srand(unsigned(time(NULL)));
@@ -91,61 +70,31 @@ int main(int argc, char **argv)
     int codedPieceCount = pieceCount * 2;
     int droppedPieceCount = pieceCount / 2;
 
-    Fr alpha;
-    G2 u, h;
-    std::vector<G1> generators(pieceSize);
-
-    KeyGen(alpha, u, h, generators);
-    std::cout << "secret key " << std::endl;
-    std::cout << "\talpha = " << alpha << std::endl;
-    std::cout << "public key " << std::endl;
-    std::cout << "\th = " << h << std::endl;
-    std::cout << "\tu = " << u << std::endl;
-    std::cout << "\tpieceCount = " << pieceCount << std::endl;
-    std::cout << "\tpieceSize = " << generators.size() << std::endl;
-
     // systematic encoder
-    FullRLNCEncoder encoder(fileData, pieceCount, identifier, alpha, generators, true);
+    Boneh boneh(pieceSize, identifier);
+    FullRLNCEncoder encoder(fileData, pieceCount, &boneh, false);
 
     std::vector<CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++)
     {
         codedPieces[i] = encoder.getCodedPiece();
-        std::vector<uint8_t> test = codedPieces[i].toBytes();
-        CodedPiece test2(test, pieceSize, pieceCount);
-
-        bool verified = Verify(codedPieces[i].signature, u, h, generators, codedPieces[i].piece,
-                               codedPieces[i].codingVector,
-                               identifier);
-        if (!verified)
-        {
-            std::cout << "[ENCODER] ERROR not verified" << std::endl;
-        }
     }
-    std::cout << "\tbyteLength = " << codedPieces[0].fullLen() << std::endl;
 
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
     std::vector<CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
 
-    FullRLNCRecoder recoder(droppedPieces);
+    FullRLNCRecoder recoder(droppedPieces, &boneh);
     int recodedPieceCount = droppedPieces.size() * 2;
     std::vector<CodedPiece> recodedPieces(recodedPieceCount);
     for (int i = 0; i < recodedPieceCount; i++)
     {
         recodedPieces[i] = recoder.getCodedPiece();
-        bool verified = Verify(recodedPieces[i].signature, u, h, generators, recodedPieces[i].piece,
-                               recodedPieces[i].codingVector,
-                               identifier);
-        if (!verified)
-        {
-            std::cout << "[RECODER] ERROR not verified" << std::endl;
-        }
     }
 
     std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
     std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
-    FullRLNCDecoder decoder(pieceCount);
+    FullRLNCDecoder decoder(pieceCount, &boneh);
     for (int i = 0; i < pieceCount; i++)
     {
         decoder.addPiece(droppedPiecesAgain[i]);
@@ -155,5 +104,9 @@ int main(int argc, char **argv)
     if (decodedData != fileData)
     {
         std::cout << "[DECODER] ERROR Incorrect decoding!" << std::endl;
+    }
+    else
+    {
+        std::cout << "[DECODER] Correct decoding and verification!" << std::endl;
     }
 }

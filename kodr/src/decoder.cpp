@@ -6,11 +6,12 @@
 #include <stdexcept>
 #include <vector>
 
-FullRLNCDecoder::FullRLNCDecoder(int pieceCount)
+FullRLNCDecoder::FullRLNCDecoder(int pieceCount, Signature *sig)
 {
     expected = pieceCount;
     useful = 0;
     received = 0;
+    this->sig = sig;
     state = DecoderState(pieceCount);
 }
 
@@ -31,7 +32,7 @@ int FullRLNCDecoder::Required() { return expected - useful; }
 
 void FullRLNCDecoder::addPiece(CodedPiece piece)
 {
-    if (IsDecoded())
+    if (IsDecoded() || !sig->Verify(piece))
     {
         return;
     }

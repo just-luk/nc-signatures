@@ -4,6 +4,7 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <string>
+#include <signature.hpp>
 
 #ifndef ENCODER_HPP
 #define ENCODER_HPP
@@ -11,11 +12,9 @@
 typedef struct FullRLNCEncoder
 {
     std::vector<std::vector<Fr>> pieces;
-    std::vector<G1> generators;
-    std::string id;
+    Signature *sig;
     bool useSystematic;
     int pieceIndex;
-    Fr secret;
 
     int PieceCount();
 
@@ -27,11 +26,9 @@ typedef struct FullRLNCEncoder
 
     CodedPiece getCodedPiece();
 
-    FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, std::string id,
-                    Fr secret, std::vector<G1> gens, bool generateSystematic);
+    FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, Signature *sig, bool generateSystematic);
 
-    FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize,
-                    std::string id, Fr secret, std::vector<G1> gens, bool generateSystematic, bool fromSize = false);
+    FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize, Signature *sig, bool generateSystematic, bool fromSize = false);
 
     FullRLNCEncoder();
 } FullRLNCEncoder;
