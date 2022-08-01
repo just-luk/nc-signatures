@@ -1,5 +1,6 @@
 coding:
-	cd build && ../install.sh && cmake --build . 
+	cd build && ../install.sh && cmake --build . && ./coding.exe 36
 
 install:
-	cd build && ../install.sh && cmake --build . && cd .. && ./install.sh
+	cd build && ../install.sh && cmake --build . 
+	./install.sh

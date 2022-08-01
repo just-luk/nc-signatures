@@ -4,20 +4,22 @@
 #include "matrix.hpp"
 #include <mcl/bls12_381.hpp>
 #include "vector"
-#include "signature.hpp"
+#include "boneh.hpp"
 
 #ifndef RECODER_HPP
 #define RECODER_HPP
 
-typedef struct FullRLNCRecoder
+template <typename T>
+class FullRLNCRecoder
 {
+public:
     std::vector<CodedPiece> pieces;
-    Signature *sig;
+    T sig;
     int pieceCount;
 
-    FullRLNCRecoder(std::vector<CodedPiece> ps, Signature *sig);
+    FullRLNCRecoder(std::vector<CodedPiece> ps, T sig);
 
-    FullRLNCRecoder(Signature *sig);
+    FullRLNCRecoder(T sig);
 
     FullRLNCRecoder();
 
@@ -26,6 +28,6 @@ typedef struct FullRLNCRecoder
     void clear();
 
     CodedPiece getCodedPiece();
-} FullRLNCRecoder;
+};
 
 #endif

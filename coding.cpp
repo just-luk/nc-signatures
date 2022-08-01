@@ -58,7 +58,6 @@ int main(int argc, char **argv)
     initPairing();
     std::vector<uint8_t> fileData = readFile("../logo.png");
 
-    std::string identifier = "logo.png" + random_string(8);
     if (argc < 2)
     {
         std::cout << "Usage: " << argv[0] << " <pieceCount>" << std::endl;
@@ -71,8 +70,9 @@ int main(int argc, char **argv)
     int droppedPieceCount = pieceCount / 2;
 
     // systematic encoder
-    Boneh boneh(pieceSize, identifier);
-    FullRLNCEncoder encoder(fileData, pieceCount, &boneh, false);
+    std::cout << "Signature created" << std::endl;
+    Boneh boneh(pieceSize, "logo.png");
+    FullRLNCEncoder<Boneh> encoder(fileData, pieceCount, boneh, false);
 
     std::vector<CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++)
@@ -83,7 +83,7 @@ int main(int argc, char **argv)
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
     std::vector<CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
 
-    FullRLNCRecoder recoder(droppedPieces, &boneh);
+    FullRLNCRecoder<Boneh> recoder(droppedPieces, boneh);
     int recodedPieceCount = droppedPieces.size() * 2;
     std::vector<CodedPiece> recodedPieces(recodedPieceCount);
     for (int i = 0; i < recodedPieceCount; i++)
@@ -94,13 +94,14 @@ int main(int argc, char **argv)
     std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
     std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
-    FullRLNCDecoder decoder(pieceCount, &boneh);
+    FullRLNCDecoder<Boneh> decoder(pieceCount, boneh);
     for (int i = 0; i < pieceCount; i++)
     {
         decoder.addPiece(droppedPiecesAgain[i]);
     }
 
-    std::vector<uint8_t> decodedData = decoder.getData();
+    std::vector<uint8_t>
+        decodedData = decoder.getData();
     if (decodedData != fileData)
     {
         std::cout << "[DECODER] ERROR Incorrect decoding!" << std::endl;

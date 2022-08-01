@@ -5,18 +5,20 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <stdexcept>
-#include <signature.hpp>
+#include "boneh.hpp"
 
 #ifndef DECODER_HPP
 #define DECODER_HPP
 
-typedef struct FullRLNCDecoder
+template <typename T>
+class FullRLNCDecoder
 {
+public:
     int expected, useful, received;
     DecoderState state;
-    Signature *sig;
+    T sig;
 
-    FullRLNCDecoder(int pieceCount, Signature *sig);
+    FullRLNCDecoder(int pieceCount, T sig);
 
     FullRLNCDecoder();
 
@@ -31,6 +33,6 @@ typedef struct FullRLNCDecoder
     std::vector<Fr> getPiece(int i);
 
     std::vector<uint8_t> getData();
-} FullRLNCDecoder;
+};
 
 #endif
