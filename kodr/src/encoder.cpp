@@ -69,7 +69,6 @@ FullRLNCEncoder<T>::getCodedPiece()
         {
             piece = multiply(piece, pieces[i], codingVec[i]);
         }
-        std::cout << "d" << std::endl;
         signature = sig.Sign(piece, codingVec, -1);
         cp = CodedPiece(piece, codingVec, signature, false);
     }
