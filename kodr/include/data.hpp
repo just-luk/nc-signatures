@@ -15,9 +15,8 @@ struct CodedPiece
     std::vector<Fr> piece;
     std::vector<Fr> codingVector;
     G1 signature;
-    bool isSystematic;
 
-    CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s, bool isSys);
+    CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s);
 
     CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize);
 

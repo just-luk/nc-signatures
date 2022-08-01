@@ -52,14 +52,11 @@ FullRLNCEncoder<T>::getCodedPiece()
     std::vector<Fr> codingVec;
     std::vector<Fr> piece;
     G1 signature;
-    CodedPiece cp;
     if (useSystematic && pieceIndex < PieceCount())
     {
         codingVec = generateSystematicVector(pieceIndex, PieceCount());
         piece = pieces[pieceIndex];
         pieceIndex++;
-        signature = sig.Sign(piece, codingVec, pieceIndex - 1);
-        cp = CodedPiece(piece, codingVec, signature, true);
     }
     else
     {
@@ -69,10 +66,9 @@ FullRLNCEncoder<T>::getCodedPiece()
         {
             piece = multiply(piece, pieces[i], codingVec[i]);
         }
-        signature = sig.Sign(piece, codingVec, -1);
-        cp = CodedPiece(piece, codingVec, signature, false);
     }
-    return cp;
+    signature = sig.Sign(piece, codingVec);
+    return CodedPiece(piece, codingVec, signature);;
 }
 
 template class FullRLNCEncoder<Boneh>;

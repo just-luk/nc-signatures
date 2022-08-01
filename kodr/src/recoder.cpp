@@ -59,8 +59,7 @@ CodedPiece FullRLNCRecoder<T>::getCodedPiece()
 
     std::vector<Fr> recodedPiece(pc.begin(), pc.begin() + size);
     std::vector<Fr> recodedVec(pc.begin() + size, pc.end());
-    CodedPiece cp = CodedPiece(recodedPiece, recodedVec, signature, false);
-    return cp;
+    return CodedPiece(recodedPiece, recodedVec, signature);
 }
 
 template class FullRLNCRecoder<Boneh>;
