@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 31 17:07:02 2022
+# Make data base, printed on Sun Jul 31 21:36:57 2022
 
 # Variables
 
@@ -155,7 +155,8 @@ PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
-USERDOMAIN = LAPTOP-HP-LUKE
+USERDOMAIN = LAPTOP-H 
+P-LUKE
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -230,7 +231,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-27 21:37:17
+#  Last modified 2022-07-31 21:20:15
 #  File has been updated.
 #  Successfully updated.
 
@@ -239,7 +240,7 @@ coding:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
-	cd build && ../install.sh && cmake --build . 
+	cd build && ../install.sh && cmake --build . && ./coding.exe 36
 
 # Not a target:
 .DEFAULT:
@@ -259,7 +260,8 @@ install:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 5):
-	cd build && ../install.sh && cmake --build . && cd .. && ./install.sh
+	cd build && ../install.sh && cmake --build . 
+	./install.sh
 
 # files hash-table stats:
 # Load=6/1024=1%, Rehash=0, Collisions=0/16=0%
@@ -275,6 +277,6 @@ install:
 # strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Sun Jul 31 17:07:02 2022
+# Finished Make data base on Sun Jul 31 21:36:57 2022
 
  
