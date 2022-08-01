@@ -3,25 +3,30 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <recoder.hpp>
+#include <boneh.hpp>
 
-FullRLNCRecoder::FullRLNCRecoder(std::vector<CodedPiece> ps, Signature *sig)
+template <typename T>
+FullRLNCRecoder<T>::FullRLNCRecoder(std::vector<CodedPiece> ps, T sig)
 {
     this->pieces = ps;
     this->sig = sig;
     this->pieceCount = ps.size();
 }
 
-FullRLNCRecoder::FullRLNCRecoder(Signature *sig)
+template <typename T>
+FullRLNCRecoder<T>::FullRLNCRecoder(T sig)
 {
     this->sig = sig;
     this->pieceCount = 0;
 }
 
-FullRLNCRecoder::FullRLNCRecoder(){};
+template <typename T>
+FullRLNCRecoder<T>::FullRLNCRecoder(){};
 
-void FullRLNCRecoder::addPiece(CodedPiece piece)
+template <typename T>
+void FullRLNCRecoder<T>::addPiece(CodedPiece piece)
 {
-    if (!sig->Verify(piece))
+    if (!sig.Verify(piece))
     {
         return;
     }
@@ -29,13 +34,15 @@ void FullRLNCRecoder::addPiece(CodedPiece piece)
     this->pieceCount++;
 }
 
-void FullRLNCRecoder::clear()
+template <typename T>
+void FullRLNCRecoder<T>::clear()
 {
     this->pieces.clear();
     this->pieceCount = 0;
 }
 
-CodedPiece FullRLNCRecoder::getCodedPiece()
+template <typename T>
+CodedPiece FullRLNCRecoder<T>::getCodedPiece()
 {
     std::vector<Fr> coefficients = generateCodingVector(this->pieceCount);
     int size = this->pieces[0].piece.size();
@@ -48,10 +55,12 @@ CodedPiece FullRLNCRecoder::getCodedPiece()
         pc = multiply(pc, this->pieces[i].flatten(), coefficients[i]);
     }
 
-    G1 signature;
-    G1::mulVec(signature, sigs.data(), coefficients.data(), sigs.size());
+    G1 signature = sig.Combine(sigs, coefficients);
 
     std::vector<Fr> recodedPiece(pc.begin(), pc.begin() + size);
     std::vector<Fr> recodedVec(pc.begin() + size, pc.end());
-    return CodedPiece(recodedPiece, recodedVec, signature);
+    CodedPiece cp = CodedPiece(recodedPiece, recodedVec, signature, false);
+    return cp;
 }
+
+template class FullRLNCRecoder<Boneh>;

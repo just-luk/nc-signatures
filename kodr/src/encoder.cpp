@@ -3,17 +3,20 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <string>
+#include <boneh.hpp>
 
-FullRLNCEncoder::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, Signature *sig, bool generateSystematic)
+template <typename T>
+FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic)
 {
-    this->pieces = pieces;
     this->sig = sig;
+    this->pieces = pieces;
     this->useSystematic = generateSystematic;
     this->pieceIndex = 0;
 }
 
-FullRLNCEncoder::FullRLNCEncoder(std::vector<uint8_t> data,
-                                 int pieceCountOrSize, Signature *sig, bool generateSystematic, bool fromSize)
+template <typename T>
+FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<uint8_t> data,
+                                 int pieceCountOrSize, T sig, bool generateSystematic, bool fromSize)
 {
     this->sig = sig;
     this->useSystematic = generateSystematic;
@@ -28,52 +31,35 @@ FullRLNCEncoder::FullRLNCEncoder(std::vector<uint8_t> data,
     }
 }
 
-FullRLNCEncoder::FullRLNCEncoder(){};
+template <typename T>
+FullRLNCEncoder<T>::FullRLNCEncoder(){};
 
-int FullRLNCEncoder::PieceCount() { return pieces.size(); }
+template <typename T>int 
+FullRLNCEncoder<T>::PieceCount() { return pieces.size(); }
 
-int FullRLNCEncoder::PieceSize() { return pieces[0].size(); }
+template <typename T>int 
+FullRLNCEncoder<T>::PieceSize() { return pieces[0].size(); }
 
-int FullRLNCEncoder::DecodableLen() { return PieceCount() * CodedPieceLen(); }
+template <typename T>int 
+FullRLNCEncoder<T>::DecodableLen() { return PieceCount() * CodedPieceLen(); }
 
-int FullRLNCEncoder::CodedPieceLen() { return PieceCount() + PieceSize(); }
+template <typename T>int 
+FullRLNCEncoder<T>::CodedPieceLen() { return PieceCount() + PieceSize(); }
 
-void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, std::vector<G1> &gens,
-                   const std::string &id, int pieceID)
-{
-    if (pieceID != -1)
-    {
-        G1 hashedID;
-        hashAndMapToG1(hashedID, id + std::to_string(pieceID));
-        G1::mulVec(P, gens.data(), codingVec.data(), codingVec.size());
-        P += hashedID;
-    }
-    else
-    {
-        std::vector<G1> fullPoints(gens.size() + codingVec.size());
-        std::vector<Fr> fullVec(vec.size() + codingVec.size());
-        std::copy(vec.begin(), vec.end(), fullVec.begin());
-        std::copy(codingVec.begin(), codingVec.end(), fullVec.begin() + vec.size());
-        std::copy(gens.begin(), gens.end(), fullPoints.begin());
-        for (int i = 0; i < codingVec.size(); i++)
-        {
-            hashAndMapToG1(fullPoints[i + gens.size()], id + std::to_string(i));
-        }
-        G1::mulVec(P, fullPoints.data(), fullVec.data(), fullVec.size());
-    }
-}
-
-CodedPiece FullRLNCEncoder::getCodedPiece()
+template <typename T>CodedPiece 
+FullRLNCEncoder<T>::getCodedPiece()
 {
     std::vector<Fr> codingVec;
     std::vector<Fr> piece;
     G1 signature;
+    CodedPiece cp;
     if (useSystematic && pieceIndex < PieceCount())
     {
         codingVec = generateSystematicVector(pieceIndex, PieceCount());
         piece = pieces[pieceIndex];
         pieceIndex++;
-        signature = sig->Sign(piece, codingVec, pieceIndex - 1);
+        signature = sig.Sign(piece, codingVec, pieceIndex - 1);
+        cp = CodedPiece(piece, codingVec, signature, true);
     }
     else
     {
@@ -83,7 +69,11 @@ CodedPiece FullRLNCEncoder::getCodedPiece()
         {
             piece = multiply(piece, pieces[i], codingVec[i]);
         }
-        signature = sig->Sign(piece, codingVec);
+        std::cout << "d" << std::endl;
+        signature = sig.Sign(piece, codingVec, -1);
+        cp = CodedPiece(piece, codingVec, signature, false);
     }
-    return CodedPiece(piece, codingVec, signature);
+    return cp;
 }
+
+template class FullRLNCEncoder<Boneh>;

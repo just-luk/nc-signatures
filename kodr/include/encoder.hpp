@@ -4,15 +4,17 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <string>
-#include <signature.hpp>
+#include "boneh.hpp"
 
 #ifndef ENCODER_HPP
 #define ENCODER_HPP
 
-typedef struct FullRLNCEncoder
+template <typename T>
+class FullRLNCEncoder
 {
+public:
     std::vector<std::vector<Fr>> pieces;
-    Signature *sig;
+    T sig;
     bool useSystematic;
     int pieceIndex;
 
@@ -26,14 +28,12 @@ typedef struct FullRLNCEncoder
 
     CodedPiece getCodedPiece();
 
-    FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, Signature *sig, bool generateSystematic);
+    FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic);
 
-    FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize, Signature *sig, bool generateSystematic, bool fromSize = false);
+    FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize, T sig, bool generateSystematic, bool fromSize = false);
 
     FullRLNCEncoder();
-} FullRLNCEncoder;
+};
 
-void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, std::vector<G1> &gens,
-                   const std::string &id, int pieceID = -1);
 
 #endif

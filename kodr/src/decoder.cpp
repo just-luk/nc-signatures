@@ -5,8 +5,10 @@
 #include <vector>
 #include <stdexcept>
 #include <vector>
+#include <boneh.hpp>
 
-FullRLNCDecoder::FullRLNCDecoder(int pieceCount, Signature *sig)
+template <typename T>
+FullRLNCDecoder<T>::FullRLNCDecoder(int pieceCount, T sig)
 {
     expected = pieceCount;
     useful = 0;
@@ -15,9 +17,11 @@ FullRLNCDecoder::FullRLNCDecoder(int pieceCount, Signature *sig)
     state = DecoderState(pieceCount);
 }
 
-FullRLNCDecoder::FullRLNCDecoder(){};
+template <typename T>
+FullRLNCDecoder<T>::FullRLNCDecoder(){};
 
-int FullRLNCDecoder::PieceLength()
+template <typename T>
+int FullRLNCDecoder<T>::PieceLength()
 {
     if (received > 0)
     {
@@ -26,13 +30,16 @@ int FullRLNCDecoder::PieceLength()
     return 0;
 }
 
-bool FullRLNCDecoder::IsDecoded() { return useful >= expected; }
+template <typename T>
+bool FullRLNCDecoder<T>::IsDecoded() { return useful >= expected; }
 
-int FullRLNCDecoder::Required() { return expected - useful; }
+template <typename T>
+int FullRLNCDecoder<T>::Required() { return expected - useful; }
 
-void FullRLNCDecoder::addPiece(CodedPiece piece)
+template <typename T>
+void FullRLNCDecoder<T>::addPiece(CodedPiece piece)
 {
-    if (IsDecoded() || !sig->Verify(piece))
+    if (IsDecoded() || !sig.Verify(piece))
     {
         return;
     }
@@ -48,9 +55,11 @@ void FullRLNCDecoder::addPiece(CodedPiece piece)
     useful = state.Rank();
 }
 
-std::vector<Fr> FullRLNCDecoder::getPiece(int i) { return state.GetPiece(i); }
+template <typename T>
+std::vector<Fr> FullRLNCDecoder<T>::getPiece(int i) { return state.GetPiece(i); }
 
-std::vector<uint8_t> FullRLNCDecoder::getData()
+template <typename T>
+std::vector<uint8_t> FullRLNCDecoder<T>::getData()
 {
     if (!IsDecoded())
     {
@@ -78,3 +87,5 @@ std::vector<uint8_t> FullRLNCDecoder::getData()
     pieces.resize(len + 1);
     return pieces;
 }
+
+template class FullRLNCDecoder<Boneh>;

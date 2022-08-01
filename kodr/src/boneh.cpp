@@ -16,6 +16,8 @@ Boneh::Boneh(int pieceSize, std::string fileName)
     }
 }
 
+Boneh::Boneh(){};
+
 void Boneh::AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID)
 {
     if (pieceID != -1)
@@ -42,7 +44,7 @@ void Boneh::AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVe
 
 std::string Boneh::RandomString(int length)
 {
-    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+ std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     std::random_device random_device;
     std::mt19937 generator(random_device());
@@ -77,7 +79,23 @@ bool Boneh::Verify(CodedPiece &encodedPiece)
 {
     Fp12 e1, e2;
     G1 hashed;
-    AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector);
+    if (encodedPiece.isSystematic)
+    {
+        int index = 0;
+        for (int i = 0; i < encodedPiece.codingVector.size(); i++)
+        {
+            if (encodedPiece.codingVector[i].isOne())
+            {
+                index = i;
+                break;
+            }
+        }
+        AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector, index);
+    }
+    else
+    {
+        AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector, -1);
+    }
     pairing(e1, encodedPiece.signature, h); // e1 = e(signature, h)
     pairing(e2, hashed, u);                 // e2 = e(hashed, u)
     return e1 == e2;

@@ -7,9 +7,8 @@ make: *** No rule to make target 'all'.  Stop.
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Sun Jul 31 12:06:04 2022
+# Make data base, printed on Sun Jul 31 17:07:02 2022
 
 # Variables
 
@@ -28,8 +27,7 @@ LOCALAPPDATA = C:\Users\lukegriffith\AppData\Local
 # environment
 VSCODE_CWD = C:\Users\lukegriffith\AppData\Local\Programs\Microsoft VS Code
 # environment
-CHOCOLATEYINSTALL = C:\Pr 
-ogramData\chocolatey
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
 # environment
 SYSTEMROOT = C:\WINDOWS
 # environment
@@ -219,7 +217,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1658971435): 14 files, no impossibilities.
+# . (key c:/Users/lukegriffith/CLionProjects/nc-signatures, mtime 1659291660): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
@@ -277,6 +275,6 @@ install:
 # strcache performance: lookups = 25 / hit rate = 24%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/25=0%
-# Finished Make data base on Sun Jul 31 12:06:04 2022
+# Finished Make data base on Sun Jul 31 17:07:02 2022
 
  

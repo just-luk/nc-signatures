@@ -14,11 +14,12 @@ std::vector<Fr> multiply(std::vector<Fr> piece1, std::vector<Fr> piece2, Fr by)
     return piece1;
 }
 
-CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s)
+CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s, bool isSys)
 {
     piece = p;
     codingVector = v;
     signature = s;
+    isSystematic = isSys;
 }
 
 CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize)
@@ -43,6 +44,7 @@ CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const 
     tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.end());
     tempString = std::string(tempArr.begin(), tempArr.end());
     signature.setStr(tempString, mcl::IoSerialize);
+    isSystematic = false;
 }
 
 CodedPiece::CodedPiece(){};
