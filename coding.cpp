@@ -67,12 +67,11 @@ int main(int argc, char **argv)
     int pieceSize = ceil((float)fileData.size() / (float)pieceCount);
     assert(pieceSize >= pieceCount);
     int codedPieceCount = pieceCount * 2;
-    int droppedPieceCount = pieceCount / 2;
+    int droppedPieceCount = pieceCount;
 
     // systematic encoder
-    std::cout << "Signature created" << std::endl;
     Boneh boneh(pieceSize, "logo.png");
-    FullRLNCEncoder<Boneh> encoder(fileData, pieceCount, boneh, false);
+    FullRLNCEncoder<Boneh> encoder(fileData, pieceCount, boneh, true);
 
     std::vector<CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++)

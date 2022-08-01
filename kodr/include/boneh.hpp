@@ -18,13 +18,13 @@ private:
     G2 u;
     std::vector<G1> generators;
     std::string id;
-    void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID);
+    void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec);
     std::string RandomString(int length);
 
 public:
     Boneh(int pieceSize, std::string fileName);
     Boneh();
-    G1 Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID);
+    G1 Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec);
     G1 Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs);
     bool Verify(CodedPiece &encodedPiece);
 };

@@ -18,28 +18,18 @@ Boneh::Boneh(int pieceSize, std::string fileName)
 
 Boneh::Boneh(){};
 
-void Boneh::AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID)
+void Boneh::AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec)
 {
-    if (pieceID != -1)
+    std::vector<G1> fullPoints(generators.size() + codingVec.size());
+    std::vector<Fr> fullVec(vec.size() + codingVec.size());
+    std::copy(vec.begin(), vec.end(), fullVec.begin());
+    std::copy(codingVec.begin(), codingVec.end(), fullVec.begin() + vec.size());
+    std::copy(generators.begin(), generators.end(), fullPoints.begin());
+    for (int i = 0; i < codingVec.size(); i++)
     {
-        G1 hashedID;
-        hashAndMapToG1(hashedID, id + std::to_string(pieceID));
-        G1::mulVec(P, generators.data(), codingVec.data(), codingVec.size());
-        P += hashedID;
+        hashAndMapToG1(fullPoints[i + generators.size()], id + std::to_string(i));
     }
-    else
-    {
-        std::vector<G1> fullPoints(generators.size() + codingVec.size());
-        std::vector<Fr> fullVec(vec.size() + codingVec.size());
-        std::copy(vec.begin(), vec.end(), fullVec.begin());
-        std::copy(codingVec.begin(), codingVec.end(), fullVec.begin() + vec.size());
-        std::copy(generators.begin(), generators.end(), fullPoints.begin());
-        for (int i = 0; i < codingVec.size(); i++)
-        {
-            hashAndMapToG1(fullPoints[i + generators.size()], id + std::to_string(i));
-        }
-        G1::mulVec(P, fullPoints.data(), fullVec.data(), fullVec.size());
-    }
+    G1::mulVec(P, fullPoints.data(), fullVec.data(), fullVec.size());
 }
 
 std::string Boneh::RandomString(int length)
@@ -60,10 +50,10 @@ std::string Boneh::RandomString(int length)
     return random_string;
 }
 
-G1 Boneh::Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID)
+G1 Boneh::Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec)
 {
     G1 sig;
-    AggregateHash(sig, vec, codingVec, pieceID);
+    AggregateHash(sig, vec, codingVec);
     G1::mul(sig, sig, alpha);
     return sig;
 }
@@ -71,7 +61,7 @@ G1 Boneh::Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec, int pieceID)
 G1 Boneh::Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs)
 {
     G1 sig;
-    G1::mulVec(sig, signs.data(), coeffs.data(), coeffs.size());
+    G1::mulVec(sig, signs.data(), coeffs.data(), signs.size());
     return sig;
 };
 
@@ -79,23 +69,7 @@ bool Boneh::Verify(CodedPiece &encodedPiece)
 {
     Fp12 e1, e2;
     G1 hashed;
-    if (encodedPiece.isSystematic)
-    {
-        int index = 0;
-        for (int i = 0; i < encodedPiece.codingVector.size(); i++)
-        {
-            if (encodedPiece.codingVector[i].isOne())
-            {
-                index = i;
-                break;
-            }
-        }
-        AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector, index);
-    }
-    else
-    {
-        AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector, -1);
-    }
+    AggregateHash(hashed, encodedPiece.piece, encodedPiece.codingVector);
     pairing(e1, encodedPiece.signature, h); // e1 = e(signature, h)
     pairing(e2, hashed, u);                 // e2 = e(hashed, u)
     return e1 == e2;
