@@ -41,4 +41,6 @@ std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceCount(std::vector<uin
 
 std::vector<std::vector<Fr>> OriginalPiecesFromDataAndPieceSize(std::vector<uint8_t> data, int pieceSize);
 
+std::string RandomString(int length);
+
 #endif

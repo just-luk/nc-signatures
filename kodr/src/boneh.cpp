@@ -32,24 +32,6 @@ void Boneh::AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVe
     G1::mulVec(P, fullPoints.data(), fullVec.data(), fullVec.size());
 }
 
-std::string Boneh::RandomString(int length)
-{
- std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-
-    std::random_device random_device;
-    std::mt19937 generator(random_device());
-    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
-
-    std::string random_string;
-
-    for (int i = 0; i < length; ++i)
-    {
-        random_string += CHARACTERS[distribution(generator)];
-    }
-
-    return random_string;
-}
-
 G1 Boneh::Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec)
 {
     G1 sig;

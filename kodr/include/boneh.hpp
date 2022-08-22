@@ -19,7 +19,6 @@ private:
     std::vector<G1> generators;
     std::string id;
     void AggregateHash(G1 &P, std::vector<Fr> &vec, std::vector<Fr> &codingVec);
-    std::string RandomString(int length);
 
 public:
     Boneh(int pieceSize, std::string fileName);

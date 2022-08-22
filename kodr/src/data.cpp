@@ -2,6 +2,7 @@
 #include <math.h>
 #include <mcl/bls12_381.hpp>
 #include <vector>
+#include <random>
 
 using namespace mcl::bls12;
 
@@ -129,4 +130,22 @@ OriginalPiecesFromDataAndPieceSize(std::vector<uint8_t> data, int pieceSize)
     int size = data.size();
     int pieceCount = ceil((float)size / (float)pieceSize);
     return OriginalPiecesWithCountAndSize(data, pieceCount, pieceSize);
+}
+
+std::string RandomString(int length)
+{
+ std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    std::random_device random_device;
+    std::mt19937 generator(random_device());
+    std::uniform_int_distribution<> distribution(0, CHARACTERS.size() - 1);
+
+    std::string random_string;
+
+    for (int i = 0; i < length; ++i)
+    {
+        random_string += CHARACTERS[distribution(generator)];
+    }
+
+    return random_string;
 }

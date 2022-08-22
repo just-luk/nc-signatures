@@ -1,4 +1,4 @@
-coding:
+test:
 	cd build && ../install.sh && cmake --build . && ./coding.exe 36
 
 install:

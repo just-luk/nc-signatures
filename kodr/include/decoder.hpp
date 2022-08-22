@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdexcept>
 #include "boneh.hpp"
+#include "li.hpp"
 
 #ifndef DECODER_HPP
 #define DECODER_HPP

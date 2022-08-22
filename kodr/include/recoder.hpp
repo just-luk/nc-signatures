@@ -5,6 +5,7 @@
 #include <mcl/bls12_381.hpp>
 #include "vector"
 #include "boneh.hpp"
+#include "li.hpp"
 
 #ifndef RECODER_HPP
 #define RECODER_HPP
