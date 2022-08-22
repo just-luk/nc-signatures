@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include "boneh.hpp"
+#include "li.hpp"
 
 #ifndef ENCODER_HPP
 #define ENCODER_HPP

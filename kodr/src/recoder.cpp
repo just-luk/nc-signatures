@@ -4,6 +4,7 @@
 #include <vector>
 #include <recoder.hpp>
 #include <boneh.hpp>
+#include <li.hpp>
 
 template <typename T>
 FullRLNCRecoder<T>::FullRLNCRecoder(std::vector<CodedPiece> ps, T sig)
@@ -63,3 +64,4 @@ CodedPiece FullRLNCRecoder<T>::getCodedPiece()
 }
 
 template class FullRLNCRecoder<Boneh>;
+template class FullRLNCRecoder<Li>;
