@@ -5,6 +5,7 @@
 #include <string>
 #include <boneh.hpp>
 #include <li.hpp>
+#include <zhang.hpp>
 
 template <typename T>
 FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic)
@@ -74,3 +75,4 @@ FullRLNCEncoder<T>::getCodedPiece()
 
 template class FullRLNCEncoder<Boneh>;
 template class FullRLNCEncoder<Li>;
+template class FullRLNCEncoder<Zhang>;

@@ -45,7 +45,7 @@ G1 Boneh::Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs)
     G1 sig;
     G1::mulVec(sig, signs.data(), coeffs.data(), signs.size());
     return sig;
-};
+}
 
 bool Boneh::Verify(CodedPiece &encodedPiece)
 {
