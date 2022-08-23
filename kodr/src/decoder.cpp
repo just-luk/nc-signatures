@@ -7,6 +7,7 @@
 #include <vector>
 #include <boneh.hpp>
 #include <li.hpp>
+#include <zhang.hpp>
 
 template <typename T>
 FullRLNCDecoder<T>::FullRLNCDecoder(int pieceCount, T sig)
@@ -91,3 +92,4 @@ std::vector<uint8_t> FullRLNCDecoder<T>::getData()
 
 template class FullRLNCDecoder<Boneh>;
 template class FullRLNCDecoder<Li>;
+template class FullRLNCDecoder<Zhang>;

@@ -15,10 +15,11 @@
 
 #include <boneh.hpp>
 #include <li.hpp>
+#include <zhang.hpp>
 
 using namespace mcl::bls12;
 
-typedef Boneh sigScheme;
+typedef Zhang sigScheme;
 
 std::vector<uint8_t> readFile(const char *fileName)
 {
@@ -56,9 +57,9 @@ int main(int argc, char **argv)
 
     // systematic encoder
     
-    sigScheme boneh(pieceSize, "logo.png");
-    // sigScheme li("node1", "logo.png");
-    FullRLNCEncoder<sigScheme> encoder(fileData, pieceCount, boneh, true);
+    // sigScheme scheme(pieceSize, "logo.png");
+    sigScheme scheme("node1", "logo.png");
+    FullRLNCEncoder<sigScheme> encoder(fileData, pieceCount, scheme, true);
 
     std::vector<CodedPiece> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++)
@@ -69,7 +70,7 @@ int main(int argc, char **argv)
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
     std::vector<CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
 
-    FullRLNCRecoder<sigScheme> recoder(droppedPieces, boneh);
+    FullRLNCRecoder<sigScheme> recoder(droppedPieces, scheme);
     int recodedPieceCount = droppedPieces.size() * 2;
     std::vector<CodedPiece> recodedPieces(recodedPieceCount);
     for (int i = 0; i < recodedPieceCount; i++)
@@ -80,7 +81,7 @@ int main(int argc, char **argv)
     std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
     std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
-    FullRLNCDecoder<sigScheme> decoder(pieceCount, boneh);
+    FullRLNCDecoder<sigScheme> decoder(pieceCount, scheme);
     for (int i = 0; i < pieceCount; i++)
     {
         decoder.addPiece(droppedPiecesAgain[i]);
