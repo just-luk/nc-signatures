@@ -10,25 +10,25 @@
 #ifndef RECODER_HPP
 #define RECODER_HPP
 
-template <typename T>
+template <typename T, typename S>
 class FullRLNCRecoder
 {
 public:
-    std::vector<CodedPiece> pieces;
+    std::vector<CodedPiece<S>> pieces;
     T sig;
     int pieceCount;
 
-    FullRLNCRecoder(std::vector<CodedPiece> ps, T sig);
+    FullRLNCRecoder(std::vector<CodedPiece<S>> ps, T sig);
 
     FullRLNCRecoder(T sig);
 
     FullRLNCRecoder();
 
-    void addPiece(CodedPiece piece);
+    void addPiece(CodedPiece<S> piece);
 
     void clear();
 
-    CodedPiece getCodedPiece();
+    CodedPiece<S> getCodedPiece();
 };
 
 #endif

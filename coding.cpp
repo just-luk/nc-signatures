@@ -16,10 +16,12 @@
 #include <boneh.hpp>
 #include <li.hpp>
 #include <zhang.hpp>
+#include <catalano.hpp>
 
 using namespace mcl::bls12;
 
-typedef Zhang sigScheme;
+typedef Catalano sigScheme;
+typedef CatSignature sigType;
 
 std::vector<uint8_t> readFile(const char *fileName)
 {
@@ -58,30 +60,33 @@ int main(int argc, char **argv)
     // systematic encoder
     
     // sigScheme scheme(pieceSize, "logo.png");
-    sigScheme scheme("node1", "logo.png");
-    FullRLNCEncoder<sigScheme> encoder(fileData, pieceCount, scheme, true);
+    // sigScheme scheme("node1", "logo.png");
+    Fr fid;
+    fid.setRand();
+    sigScheme scheme(pieceCount, pieceSize, fid);
+    FullRLNCEncoder<sigScheme, sigType> encoder(fileData, pieceCount, scheme, true);
 
-    std::vector<CodedPiece> codedPieces(codedPieceCount);
+    std::vector<CodedPiece<sigType>> codedPieces(codedPieceCount);
     for (int i = 0; i < codedPieceCount; i++)
     {
         codedPieces[i] = encoder.getCodedPiece();
     }
 
     std::random_shuffle(codedPieces.begin(), codedPieces.end());
-    std::vector<CodedPiece> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
+    std::vector<CodedPiece<sigType>> droppedPieces(codedPieces.begin(), codedPieces.end() - droppedPieceCount);
 
-    FullRLNCRecoder<sigScheme> recoder(droppedPieces, scheme);
+    FullRLNCRecoder<sigScheme, sigType> recoder(droppedPieces, scheme);
     int recodedPieceCount = droppedPieces.size() * 2;
-    std::vector<CodedPiece> recodedPieces(recodedPieceCount);
+    std::vector<CodedPiece<sigType>> recodedPieces(recodedPieceCount);
     for (int i = 0; i < recodedPieceCount; i++)
     {
         recodedPieces[i] = recoder.getCodedPiece();
     }
 
     std::random_shuffle(recodedPieces.begin(), recodedPieces.end());
-    std::vector<CodedPiece> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
+    std::vector<CodedPiece<sigType>> droppedPiecesAgain(recodedPieces.begin(), recodedPieces.end() - recodedPieces.size() / 2);
 
-    FullRLNCDecoder<sigScheme> decoder(pieceCount, scheme);
+    FullRLNCDecoder<sigScheme, sigType> decoder(pieceCount, scheme);
     for (int i = 0; i < pieceCount; i++)
     {
         decoder.addPiece(droppedPiecesAgain[i]);

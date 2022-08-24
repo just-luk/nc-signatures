@@ -9,8 +9,10 @@
 #ifndef DECODER_STATE_HPP
 #define DECODER_STATE_HPP
 
-typedef struct DecoderState
+template <typename S>
+class DecoderState
 {
+public:
     int pieceCount;
     Matrix coeffs;
     Matrix coded;
@@ -35,9 +37,9 @@ typedef struct DecoderState
 
     Matrix CodedMatrix();
 
-    void AddPiece(CodedPiece a);
+    void AddPiece(CodedPiece<S> a);
 
     std::vector<Fr> GetPiece(int idx);
-} DecoderState;
+};
 
 #endif

@@ -5,15 +5,18 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <stdexcept>
+#include <catalano.hpp>
 
-DecoderState::DecoderState(Matrix cfs, Matrix pieces)
+template <typename S>
+DecoderState<S>::DecoderState(Matrix cfs, Matrix pieces)
 {
     coeffs = cfs;
     coded = pieces;
     pieceCount = cfs.rows;
 }
 
-DecoderState::DecoderState(int p)
+template <typename S>
+DecoderState<S>::DecoderState(int p)
 {
     pieceCount = p;
     Matrix cfs(std::vector<std::vector<Fr>>(1));
@@ -22,7 +25,8 @@ DecoderState::DecoderState(int p)
     coded = cd;
 }
 
-DecoderState::DecoderState(){};
+template <typename S>
+DecoderState<S>::DecoderState(){};
 
 int min(int a, int b)
 {
@@ -33,7 +37,8 @@ int min(int a, int b)
     return b;
 }
 
-void DecoderState::clean_forward()
+template <typename S>
+void DecoderState<S>::clean_forward()
 {
     int rows = coeffs.rows;
     int cols = coeffs.cols;
@@ -91,7 +96,8 @@ void DecoderState::clean_forward()
     }
 }
 
-void DecoderState::clean_backward()
+template <typename S>
+void DecoderState<S>::clean_backward()
 {
     int rows = coeffs.rows;
     int cols = coeffs.cols;
@@ -147,7 +153,8 @@ void DecoderState::clean_backward()
     }
 }
 
-void DecoderState::remove_zero_rows()
+template <typename S>
+void DecoderState<S>::remove_zero_rows()
 {
     int cols = coeffs.data[0].size();
     for (int i = 0; i < coeffs.data.size(); i++)
@@ -175,20 +182,25 @@ void DecoderState::remove_zero_rows()
     }
 }
 
-void DecoderState::Rref()
+template <typename S>
+void DecoderState<S>::Rref()
 {
     clean_forward();
     clean_backward();
     remove_zero_rows();
 }
 
-int DecoderState::Rank() { return coeffs.rows; }
+template <typename S>
+int DecoderState<S>::Rank() { return coeffs.rows; }
 
-Matrix DecoderState::CoeffMatrix() { return coeffs; }
+template <typename S>
+Matrix DecoderState<S>::CoeffMatrix() { return coeffs; }
 
-Matrix DecoderState::CodedMatrix() { return coded; }
+template <typename S>
+Matrix DecoderState<S>::CodedMatrix() { return coded; }
 
-void DecoderState::AddPiece(CodedPiece a)
+template <typename S>
+void DecoderState<S>::AddPiece(CodedPiece<S> a)
 {
     if (coeffs.cols == 0)
     {
@@ -206,7 +218,8 @@ void DecoderState::AddPiece(CodedPiece a)
     }
 }
 
-std::vector<Fr> DecoderState::GetPiece(int idx)
+template <typename S>
+std::vector<Fr> DecoderState<S>::GetPiece(int idx)
 {
     if (idx >= pieceCount)
     {
@@ -246,3 +259,6 @@ OUT:
     }
     return coded.data[idx];
 }
+
+template class DecoderState<G1>;
+template class DecoderState<CatSignature>;

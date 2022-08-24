@@ -10,7 +10,7 @@
 #ifndef ENCODER_HPP
 #define ENCODER_HPP
 
-template <typename T>
+template <typename T, typename S>
 class FullRLNCEncoder
 {
 public:
@@ -27,7 +27,7 @@ public:
 
     int CodedPieceLen();
 
-    CodedPiece getCodedPiece();
+    CodedPiece<S> getCodedPiece();
 
     FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic);
 

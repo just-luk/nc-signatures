@@ -8,22 +8,23 @@
 #include <boneh.hpp>
 #include <li.hpp>
 #include <zhang.hpp>
+#include <catalano.hpp>
 
-template <typename T>
-FullRLNCDecoder<T>::FullRLNCDecoder(int pieceCount, T sig)
+template <typename T, typename S>
+FullRLNCDecoder<T, S>::FullRLNCDecoder(int pieceCount, T sig)
 {
     expected = pieceCount;
     useful = 0;
     received = 0;
     this->sig = sig;
-    state = DecoderState(pieceCount);
+    state = DecoderState<S>(pieceCount);
 }
 
-template <typename T>
-FullRLNCDecoder<T>::FullRLNCDecoder(){};
+template <typename T, typename S>
+FullRLNCDecoder<T, S>::FullRLNCDecoder(){};
 
-template <typename T>
-int FullRLNCDecoder<T>::PieceLength()
+template <typename T, typename S>
+int FullRLNCDecoder<T, S>::PieceLength()
 {
     if (received > 0)
     {
@@ -32,14 +33,14 @@ int FullRLNCDecoder<T>::PieceLength()
     return 0;
 }
 
-template <typename T>
-bool FullRLNCDecoder<T>::IsDecoded() { return useful >= expected; }
+template <typename T, typename S>
+bool FullRLNCDecoder<T, S>::IsDecoded() { return useful >= expected; }
 
-template <typename T>
-int FullRLNCDecoder<T>::Required() { return expected - useful; }
+template <typename T, typename S>
+int FullRLNCDecoder<T, S>::Required() { return expected - useful; }
 
-template <typename T>
-void FullRLNCDecoder<T>::addPiece(CodedPiece piece)
+template <typename T, typename S>
+void FullRLNCDecoder<T, S>::addPiece(CodedPiece<S> piece)
 {
     if (IsDecoded() || !sig.Verify(piece))
     {
@@ -57,11 +58,11 @@ void FullRLNCDecoder<T>::addPiece(CodedPiece piece)
     useful = state.Rank();
 }
 
-template <typename T>
-std::vector<Fr> FullRLNCDecoder<T>::getPiece(int i) { return state.GetPiece(i); }
+template <typename T, typename S>
+std::vector<Fr> FullRLNCDecoder<T, S>::getPiece(int i) { return state.GetPiece(i); }
 
-template <typename T>
-std::vector<uint8_t> FullRLNCDecoder<T>::getData()
+template <typename T, typename S>
+std::vector<uint8_t> FullRLNCDecoder<T, S>::getData()
 {
     if (!IsDecoded())
     {
@@ -90,6 +91,7 @@ std::vector<uint8_t> FullRLNCDecoder<T>::getData()
     return pieces;
 }
 
-template class FullRLNCDecoder<Boneh>;
-template class FullRLNCDecoder<Li>;
-template class FullRLNCDecoder<Zhang>;
+template class FullRLNCDecoder<Boneh, G1>;
+template class FullRLNCDecoder<Li, G1>;
+template class FullRLNCDecoder<Zhang, G1>;
+template class FullRLNCDecoder<Catalano, CatSignature>;
