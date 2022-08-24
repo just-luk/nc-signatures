@@ -8,7 +8,7 @@ Code for the implementation and performance evaluation of authentication schemes
 
 ### Why is this important?
 
-Network coding is a largely theoretical field. However, it is important to understand the performance of various authentication schemes to determine the best one for a given network. I've implemented 3 authentication schemes for network coding, which are listed below.
+Network coding is a largely theoretical field. However, it is important to understand the performance of various authentication schemes to determine the best one for a given network. I've implemented 4 authentication schemes for network coding, which are listed below.
 
 #### Authentication Schemes Implemented
 
