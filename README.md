@@ -4,7 +4,7 @@ Authentication Schemes for Network Coding
 
 ### What is this?
 
-Code for the implementation and performance evaluation of authentication schemes for network coding.
+Code for the implementation and performance evaluation of authentication schemes for network coding. (It's very messy, but it's the best I could do with my limited C++ knowledge.)
 
 ### Why is this important?
 
@@ -14,6 +14,8 @@ Network coding is a largely theoretical field. However, it is important to under
 
 - [Boneh 2008](https://eprint.iacr.org/2008/316.pdf)
 - [Li 2020](https://ieeexplore.ieee.org/document/9268072)
+- [Zhang 2017](https://link.springer.com/chapter/10.1007/978-3-319-59463-7_52)
+- [Catalano 2012](https://eprint.iacr.org/2011/696.pdf)
 
 ### Resources used
 
