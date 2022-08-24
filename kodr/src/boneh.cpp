@@ -47,7 +47,7 @@ G1 Boneh::Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs)
     return sig;
 }
 
-bool Boneh::Verify(CodedPiece &encodedPiece)
+bool Boneh::Verify(CodedPiece<G1> &encodedPiece)
 {
     Fp12 e1, e2;
     G1 hashed;

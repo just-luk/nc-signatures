@@ -35,7 +35,7 @@ class Li
         Li();
         G1 Sign(std::vector<Fr> &vec, std::vector<Fr> &codingVec);
         G1 Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs);
-        bool Verify(CodedPiece &encodedPiece);
+        bool Verify(CodedPiece<G1> &encodedPiece);
 };
 
 #endif

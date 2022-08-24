@@ -3,6 +3,7 @@
 #include <mcl/bls12_381.hpp>
 #include <vector>
 #include <random>
+#include <catalano.hpp>
 
 using namespace mcl::bls12;
 
@@ -15,14 +16,16 @@ std::vector<Fr> multiply(std::vector<Fr> piece1, std::vector<Fr> piece2, Fr by)
     return piece1;
 }
 
-CodedPiece::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, G1 s)
+template <typename T>
+CodedPiece<T>::CodedPiece(std::vector<Fr> p, std::vector<Fr> v, T s)
 {
     piece = p;
     codingVector = v;
     signature = s;
 }
 
-CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize)
+template <typename T>
+CodedPiece<T>::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize)
 {
     piece.resize(pieceSize);
     codingVector.resize(codingVectorSize);
@@ -46,16 +49,52 @@ CodedPiece::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const 
     signature.setStr(tempString, mcl::IoSerialize);
 }
 
-CodedPiece::CodedPiece(){};
-
-int CodedPiece::dataLen() { return piece.size() + codingVector.size(); }
-
-int CodedPiece::fullLen()
+template <>
+CodedPiece<CatSignature>::CodedPiece(std::vector<uint8_t> &bytes, const int &pieceSize, const int &codingVectorSize)
 {
+    piece.resize(pieceSize);
+    codingVector.resize(codingVectorSize);
+    std::vector<uint8_t> tempArr(32);
+    std::string tempString;
+
+    for (int i = 0; i < pieceSize; i++)
+    {
+        tempArr = std::vector<uint8_t>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempString = std::string(tempArr.begin(), tempArr.end());
+        piece[i].setStr(tempString, mcl::IoSerialize);
+    }
+    for (int i = pieceSize; i < pieceSize + codingVectorSize; i++)
+    {
+        tempArr = std::vector<uint8_t>(bytes.begin() + i * 32, bytes.begin() + (i + 1) * 32);
+        tempString = std::string(tempArr.begin(), tempArr.end());
+        codingVector[i - pieceSize].setStr(tempString, mcl::IoSerialize);
+    }
+    tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32, bytes.end());
+    tempString = std::string(tempArr.begin(), tempArr.end());
+    signature.X.setStr(tempString, mcl::IoSerialize);
+    tempArr = std::vector<uint8_t>(bytes.begin() + (pieceSize + codingVectorSize) * 32 + 32, bytes.end());
+    tempString = std::string(tempArr.begin(), tempArr.end());
+    signature.s.setStr(tempString, mcl::IoSerialize);
+}
+
+template <typename T>
+CodedPiece<T>::CodedPiece(){};
+
+template <typename T>
+int CodedPiece<T>::dataLen() { return piece.size() + codingVector.size(); }
+
+template <typename T>
+int CodedPiece<T>::fullLen()
+{
+    if (std::is_same<T, CatSignature>::value)
+    {
+        return dataLen() * 32 + 64;
+    }
     return dataLen() * 32 + 32;
 }
 
-std::vector<Fr> CodedPiece::flatten()
+template <typename T>
+std::vector<Fr> CodedPiece<T>::flatten()
 {
     std::vector<Fr> ret(dataLen());
     std::copy(piece.begin(), piece.end(), ret.begin());
@@ -63,7 +102,8 @@ std::vector<Fr> CodedPiece::flatten()
     return ret;
 }
 
-std::vector<uint8_t> CodedPiece::toBytes()
+template <typename T>
+std::vector<uint8_t> CodedPiece<T>::toBytes()
 {
     std::vector<uint8_t> ret(fullLen());
     std::vector<uint8_t> tempArr(32);
@@ -83,6 +123,33 @@ std::vector<uint8_t> CodedPiece::toBytes()
     tempString = signature.getStr(mcl::IoSerialize);
     tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
     std::copy(tempArr.begin(), tempArr.end(), ret.begin() + dataLen() * 32);
+    return ret;
+}
+
+template <>
+std::vector<uint8_t> CodedPiece<CatSignature>::toBytes()
+{
+    std::vector<uint8_t> ret(fullLen());
+    std::vector<uint8_t> tempArr(32);
+    std::string tempString;
+    for (int i = 0; i < piece.size(); i++)
+    {
+        tempString = piece[i].getStr(mcl::IoSerialize);
+        tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
+        std::copy(tempArr.begin(), tempArr.end(), ret.begin() + i * 32);
+    }
+    for (int i = 0; i < codingVector.size(); i++)
+    {
+        tempString = codingVector[i].getStr(mcl::IoSerialize);
+        tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
+        std::copy(tempArr.begin(), tempArr.end(), ret.begin() + (piece.size() + i) * 32);
+    }
+    tempString = signature.X.getStr(mcl::IoSerialize);
+    tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
+    std::copy(tempArr.begin(), tempArr.end(), ret.begin() + dataLen() * 32);
+    tempString = signature.s.getStr(mcl::IoSerialize);
+    tempArr = std::vector<uint8_t>(tempString.begin(), tempString.end());
+    std::copy(tempArr.begin(), tempArr.end(), ret.begin() + dataLen() * 32 + 32);
     return ret;
 }
 
@@ -149,3 +216,6 @@ std::string RandomString(int length)
 
     return random_string;
 }
+
+template class CodedPiece<G1>;
+template class CodedPiece<CatSignature>;

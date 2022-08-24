@@ -69,7 +69,7 @@ G1 Zhang::Combine(std::vector<G1> &signs, std::vector<Fr> &coeffs)
     return sig;
 }
 
-bool Zhang::Verify(CodedPiece &encodedPiece)
+bool Zhang::Verify(CodedPiece<G1> &encodedPiece)
 {
    Fp12 e1, e2;
    pairing(e1, encodedPiece.signature, h);

@@ -6,9 +6,10 @@
 #include <boneh.hpp>
 #include <li.hpp>
 #include <zhang.hpp>
+#include <catalano.hpp>
 
-template <typename T>
-FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic)
+template <typename T, typename S>
+FullRLNCEncoder<T, S>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic)
 {
     this->sig = sig;
     this->pieces = pieces;
@@ -16,8 +17,8 @@ FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, 
     this->pieceIndex = 0;
 }
 
-template <typename T>
-FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<uint8_t> data,
+template <typename T, typename S>
+FullRLNCEncoder<T, S>::FullRLNCEncoder(std::vector<uint8_t> data,
                                  int pieceCountOrSize, T sig, bool generateSystematic, bool fromSize)
 {
     this->sig = sig;
@@ -33,27 +34,27 @@ FullRLNCEncoder<T>::FullRLNCEncoder(std::vector<uint8_t> data,
     }
 }
 
-template <typename T>
-FullRLNCEncoder<T>::FullRLNCEncoder(){};
+template <typename T, typename S>
+FullRLNCEncoder<T, S>::FullRLNCEncoder(){};
 
-template <typename T>int 
-FullRLNCEncoder<T>::PieceCount() { return pieces.size(); }
+template <typename T, typename S>int 
+FullRLNCEncoder<T, S>::PieceCount() { return pieces.size(); }
 
-template <typename T>int 
-FullRLNCEncoder<T>::PieceSize() { return pieces[0].size(); }
+template <typename T, typename S>int 
+FullRLNCEncoder<T, S>::PieceSize() { return pieces[0].size(); }
 
-template <typename T>int 
-FullRLNCEncoder<T>::DecodableLen() { return PieceCount() * CodedPieceLen(); }
+template <typename T, typename S>int 
+FullRLNCEncoder<T, S>::DecodableLen() { return PieceCount() * CodedPieceLen(); }
 
-template <typename T>int 
-FullRLNCEncoder<T>::CodedPieceLen() { return PieceCount() + PieceSize(); }
+template <typename T, typename S>int 
+FullRLNCEncoder<T, S>::CodedPieceLen() { return PieceCount() + PieceSize(); }
 
-template <typename T>CodedPiece 
-FullRLNCEncoder<T>::getCodedPiece()
+template <typename T, typename S> CodedPiece<S> 
+FullRLNCEncoder<T, S>::getCodedPiece()
 {
     std::vector<Fr> codingVec;
     std::vector<Fr> piece;
-    G1 signature;
+    S signature;
     if (useSystematic && pieceIndex < PieceCount())
     {
         codingVec = generateSystematicVector(pieceIndex, PieceCount());
@@ -70,9 +71,10 @@ FullRLNCEncoder<T>::getCodedPiece()
         }
     }
     signature = sig.Sign(piece, codingVec);
-    return CodedPiece(piece, codingVec, signature);;
+    return CodedPiece<S>(piece, codingVec, signature);;
 }
 
-template class FullRLNCEncoder<Boneh>;
-template class FullRLNCEncoder<Li>;
-template class FullRLNCEncoder<Zhang>;
+template class FullRLNCEncoder<Boneh, G1>;
+template class FullRLNCEncoder<Li, G1>;
+template class FullRLNCEncoder<Zhang, G1>;
+template class FullRLNCEncoder<Catalano, CatSignature>;

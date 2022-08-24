@@ -11,12 +11,12 @@
 #ifndef DECODER_HPP
 #define DECODER_HPP
 
-template <typename T>
+template <typename T, typename S>
 class FullRLNCDecoder
 {
 public:
     int expected, useful, received;
-    DecoderState state;
+    DecoderState<S> state;
     T sig;
 
     FullRLNCDecoder(int pieceCount, T sig);
@@ -29,7 +29,7 @@ public:
 
     int Required();
 
-    void addPiece(CodedPiece piece);
+    void addPiece(CodedPiece<S> piece);
 
     std::vector<Fr> getPiece(int i);
 
