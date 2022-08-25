@@ -7,6 +7,7 @@
 #include <li.hpp>
 #include <zhang.hpp>
 #include <catalano.hpp>
+#include <chang.hpp>
 
 template <typename T, typename S>
 FullRLNCRecoder<T, S>::FullRLNCRecoder(std::vector<CodedPiece<S>> ps, T sig)
@@ -70,3 +71,4 @@ template class FullRLNCRecoder<Boneh, G1>;
 template class FullRLNCRecoder<Li, G1>;
 template class FullRLNCRecoder<Zhang, G1>;
 template class FullRLNCRecoder<Catalano, CatSignature>;
+template class FullRLNCRecoder<Chang, G1>;
