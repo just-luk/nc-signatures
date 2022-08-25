@@ -9,6 +9,7 @@
 #include <li.hpp>
 #include <zhang.hpp>
 #include <catalano.hpp>
+#include <chang.hpp>
 
 template <typename T, typename S>
 FullRLNCDecoder<T, S>::FullRLNCDecoder(int pieceCount, T sig)
@@ -95,3 +96,4 @@ template class FullRLNCDecoder<Boneh, G1>;
 template class FullRLNCDecoder<Li, G1>;
 template class FullRLNCDecoder<Zhang, G1>;
 template class FullRLNCDecoder<Catalano, CatSignature>;
+template class FullRLNCDecoder<Chang, G1>;

@@ -17,11 +17,12 @@
 #include <li.hpp>
 #include <zhang.hpp>
 #include <catalano.hpp>
+#include <chang.hpp>
 
 using namespace mcl::bls12;
 
-typedef Catalano sigScheme;
-typedef CatSignature sigType;
+typedef Chang sigScheme;
+typedef G1 sigType;
 
 std::vector<uint8_t> readFile(const char *fileName)
 {
@@ -59,11 +60,11 @@ int main(int argc, char **argv)
 
     // systematic encoder
     
-    // sigScheme scheme(pieceSize, "logo.png");
+    sigScheme scheme(pieceSize, "logo.png");
     // sigScheme scheme("node1", "logo.png");
-    Fr fid;
-    fid.setRand();
-    sigScheme scheme(pieceCount, pieceSize, fid);
+    // Fr fid;
+    // fid.setRand();
+    // sigScheme scheme(pieceCount, pieceSize, fid);
     FullRLNCEncoder<sigScheme, sigType> encoder(fileData, pieceCount, scheme, true);
 
     std::vector<CodedPiece<sigType>> codedPieces(codedPieceCount);

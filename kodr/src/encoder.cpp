@@ -7,6 +7,7 @@
 #include <li.hpp>
 #include <zhang.hpp>
 #include <catalano.hpp>
+#include <chang.hpp>
 
 template <typename T, typename S>
 FullRLNCEncoder<T, S>::FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic)
@@ -78,3 +79,4 @@ template class FullRLNCEncoder<Boneh, G1>;
 template class FullRLNCEncoder<Li, G1>;
 template class FullRLNCEncoder<Zhang, G1>;
 template class FullRLNCEncoder<Catalano, CatSignature>;
+template class FullRLNCEncoder<Chang, G1>;
