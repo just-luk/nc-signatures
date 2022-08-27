@@ -29,6 +29,8 @@ public:
 
     CodedPiece<S> getCodedPiece();
 
+    void setPieces(std::vector<std::vector<Fr>> pieces);
+
     FullRLNCEncoder(std::vector<std::vector<Fr>> pieces, T sig, bool generateSystematic);
 
     FullRLNCEncoder(std::vector<uint8_t> data, int pieceCountOrSize, T sig, bool generateSystematic, bool fromSize = false);

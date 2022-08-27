@@ -75,6 +75,13 @@ FullRLNCEncoder<T, S>::getCodedPiece()
     return CodedPiece<S>(piece, codingVec, signature);;
 }
 
+template <typename T, typename S>
+void FullRLNCEncoder<T, S>::setPieces(std::vector<std::vector<Fr>> pieces)
+{
+    this->pieces = pieces;
+    this->pieceIndex = 0;
+}
+
 template class FullRLNCEncoder<Boneh, G1>;
 template class FullRLNCEncoder<Li, G1>;
 template class FullRLNCEncoder<Zhang, G1>;
