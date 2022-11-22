@@ -16,7 +16,7 @@ Network coding is a largely theoretical field. However, it is important to under
 - [Li 2020](https://ieeexplore.ieee.org/document/9268072)
 - [Zhang 2017](https://link.springer.com/chapter/10.1007/978-3-319-59463-7_52)
 - [Catalano 2012](https://eprint.iacr.org/2011/696.pdf)
-- [Chang 2019](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8676234)
+- [Chang 2019](https://link.springer.com/chapter/10.1007/978-3-319-53177-9_13)
 
 ### Resources used
 
